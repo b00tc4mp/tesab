@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import Link from 'next/link'
 
 function Header() {
-  const [toggleMenuButtonText, setToggleMenuText] = useState('close')
+  const [toggleMenuButtonText, setToggleMenuText] = useState('menu')
   const [toggleEquipmentButtonText, setToggleEquipmentButton] = useState('arrow_drop_up')
 
   const toggleMenu = () => setToggleMenuText(toggleMenuButtonText === 'menu' ? 'close' : 'menu')
@@ -75,7 +76,7 @@ function Header() {
       <div className="flex justify-between p-3 bg-white/75">
         <div className="flex flex-col justify-self-center self-center">
           <h1 className="">
-            <img className="h-8" src="images/tesab-logo.png" alt="Tesab Spain" />
+            <Link href="/"><img className="h-8 cursor-pointer" src="images/tesab-logo.png" alt="Tesab Spain" /></Link>
           </h1>
           <h2 className="text-sm font-sans">Alquiler y venta de maquinaria</h2>
         </div>
@@ -89,11 +90,11 @@ function Header() {
             <a href="" className="px-4">English</a>|<a href="" className="px-4">Português</a>
           </li>
           <li className="border-b-black border pl-4 py-2">
-            <a href="">Quienes Somos</a>
+            <Link href="/who-we-are">Quienes Somos</Link>
           </li>
           <li className="border-b-black border pl-4 py-2">
             <span className="flex items-center">
-              <a href="">Equipos</a>
+              <Link href="/equipment">Equipos</Link>
               <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonText}</button>
             </span>
             {toggleEquipmentButtonText === 'arrow_drop_up' && <ul className="ml-4">

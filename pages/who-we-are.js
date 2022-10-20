@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Background from '../components/Background'
 import Header from '../components/Header'
 
-export default function Home() {
+export default function Equipment() {
   return (
     <div>
       <Head>
@@ -13,11 +13,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
 
-      <Background />
-
       <Header />
 
-      <h1>TODO home</h1>
+      <h1>TODO who we are</h1>
     </div>
   )
 }
