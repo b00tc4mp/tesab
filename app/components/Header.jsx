@@ -4,9 +4,11 @@ import Link from 'next/link'
 function Header() {
   const [toggleMenuButtonText, setToggleMenuText] = useState('menu')
   const [toggleEquipmentButtonText, setToggleEquipmentButton] = useState('arrow_drop_up')
+  const [toggleServicesButtonText, setToggleServicesButton] = useState ('arrow_drop_up')
 
   const toggleMenu = () => setToggleMenuText(toggleMenuButtonText === 'menu' ? 'close' : 'menu')
   const toggleEquipment = () => setToggleEquipmentButton(toggleEquipmentButtonText === 'arrow_drop_up' ? 'arrow_drop_down' : 'arrow_drop_up')
+  const toggleServices = () => setToggleServicesButton(toggleServicesButtonText === 'arrow_drop_up' ? 'arrow_drop_down' : 'arrow_drop_up')
 
   return (
     <header>
@@ -123,12 +125,12 @@ function Header() {
           </li >
           <li className="border-b-black border pl-4 py-2 py-2"><a href="">Equipos usados</a></li>
           <li className="border-b-black border pl-4 py-2"><a href="">Recambios</a></li>
-          <li className="border-b-black border pl-4 py-2"><span className="flex items-center"><a href="">Servicios</a><button className="material-symbols-outlined">arrow_drop_up</button></span>
-            <ul className="ml-4">
+          <li className="border-b-black border pl-4 py-2"><span className="flex items-center"><a href="">Servicios</a><button className="material-symbols-outlined" onclick={toggleServices}>{toggleServicesButtonText}</button></span>
+          {toggleServicesButtonText === 'arrow_drop_up' && <ul className="ml-4">
               <li className="py-1"><a href="">Asesoramiento</a></li>
               <li className="py-1"><a href="">Post-Venta</a></li>
               <li className="py-1"><a href="">Asistencia Técnica</a></li>
-            </ul>
+            </ul>}
           </li>
           <li className="border-b-black border pl-4 py-2"><a href="">Application News</a></li>
           <li className="border-b-black border pl-4 py-2"><a href="">Contacto</a></li>
