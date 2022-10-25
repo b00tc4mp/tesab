@@ -5,7 +5,7 @@ export default function Equipment() {
     <h1 className='font-bold text-center text-3xl m-4 font-bakbak-one'>EQUIPOS</h1>
     <div className='relative'>
       <h2 className='font-bold text-xl absolute top-5 text-white left-5 inline-block'>Machacadoras</h2>
-      <img className='-z-10' src="images/equipment/crushers/700i.jpeg"></img>
+      <img className='-z-10 lg:w-128 lg:h-48 lg:object-cover' src="images/equipment/crushers/700i.jpeg"></img>
     </div>
     <p className='text-justify m-6'>Entre nuestra gama de machaqueo destacan los modelos móviles Tesab 700i, Tesab 800i y la nueva machacadora eléctrica híbrida 700ie, todos ofreciendo una solución excelente y altamente eficaz para el cliente. Gracias al diseño único de las machacadoras con sus óptimos ángulos de trituración y sus mandíbulas largas, los equipos de trituración se han convertido en la herramienta idónea para aplicaciones de piedra dura.</p>
     <div className='flex justify-around'>

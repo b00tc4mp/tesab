@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'bakbak-one': ['"Bakbak One"'],
       },
+      width: {
+        '128': '32rem',
+      }
     },
   },
   plugins: [],

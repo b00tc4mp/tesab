@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 function Header() {
-  const [toggleMenuButtonText, setToggleMenuText] = useState('close')
+  const [toggleMenuButtonText, setToggleMenuText] = useState('menu')
   const [toggleEquipmentButtonText, setToggleEquipmentButton] = useState('arrow_drop_up')
   const [toggleServicesButtonText, setToggleServicesButton] = useState ('arrow_drop_up')
 
@@ -125,7 +125,7 @@ function Header() {
           </li >
           <li className="border-b-black border pl-4 py-2 py-2"><a href="">Equipos usados</a></li>
           <li className="border-b-black border pl-4 py-2"><a href="">Recambios</a></li>
-          <li className="border-b-black border pl-4 py-2"><span className="flex items-center"><a href="">Servicios</a><button className="material-symbols-outlined" onclick={toggleServices}>{toggleServicesButtonText}</button></span>
+          <li className="border-b-black border pl-4 py-2"><span className="flex items-center"><a href="">Servicios</a><button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonText}</button></span>
           {toggleServicesButtonText === 'arrow_drop_up' && <ul className="ml-4">
               <li className="py-1"><a href="">Asesoramiento</a></li>
               <li className="py-1"><a href="">Post-Venta</a></li>
