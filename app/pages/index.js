@@ -17,7 +17,7 @@ export default function Home() {
 
       <Header />
 
-      <h1>TODO home</h1>
+      <h1>TODO home :)</h1>
     </div>
   )
 }
