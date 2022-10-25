@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 function Header() {
-  const [toggleMenuButtonText, setToggleMenuText] = useState('menu')
+  const [toggleMenuButtonText, setToggleMenuText] = useState('close')
   const [toggleEquipmentButtonText, setToggleEquipmentButton] = useState('arrow_drop_up')
   const [toggleServicesButtonText, setToggleServicesButton] = useState ('arrow_drop_up')
 
@@ -10,8 +10,7 @@ function Header() {
   const toggleEquipment = () => setToggleEquipmentButton(toggleEquipmentButtonText === 'arrow_drop_up' ? 'arrow_drop_down' : 'arrow_drop_up')
   const toggleServices = () => setToggleServicesButton(toggleServicesButtonText === 'arrow_drop_up' ? 'arrow_drop_down' : 'arrow_drop_up')
 
-  return (
-    <header>
+  return <header className='z-10'>
       <div className="flex justify-between bg-[#323A47] p-2">
         <nav className="flex space-x-5">
           <a href="https://wa.me/34666967923">
@@ -86,7 +85,8 @@ function Header() {
           {toggleMenuButtonText}
         </button>
       </div>
-      {toggleMenuButtonText === 'close' && <nav className=" h-full bg-white/75">
+
+      {toggleMenuButtonText === 'close' && <nav className=" h-full bg-white/75 +z-20">
         <ul className="font-sans text-lg">
           <li className="pl-4 text-right ">
             <a href="" className="px-4">English</a>|<a href="" className="px-4">Português</a>
@@ -137,7 +137,6 @@ function Header() {
         </ul>
       </nav>}
     </header>
-  );
 }
 
 export default Header
