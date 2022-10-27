@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'bakbak-one': ['"Bakbak One"'],
       },
+      colors: {
+        'tesabGray':'#323A47',
+      },
       width: {
         '128': '32rem',
       }

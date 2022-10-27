@@ -1,11 +1,25 @@
+import Footer from '../components/Footer'
+
 export default function WhoWeAre() {
   return <>
-    <h1 className='font-bold text-center text-3xl m-4'>QUIENES SOMOS</h1>
-    <p className='text-justify m-6'>Somos Tesab Spain S.L., distribuidor oficial de la reconocida marca sueco-Irlandesa Tesab Engineeringy sus marcas afiliadas Trackstack, Screenpod y JLM.  Estamos especializados en alquiler y venta de equipos móviles para clasificación, trituración y reciclaje, complementos para gestión de residuos inertes y cabinas de triaje.</p>
-    <p className='text-justify m-6'>Damos servicio principalmente a empresas dedicadas a la minería, fabricación de áridos, reciclaje y gestión de RCDs.</p>
-    <p className='text-justify m-6'>Contamos con una amplia experiencia, avalada por nuestros más de 15 años en el mercado, ofreciendo soluciones y equipos móviles de alta calidad y rentabilidad, en España, Portugal, Inglaterra y América del Sur.</p>
-    <p className='text-justify m-6'>Nuestra especialización y conocimientos técnicos y del mercado, nos diferencian y nos capacitan para ser eficientes y diseñar proyectos personalizados. Gracias a nuestra flota de alquiler, con más de 50 equipos móviles en propiedad, convertimos estos proyectos en reales, dando solución a las necesidades específicas de cada uno de nuestros clientes.</p>
-    <p className='text-justify m-6'>Puedes encontrarnos en Bizkaia, en nuestra sede donde disponemos de 300 m3 que se distribuyen entre oficinas y almacén, con un amplio stock de repuestos, que no permiten ser lideres en el servicio post venta.</p>
-    <p className='text-justify m-6'>Basamos nuestro trabajo en la escucha activa y el desarrollo de relaciones comerciales duraderas y rentables para todos los implicados. Nos sentimos identificados y nos representan la transparencia, la eficacia y la pasión por nuestro negocio y el sector.</p>
+    <main>
+      <div className="relative">
+        <img className="-z-10 w-128 h-48 object-cover" src="images/equipment/screeners/ts3600.jpeg" alt="" />
+        <h1 className='font-bold text-center text-3xl m-4 absolute top-20 text-white left-10'>QUIENES SOMOS</h1>
+      </div>
+      <p className='text-justify m-6'>Reprehenderit minim commodo veniam ipsum deserunt anim nulla. Proident sunt cillum consectetur nostrud exercitation ullamco laborum commodo elit aute tempor non ut. Veniam do sit nisi et esse velit consectetur.</p>
+      <p className='text-justify m-6'>Officia sint laborum sint velit velit sit enim mollit sint reprehenderit nostrud cillum fugiat. Deserunt incididunt Lorem ullamco deserunt. Labore labore irure Lorem exercitation qui labore quis ad. Aute ut Lorem elit anim esse voluptate quis.</p>
+      <h2 className='font-bold text-center text-3xl m-4'>NUESTROS VALORES</h2>
+      <ul className="mt-10">
+        <li className='font-bold text-left m-4'>DESERUNT</li>
+        <p className='text-justify m-6'>Ea nisi velit duis deserunt culpa aliqua veniam est do aliqua cillum fugiat. Incididunt irure tempor non mollit laborum elit qui cupidatat tempor deserunt ullamco in velit. Consectetur enim exercitation irure culpa officia.</p>
+        <li className='font-bold text-left m-4'>DESERUNT</li>
+        <p className='text-justify m-6'>Amet et voluptate ipsum pariatur voluptate amet laboris tempor sit sint mollit est sit officia. Sint id magna aliquip dolore. Adipisicing ex sit fugiat veniam esse.</p>
+        <li className='font-bold text-left m-4'>DESERUNT</li>
+        <p className='text-justify m-6'>Officia consectetur aute in adipisicing excepteur culpa pariatur. Pariatur enim nisi eiusmod elit nisi. Non officia ut non id consectetur. Consectetur do aliquip aliquip eiusmod et est deserunt excepteur culpa aliquip dolor. Est do cupidatat enim esse elit cillum ad reprehenderit duis. Laboris proident irure nostrud do elit ad. Mollit laboris et cupidatat nisi consectetur labore magna aliqua commodo.</p>
+      </ul>
+    </main>
+
+    <Footer />
   </>
 }

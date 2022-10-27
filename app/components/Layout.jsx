@@ -1,10 +1,10 @@
 import Header from './Header'
-import Footer from './Footer'
+// import Footer from './Footer'
 import Head from 'next/head'
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="h-screen">
       <Head>
         <title>Tesab Spain SL</title>
         <meta name="description" content="TODO set tesab description here" />
@@ -19,9 +19,9 @@ export default function Layout({ children }) {
 
       <Header />
 
-      <main className='absolute top-0 w-full pt-32 -z-10'>{children}</main>
+      <div className='w-full pt-32 -z-10 h-full'>{children}</div>
 
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </div>
   )
 }
