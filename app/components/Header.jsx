@@ -187,7 +187,7 @@ function Header() {
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <a href="">Servicios</a>
+                <Link href="/services">Servicios</Link>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleServices}
@@ -210,10 +210,10 @@ function Header() {
               )}
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="">Application News</a>
+              <Link href="/news">Application News</Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="">Contacto</a>
+              <Link href="/contact">Contacto</Link>
             </li>
           </ul>
         </nav>

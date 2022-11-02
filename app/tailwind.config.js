@@ -14,7 +14,11 @@ module.exports = {
       },
       width: {
         '128': '32rem',
+      },
+      borderRadius: {
+        'circle': '0'
       }
+
     },
   },
   plugins: [],
