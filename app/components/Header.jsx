@@ -153,11 +153,15 @@ function Header() {
               </a>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="/who-we-are" onClick={navigateTo}>Quienes Somos</a>
+              <Link href="/who-we-are">
+                <a onClick={navigateTo}>Quienes Somos</a>
+              </Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <a href="/equipment" onClick={navigateTo}>Equipos</a>
+                <Link href="/equipment">
+                  <a onClick={navigateTo}>Equipos</a>
+                </Link>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleEquipment}
@@ -192,14 +196,14 @@ function Header() {
               )}
             </li>
             <li className="border-b-black border pl-4 py-2 py-2">
-              <a href="/used-equipment" onClick={navigateTo}>Equipos usados</a>
+              <Link href="/used-equipment"><a onClick={navigateTo}>Equipos usados</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="/spare-parts" onClick={navigateTo}>Recambios</a>
+              <Link href="/spare-parts"><a onClick={navigateTo}>Recambios</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <a href="/services" onClick={navigateTo}>Servicios</a>
+                <Link href="/services"><a onClick={navigateTo}>Servicios</a></Link>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleServices}
@@ -222,10 +226,10 @@ function Header() {
               )}
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="/news" onClick={navigateTo}>Application News</a>
+              <Link href="/news"><a onClick={navigateTo}>Application News</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <a href="/contact" onClick={navigateTo}>Contacto</a>
+              <Link href="/contact"><a onClick={navigateTo}>Contacto</a></Link>
             </li>
           </ul>
         </nav>
