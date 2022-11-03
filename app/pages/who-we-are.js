@@ -6,7 +6,7 @@ export default function WhoWeAre() {
       <main>
         <div className="relative">
           <img
-            className="-z-10 w-128 h-48 object-cover"
+            className="-z-10 object-cover w-full h-48 sm:h-64 md:h-96"
             src="images/equipment/screeners/ts3600.jpeg"
             alt=""
           />

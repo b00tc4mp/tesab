@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 function Header() {
   const [toggleMenuButtonText, setToggleMenuText] = useState("menu");
@@ -9,6 +10,7 @@ function Header() {
     useState("arrow_drop_down");
   const [phoneNumberVisible, setPhoneNumberVisible] = useState(false);
   const [emailVisible, setEmailVisible] = useState(false);
+  const router = useRouter()
 
   const toggleMenu = () =>
     setToggleMenuText(toggleMenuButtonText === "menu" ? "close" : "menu");
@@ -32,6 +34,16 @@ function Header() {
     setPhoneNumberVisible(false);
     setEmailVisible(!emailVisible);
   };
+
+  const navigateTo = event => {
+    event.preventDefault()
+
+    setToggleMenuText('menu')
+
+    const { href } = event.target
+
+    router.push(href)
+  }
 
   return (
     <header className="z-10 absolute top-0 w-full">
@@ -109,7 +121,7 @@ function Header() {
 
       <div className="flex justify-between p-3 bg-white/75">
         <div className="flex flex-col justify-self-center self-center">
-          <h1 className="">
+          <h1>
             <Link href="/">
               <img
                 className="h-8 cursor-pointer"
@@ -118,7 +130,7 @@ function Header() {
               />
             </Link>
           </h1>
-          <h2 className="text-sm font-sans">Alquiler y venta de maquinaria</h2>
+          <h2 className="text-sm font-bold">Alquiler y venta de maquinaria</h2>
         </div>
         <button
           className="material-symbols-outlined justify-self-end self-center cursor-pointer"
@@ -129,8 +141,8 @@ function Header() {
       </div>
 
       {toggleMenuButtonText === "close" && (
-        <nav className=" h-full bg-white/75 +z-20">
-          <ul className="font-sans text-lg">
+        <nav className=" h-full bg-white opacity-95 +z-20">
+          <ul className="text-lg font-bold">
             <li className="pl-4 text-right ">
               <a href="" className="px-4">
                 English
@@ -141,11 +153,11 @@ function Header() {
               </a>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/who-we-are">Quienes Somos</Link>
+              <a href="/who-we-are" onClick={navigateTo}>Quienes Somos</a>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <Link href="/equipment">Equipos</Link>
+                <a href="/equipment" onClick={navigateTo}>Equipos</a>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleEquipment}
@@ -180,14 +192,14 @@ function Header() {
               )}
             </li>
             <li className="border-b-black border pl-4 py-2 py-2">
-              <Link href="/used-equipment">Equipos usados</Link>
+              <a href="/used-equipment" onClick={navigateTo}>Equipos usados</a>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/spare-parts">Recambios</Link>
+              <a href="/spare-parts" onClick={navigateTo}>Recambios</a>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <Link href="/services">Servicios</Link>
+                <a href="/services" onClick={navigateTo}>Servicios</a>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleServices}
@@ -210,10 +222,10 @@ function Header() {
               )}
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/news">Application News</Link>
+              <a href="/news" onClick={navigateTo}>Application News</a>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/contact">Contacto</Link>
+              <a href="/contact" onClick={navigateTo}>Contacto</a>
             </li>
           </ul>
         </nav>

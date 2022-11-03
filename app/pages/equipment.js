@@ -10,11 +10,11 @@ export default function Equipment() {
         <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block '>Machacadoras</h2>
         <img className='-z-10 lg:w-128 lg:h-48 lg:object-cover' src="images/equipment/crushers/700i.jpeg"></img>
       </div>
-      <p className='text-justify m-4'>Entre nuestra gama de machaqueo destacan los modelos móviles Tesab 700i, Tesab 800i y la nueva machacadora eléctrica híbrida 700ie, todos ofreciendo una solución excelente y altamente eficaz para el cliente. Gracias al diseño único de las machacadoras con sus óptimos ángulos de trituración y sus mandíbulas largas, los equipos de trituración se han convertido en la herramienta idónea para aplicaciones de piedra dura.</p>
+      <p className='text-justify m-4'>Gracias al diseño único de nuestras machacadoras, con ángulos óptimos de trituración y mandíbulas largas, los equipos de machaqueo  Tesab se han convertido en la herramienta idónea para aplicaciones de piedra dura. Mejorando aún más con la nueva machacadora eléctrica híbrida 700ie, ofreciendo así una solución excelente y altamente eficaz para el cliente. </p>
       <div className='flex justify-around my-6'>
-        <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700i</button>
+      <Link href="/crusher700i"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700i</button></Link>
         <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>800i</button>
-        <Link href="/crusher700ie"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700ie</button></Link>
+        <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700ie</button>
       </div>
 
       <div className='relative'>
