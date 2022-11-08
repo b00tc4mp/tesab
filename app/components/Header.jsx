@@ -133,11 +133,14 @@ function Header() {
           <h2 className="text-sm font-bold">Alquiler y venta de maquinaria</h2>
         </div>
         <button
-          className="material-symbols-outlined justify-self-end self-center cursor-pointer"
+          className="material-symbols-outlined justify-self-end self-center cursor-pointer lg:hidden"
           onClick={toggleMenu}
         >
           {toggleMenuButtonText}
         </button>
+        <nav className="hidden lg:block">
+              mi menu
+        </nav>
       </div>
 
       {toggleMenuButtonText === "close" && (

@@ -7,7 +7,10 @@ export default function crusher700ie() {
     <>
       <h1 className="font-bakbak-one text-center text-4xl mx-4">700i</h1>
       <div className=" flex overflow-x-auto my-4">
-        <img src="images/equipment/crushers/700i.jpeg"></img>
+        <video autoPlay loop muted>
+          <source src="https://tesab-heavy.surge.sh/videos/700ie-drone-video-snippet_bLGz3NnO.mp4" type="video/mp4" />
+        </video>
+        {/* <img src="images/equipment/crushers/700i.jpeg"></img> */}
         <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
         <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
       </div>
@@ -33,7 +36,7 @@ export default function crusher700ie() {
         </ul>
       </div>
       <div className="flex justify-center sticky bottom-5">
-      <Link href="/contact"><button className="bg-amber-400 m-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
+        <Link href="/contact"><button className="bg-amber-400 m-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
           {" "}
           Solicitar información{" "}
         </button></Link>
