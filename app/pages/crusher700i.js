@@ -1,8 +1,43 @@
 import Link from 'next/link'
 import Footer from "../components/Footer";
-// import TypeForm from '../components/TypeForm'
+import { useRouter } from 'next/router';
+
+const literals = {
+  'pt-PT': {
+    descriptionTittle: 'Descrição',
+    descriptionText: '',
+    technicalSpecifications: 'Especificações técnicas',
+    technicalSpecificationsText: '',
+    makeQueryButton: 'Pedido de informação',
+  },
+
+  'en-IE': {
+    descriptionTittle: 'Description',
+    descriptionText: '',
+    technicalSpecifications: 'Technical Specifications',
+    technicalSpecificationsText1: '',
+    makeQueryButton: 'More information',
+  },
+
+  'es-ES': {
+    descriptionTittle: 'Descripciçon',
+    descriptionText: '',
+    technicalSpecifications: 'Especificaciones Técnicas',
+    technicalSpecificationsText1: '',
+    technicalSpecificationsText2: '',
+    technicalSpecificationsText3: '',
+    technicalSpecificationsText4: '',
+    technicalSpecificationsText5: '',
+    technicalSpecificationsText6: '',
+    makeQueryButton: 'Solicitar información',
+  }
+}
+
 
 export default function crusher700ie() {
+  const { locale } = useRouter()
+  const {descriptionTitle, descriptionText,technicalSpecifications, technicalSpecificationsText1,technicalSpecificationsText2, technicalSpecificationsText3,technicalSpecificationsText4,technicalSpecificationsText5,technicalSpecificationsText6, makeQueryButton } = literals[locale]
+
   return (
     <>
       <h1 className="font-bakbak-one text-center text-4xl mx-4">700i</h1>
@@ -22,23 +57,23 @@ export default function crusher700ie() {
           </div>
           <p>1 de 3</p>
         </div>
-        <h2 className="font-bakbak-one m-4">Descripción</h2>
-        <p className="m-4 text-justify">700i es un equipo ágil y potente con mayor versatilidad para su manipulación. Vibración de alta eficiencia le permite un mayor rendimiento, una mejor calidad de separación de material y la capacidad de manejar el material en seco y húmedo sin contratiempos en la operación. Con producción de hasta 350 toneladas por hora es un equipo ideal para la industria minera, de agregados y reciclaje.</p>
+        <h2 className="font-bakbak-one m-4">{descriptionTitle}</h2>
+        <p className="m-4 text-justify">{descriptionText}</p>
 
-        <h2 className="font-bakbak-one m-4 ">Especificaciones técnicas</h2>
+        <h2 className="font-bakbak-one m-4 ">{technicalSpecifications}</h2>
         <ul className="m-4">
-          <li>Dimensiones de la machacadora: 1100 x 700 mm.</li>
-          <li>Profundidad de la machacadora: 1550 mm.</li>
-          <li>Sistema de doble alimentador independiente.</li>
-          <li>Banda magnética y cinta lateral.</li>
-          <li>Tolva de 9,2 m3.</li>
-          <li>Motor diésel Caterpillar de 300 CV.</li>
+          <li>{technicalSpecificationsText1}</li>
+          <li>{technicalSpecificationsText2}</li>
+          <li>{technicalSpecificationsText3}</li>
+          <li>{technicalSpecificationsText4}</li>
+          <li>{technicalSpecificationsText5}</li>
+          <li>{technicalSpecificationsText6}</li>
         </ul>
       </div>
       <div className="flex justify-center sticky bottom-5">
         <Link href="/contact"><button className="bg-amber-400 m-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
           {" "}
-          Solicitar información{" "}
+          {makeQueryButton}{" "}
         </button></Link>
       </div>
 

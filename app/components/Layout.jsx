@@ -1,5 +1,5 @@
 import Header from './Header'
-// import Footer from './Footer'
+
 import Head from 'next/head'
 
 export default function Layout({ children }) {
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
 
       <div className='w-full pt-32 -z-10 h-full'>{children}</div>
 
-      {/* <Footer /> */}
+     
     </div>
   )
 }

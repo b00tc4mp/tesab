@@ -2,7 +2,74 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 
+const literals = {
+  'pt-PT': {
+    whoWeAre: 'quem somos',
+    equipment: 'equipa',
+    crushers: '',
+    impactCrushers: '',
+    scalpers: '',
+    screeners: '',
+    conveyor: '',
+    recycling: '',
+    dustCannon: '',
+    usedEquipment: 'equipamento usado',
+    spareParts: 'peças de reposição',
+    services: 'serviços',
+    customerAssitance: 'consultoria',
+    afterSaleService: 'pós-venta',
+    technicalAssistance: 'assistência técnica',
+    news: 'notícias',
+    contact: 'contacto'
+  },
+
+  'en-IE': {
+    whoWeAre: 'Who we are',
+    equipment: 'Equipment',
+    crushers: 'Crushers',
+    impactCrushers: 'Impact Crushers',
+    scalpers: 'Scalpers',
+    screeners: 'Screeners',
+    conveyor: 'Conveyors',
+    recycling: 'Recycling',
+    dustCannon: 'Dust Cannon',
+    usedEquipment: 'Used Equipment',
+    spareParts: 'Spare parts',
+    services: 'services',
+    customerAssitance: 'Customer Assistance',
+    afterSaleService: 'After-Sale Assistance',
+    technicalAssistance: 'Technical Assistance',
+    news: 'News',
+    contact: 'Contact'
+  },
+
+  'es-ES': {
+    whoWeAre: 'Quienes somos',
+    equipment: 'Equipos',
+    crushers: 'Machacadoras',
+    impactCrushers: 'Molinos',
+    scalpers: 'Precribadores',
+    screeners: 'Cribas',
+    conveyor: 'Cintas',
+    recycling: 'Reciclaje',
+    dustCannon: 'Cañón de polvo',
+    usedEquipment: 'Equipos usados',
+    spareParts: 'Recambios',
+    services: 'servicios',
+    customerAssitance: 'Asesoramiento',
+    afterSaleService: 'Post-venta',
+    technicalAssistance: 'Asistencia Técnica',
+    news: 'Novedades',
+    contact: 'Contacto'
+
+  }
+}
+
 function Header() {
+  const { locale } = useRouter()
+  const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = literals[locale]
+
+
   const [toggleMenuButtonText, setToggleMenuText] = useState("menu");
   const [toggleEquipmentButtonText, setToggleEquipmentButton] =
     useState("arrow_drop_down");
@@ -11,6 +78,7 @@ function Header() {
   const [phoneNumberVisible, setPhoneNumberVisible] = useState(false);
   const [emailVisible, setEmailVisible] = useState(false);
   const router = useRouter()
+
 
   const toggleMenu = () =>
     setToggleMenuText(toggleMenuButtonText === "menu" ? "close" : "menu");
@@ -139,7 +207,7 @@ function Header() {
           {toggleMenuButtonText}
         </button>
         <nav className="hidden lg:block">
-              mi menu
+          mi menu
         </nav>
       </div>
 
@@ -157,13 +225,13 @@ function Header() {
             </li>
             <li className="border-b-black border pl-4 py-2">
               <Link href="/who-we-are">
-                <a onClick={navigateTo}>Quienes Somos</a>
+                <a onClick={navigateTo}>{whoWeAre}</a>
               </Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
                 <Link href="/equipment">
-                  <a onClick={navigateTo}>Equipos</a>
+                  <a onClick={navigateTo}>{equipment}</a>
                 </Link>
                 <button
                   className="material-symbols-outlined"
@@ -175,38 +243,38 @@ function Header() {
               {toggleEquipmentButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="">
-                    <a href="">Machacadoras</a>
+                    <a href="">{crushers}</a>
                   </li>
                   <li className="">
-                    <a href="">Cribadoras</a>
+                    <a href="">{impactCrusher}</a>
                   </li>
                   <li className="">
-                    <a href="">Precribadoras</a>
+                    <a href="">{scalpers}</a>
                   </li>
                   <li className="">
-                    <a href="">Molinos</a>
+                    <a href="">{screeners}</a>
                   </li>
                   <li className="">
-                    <a href="">Cintas</a>
+                    <a href="">{conveyor}</a>
                   </li>
                   <li className="">
-                    <a href="">Reciclaje</a>
+                    <a href="">{recycling}</a>
                   </li>
                   <li>
-                    <a href="">Application news</a>
+                    <a href="">{dustCannon}</a>
                   </li>
                 </ul>
               )}
             </li>
             <li className="border-b-black border pl-4 py-2 py-2">
-              <Link href="/used-equipment"><a onClick={navigateTo}>Equipos usados</a></Link>
+              <Link href="/used-equipment"><a onClick={navigateTo}>{usedEquipment}</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/spare-parts"><a onClick={navigateTo}>Recambios</a></Link>
+              <Link href="/spare-parts"><a onClick={navigateTo}>{spareParts}</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
-                <Link href="/services"><a onClick={navigateTo}>Servicios</a></Link>
+                <Link href="/services"><a onClick={navigateTo}>{services}</a></Link>
                 <button
                   className="material-symbols-outlined"
                   onClick={toggleServices}
@@ -217,22 +285,22 @@ function Header() {
               {toggleServicesButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="py-1">
-                    <a href="">Asesoramiento</a>
+                    <a href="">{customerAssitance}</a>
                   </li>
                   <li className="py-1">
-                    <a href="">Post-Venta</a>
+                    <a href="">{afterSaleService}</a>
                   </li>
                   <li className="py-1">
-                    <a href="">Asistencia Técnica</a>
+                    <a href="">{technicalAssistance}</a>
                   </li>
                 </ul>
               )}
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/news"><a onClick={navigateTo}>Application News</a></Link>
+              <Link href="/news"><a onClick={navigateTo}>{news}</a></Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
-              <Link href="/contact"><a onClick={navigateTo}>Contacto</a></Link>
+              <Link href="/contact"><a onClick={navigateTo}>{contact}</a></Link>
             </li>
           </ul>
         </nav>
