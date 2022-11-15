@@ -61,8 +61,8 @@ export default function Equipment() {
 
         <div>
           <div className='relative'>
-            <h2 className='font-bold text-2xl'>Cintas</h2>
-            <img src=""></img>
+            <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>Cintas</h2>
+            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/trackedStockpilers/8042.jpg"></img>
           </div>
           <p className='text-justify m-6'>Entre nuestra gama de machaqueo destacan los modelos móviles Tesab 700i, Tesab 800i y la nueva machacadora eléctrica híbrida 700ie, todos ofreciendo una solución excelente y altamente eficaz para el cliente. Gracias al diseño único de las machacadoras con sus óptimos ángulos de trituración y sus mandíbulas largas, los equipos de trituración se han convertido en la herramienta idónea para aplicaciones de piedra dura.</p>
           <div className='flex justify-around my-6'>
@@ -85,10 +85,10 @@ export default function Equipment() {
           </div>
         </div>
 
-        <div>
+        <div id="dust-cannon">
           <div>
-            <h2 className='font-bold text-2xl'>Sistemas de supreción de polvo</h2>
-            <img src=""></img>
+            <h2 className='font-bold text-2xl absolute top-5 text-white  inline-block'>Sistemas de supreción de polvo</h2>
+            <img  className='-z-10 w-full object-cover lg:h-96' src="images/equipment/accesories/dustCannon.png"></img>
           </div>
           <p className='text-justify m-6'>Entre nuestra gama de machaqueo destacan los modelos móviles Tesab 700i, Tesab 800i y la nueva machacadora eléctrica híbrida 700ie, todos ofreciendo una solución excelente y altamente eficaz para el cliente. Gracias al diseño único de las machacadoras con sus óptimos ángulos de trituración y sus mandíbulas largas, los equipos de trituración se han convertido en la herramienta idónea para aplicaciones de piedra dura.</p>
           <div className='flex justify-around my-6'>

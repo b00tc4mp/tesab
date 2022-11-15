@@ -1,25 +1,35 @@
 import Link from 'next/link'
 import Footer from "../components/Footer";
-import { useRouter } from 'next/router';
+import useLiterals from '../hooks/useLiterals'
 
 const literals = {
-  'pt-PT': {
+  pt: {
     descriptionTittle: 'Descrição',
     descriptionText: '',
     technicalSpecifications: 'Especificações técnicas',
-    technicalSpecificationsText: '',
+    technicalSpecificationsText1: '',
+    technicalSpecificationsText2: '',
+    technicalSpecificationsText3: '',
+    technicalSpecificationsText4: '',
+    technicalSpecificationsText5: '',
+    technicalSpecificationsText6: '',
     makeQueryButton: 'Pedido de informação',
   },
 
-  'en-IE': {
+  en: {
     descriptionTittle: 'Description',
     descriptionText: '',
     technicalSpecifications: 'Technical Specifications',
     technicalSpecificationsText1: '',
+    technicalSpecificationsText2: '',
+    technicalSpecificationsText3: '',
+    technicalSpecificationsText4: '',
+    technicalSpecificationsText5: '',
+    technicalSpecificationsText6: '',
     makeQueryButton: 'More information',
   },
 
-  'es-ES': {
+  es: {
     descriptionTittle: 'Descripciçon',
     descriptionText: '',
     technicalSpecifications: 'Especificaciones Técnicas',
@@ -33,10 +43,8 @@ const literals = {
   }
 }
 
-
 export default function crusher700ie() {
-  const { locale } = useRouter()
-  const {descriptionTitle, descriptionText,technicalSpecifications, technicalSpecificationsText1,technicalSpecificationsText2, technicalSpecificationsText3,technicalSpecificationsText4,technicalSpecificationsText5,technicalSpecificationsText6, makeQueryButton } = literals[locale]
+  const { descriptionTitle, descriptionText, technicalSpecifications, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, makeQueryButton } = useLiterals(literals)
 
   return (
     <>
@@ -46,8 +54,8 @@ export default function crusher700ie() {
           <source src="https://tesab-heavy.surge.sh/videos/700ie-drone-video-snippet_bLGz3NnO.mp4" type="video/mp4" />
         </video>
         {/* <img src="images/equipment/crushers/700i.jpeg"></img> */}
-        <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-        <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+        <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
+        <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
       </div>
       <div>
         <div className="flex">

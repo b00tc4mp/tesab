@@ -3,21 +3,21 @@ import Footer from "../components/Footer";
 import { useRouter } from 'next/router'
 
 const literals = {
-    'pt-PT': {
+    pt: {
         title: 'CONTACTO',
         address: 'Endereço: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Telefone: (+34) 944 924 003',
         wsapp: 'Whatsapp: (+34) 666 967 923'
             },
 
-    'en-IE': {
+    en: {
         title: 'CONTACT',
         address: 'Address: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Telephone: (+34) 944 924 003',
         wsapp: 'Whatsapp: (+34) 666 967 923'
             },
 
-    'es-ES': {
+    es: {
         title: 'CONTACTO',
         address: 'Dirección: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Teléfono: (+34) 944 924 003',

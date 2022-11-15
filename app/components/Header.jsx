@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Link from "next/link";
+import useLiterals from "../hooks/useLiterals";
 import { useRouter } from 'next/router'
 
 const literals = {
-  'pt-PT': {
+  pt: {
     whoWeAre: 'quem somos',
     equipment: 'equipa',
     crushers: '',
@@ -23,7 +24,7 @@ const literals = {
     contact: 'contacto'
   },
 
-  'en-IE': {
+  en: {
     whoWeAre: 'Who we are',
     equipment: 'Equipment',
     crushers: 'Crushers',
@@ -43,7 +44,7 @@ const literals = {
     contact: 'Contact'
   },
 
-  'es-ES': {
+  es: {
     whoWeAre: 'Quienes somos',
     equipment: 'Equipos',
     crushers: 'Machacadoras',
@@ -66,9 +67,7 @@ const literals = {
 }
 
 function Header() {
-  const { locale } = useRouter()
-  const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = literals[locale]
-
+  const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
 
   const [toggleMenuButtonText, setToggleMenuText] = useState("menu");
   const [toggleEquipmentButtonText, setToggleEquipmentButton] =
@@ -77,8 +76,8 @@ function Header() {
     useState("arrow_drop_down");
   const [phoneNumberVisible, setPhoneNumberVisible] = useState(false);
   const [emailVisible, setEmailVisible] = useState(false);
-  const router = useRouter()
 
+  const router = useRouter()
 
   const toggleMenu = () =>
     setToggleMenuText(toggleMenuButtonText === "menu" ? "close" : "menu");
@@ -120,35 +119,35 @@ function Header() {
           <a href="https://wa.me/34666967923">
             <img
               className="w-5"
-              src="images/social/Wsapp-Blanco.png"
+              src="/images/social/Wsapp-Blanco.png"
               alt="WhatsApp"
             />
           </a>
           <a href="">
             <img
               className="w-5"
-              src="images/social/Youtube-Blanco.png"
+              src="/images/social/Youtube-Blanco.png"
               alt="YouTube"
             />
           </a>
           <a href="https://www.instagram.com/tesabspain/">
             <img
               className="w-5"
-              src="images/social/Instagram-Blanco.png"
+              src="/images/social/Instagram-Blanco.png"
               alt="Instagram"
             />
           </a>
           <a href="https://www.linkedin.com/company/tesab-spain-sl/?viewAsMember=true">
             <img
               className="w-5"
-              src="images/social/Linkedin-blanco.png"
+              src="/images/social/Linkedin-blanco.png"
               alt="LinkedIn"
             />
           </a>
           <a href="https://www.facebook.com/tesabspainsl/">
             <img
               className="w-5"
-              src="images/social/Facebook-blanco.png"
+              src="/images/social/Facebook-blanco.png"
               alt="Facebook"
             />
           </a>
@@ -157,7 +156,7 @@ function Header() {
           <span className="flex items-center space-x-2">
             <img
               className="w-4"
-              src="images/social/Telefono-Blanco.png"
+              src="/images/social/Telefono-Blanco.png"
               alt="Telephone"
               onClick={togglePhoneNumber}
             />
@@ -171,7 +170,7 @@ function Header() {
           <span className="flex items-center space-x-2">
             <img
               className="w-4"
-              src="images/social/Correo-blanco.png"
+              src="/images/social/Correo-blanco.png"
               alt="E-mail"
               onClick={toggleEmail}
             />
@@ -193,7 +192,7 @@ function Header() {
             <Link href="/">
               <img
                 className="h-8 cursor-pointer"
-                src="images/tesab-logo.png"
+                src="/images/tesab-logo.png"
                 alt="Tesab Spain"
               />
             </Link>
@@ -215,13 +214,23 @@ function Header() {
         <nav className=" h-full bg-white opacity-95 +z-20">
           <ul className="text-lg font-bold">
             <li className="pl-4 text-right ">
-              <a href="" className="px-4">
-                English
-              </a>
+              <Link href="" locale="es">
+                <a className="px-4">
+                  Español
+                </a>
+              </Link>
               |
-              <a href="" className="px-4">
-                Português
-              </a>
+              <Link href="" locale="en">
+                <a className="px-4">
+                  English
+                </a>
+              </Link>
+              |
+              <Link href="" locale="pt">
+                <a className="px-4">
+                  Português
+                </a>
+              </Link>
             </li>
             <li className="border-b-black border pl-4 py-2">
               <Link href="/who-we-are">
@@ -261,7 +270,7 @@ function Header() {
                     <a href="">{recycling}</a>
                   </li>
                   <li>
-                    <a href="">{dustCannon}</a>
+                    <Link href="/equipment#dust-cannon"><a>{dustCannon}</a></Link>
                   </li>
                 </ul>
               )}

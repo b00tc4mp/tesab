@@ -1,15 +1,15 @@
 import { useRouter } from 'next/router'
 
 const literals = {
-    'pt-PT': {
+    pt: {
         address: 'Endereço: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Telefone: (+34) 944 924 003'
     },
-    'en-IE': {
+    en: {
         address: 'Address: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Telephone: (+34) 944 924 003',
     },
-    'es-ES': {
+    es: {
         address: 'Dirección: Polígono Industrial Erletxe Plataforma 1A, pabellón Nº8, CP 48960,Galdacano,Vizcaya',
         phone: 'Teléfono: (+34) 944 924 003',
     }

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {useRouter} from 'next/router'
 
 const literals = {
-    'pt-PT': {
+    pt: {
         formTitle: 'Contacto',
         contactName: 'Nome e Apelido(*)',
         contactEmail: 'E-mail de contacto(*)',
@@ -15,7 +15,7 @@ const literals = {
         dataProtectionInfo: 'Em conformidade com as disposições do Regulamento (UE) 2016/679 e da Lei Orgânica 3/2018, de 5 de Dezembro (LOPDGDD), informamos que os seus dados serão incorporados no sistema de processamento propriedade da TESAB ESPANHA, S.L. com CIF B9546222222 e endereço registado em Polígono Industrial Erletxe - Plataforma A1, Pabellón 8, 48960 - Galdakao (Vizcaya), a fim de o informar sobre os produtos e serviços que oferecemos. Como parte directamente interessada, tem o direito de acesso, rectificação, cancelamento e oposição ao processamento de informações que lhe dizem respeito. Os referidos direitos podem ser exercidos através do envio de um e-mail para info@tesabspain.es'
     },
 
-    'en-IE':{
+    en:{
         formTitle: 'Get in touch (*)',
         contactName: 'Name and surname(*)',
         contactEmail: 'Contact email(*)',
@@ -28,7 +28,7 @@ const literals = {
         dataProtectionInfo: 'In accordance with the provisions of Regulation (EU) 2016/679 and Organic Law 3/2018, of 5 December (LOPDGDD), we inform you that your data will be incorporated into the processing system owned by TESAB SPAIN, S.L. with CIF B95462222 and registered address at Polígono Industrial Erletxe - Plataforma A1, Pabellón 8, 48960 - Galdakao (Vizcaya), in order to inform you of the products and services we offer. You, as a direct interested party, have the right of access, rectification, cancellation and opposition to the processing of information concerning you. The aforementioned rights may be exercised by sending an email to info@tesabspain.es'
     },
 
-    'es-ES' : {
+    es : {
         formTitle: 'Contacta',
         contactName: 'Nombre y Apellidos(*)',
         contactEmail: 'Email de contacto(*)',
