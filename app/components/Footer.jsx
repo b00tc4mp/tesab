@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import useLiterals from "../hooks/useLiterals"
 
 const literals = {
     pt: {
@@ -15,9 +15,8 @@ const literals = {
     }
 }
 function Footer() {
-    const {locale} = useRouter()
-    const {address, phone} = literals[locale]
 
+    const {address, phone} = useLiterals(literals)
     return <footer className='bg-[#323A47] p-4'>
         <div>
             <p className='text-white text-xs text-center'>{address}</p>

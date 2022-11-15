@@ -1,6 +1,6 @@
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
-import { useRouter } from 'next/router'
+import useLiterals from "../hooks/useLiterals";
 
 const literals = {
     pt: {
@@ -26,8 +26,7 @@ const literals = {
 }
 
 export default function contact() {
-    const { locale } = useRouter()
-    const { title, address, phone, wsapp } = literals[locale]
+    const { title, address, phone, wsapp } = useLiterals(literals)
 
     return (
         <main>

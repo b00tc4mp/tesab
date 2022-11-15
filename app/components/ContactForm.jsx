@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {useRouter} from 'next/router'
+ import useLiterals from '../hooks/useLiterals'
 
 const literals = {
     pt: {
@@ -46,8 +47,7 @@ const literals = {
 
 
 function ContactForm() {
-    const { locale } = useRouter()
-    const { formTitle,contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo} = literals[locale]
+    const { formTitle,contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo} = useLiterals(literals)
 
     const [toggleDataProtectionButtomText, setToggleDataProtectionButtomText] = useState('arrow_drop_down')
     const [dataProtectionVisible, setDataProtectionVisible] = useState(false);
