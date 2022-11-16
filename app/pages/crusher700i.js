@@ -48,6 +48,7 @@ export default function crusher700ie() {
 
   return (
     <>
+    <main>      
       <h1 className="font-bakbak-one text-center text-4xl mx-4">700i</h1>
       <div className=" flex overflow-x-auto my-4">
         <video autoPlay loop muted>
@@ -84,8 +85,7 @@ export default function crusher700ie() {
           {makeQueryButton}{" "}
         </button></Link>
       </div>
-
-      {/* <TypeForm /> */}
+    </main>
 
       <Footer />
     </>

@@ -38,7 +38,7 @@ const literals = {
     spareParts: 'Spare parts',
     services: 'services',
     customerAssitance: 'Customer Assistance',
-    afterSaleService: 'After-Sale Assistance',
+    afterSaleService: 'After-Sale Service',
     technicalAssistance: 'Technical Assistance',
     news: 'News',
     contact: 'Contact'
@@ -252,22 +252,22 @@ function Header() {
               {toggleEquipmentButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="">
-                    <a href="">{crushers}</a>
+                    <Link href= "/equipment#crushers"><a>{crushers}</a></Link>
                   </li>
                   <li className="">
-                    <a href="">{impactCrusher}</a>
+                    <Link href= "/equipment#impactCrusher"><a>{impactCrusher}</a></Link>
                   </li>
                   <li className="">
-                    <a href="">{scalpers}</a>
+                    <Link href= "/equipment#scalpers"><a>{scalpers}</a></Link>
                   </li>
                   <li className="">
-                    <a href="">{screeners}</a>
+                    <Link href= "/equipment#screeners"><a>{screeners}</a></Link>
                   </li>
                   <li className="">
-                    <a href="">{conveyor}</a>
+                    <Link href= "/equipment#conveyor"><a>{conveyor}</a></Link>
                   </li>
                   <li className="">
-                    <a href="">{recycling}</a>
+                    <Link href= "/equipment#recycling"><a>{recycling}</a></Link>
                   </li>
                   <li>
                     <Link href="/equipment#dust-cannon"><a>{dustCannon}</a></Link>
@@ -294,13 +294,13 @@ function Header() {
               {toggleServicesButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="py-1">
-                    <a href="">{customerAssitance}</a>
+                    <Link href ='/services#customerAssistance'><a>{customerAssitance}</a></Link>
                   </li>
                   <li className="py-1">
-                    <a href="">{afterSaleService}</a>
+                    <Link href ='/services#afterSaleService'><a>{afterSaleService}</a></Link>
                   </li>
                   <li className="py-1">
-                    <a href="">{technicalAssistance}</a>
+                    <Link href ='/services#technicalAssistance'><a>{technicalAssistance}</a></Link>
                   </li>
                 </ul>
               )}
