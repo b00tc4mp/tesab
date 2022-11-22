@@ -48,11 +48,11 @@ const literals = {
 
 export default function Crusher700ie() {
   const { descriptionTitle, descriptionText, technicalSpecifications, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, makeQueryButton } = useLiterals(literals)
-
+  
   return (
     <>
     <main>      
-      <h1 className="font-bakbak-one text-center text-4xl mx-4">700i</h1>
+      <h1 className={`text-center text-4xl mx-4`}>700i</h1>
       <div className=" flex overflow-x-auto my-4">
         <video autoPlay loop muted>
           <source src="https://tesab-heavy.surge.sh/videos/700ie-drone-video-snippet_bLGz3NnO.mp4" type="video/mp4" />

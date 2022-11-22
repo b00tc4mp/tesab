@@ -2,6 +2,8 @@ import { useState } from "react";
 import Link from "next/link";
 import useLiterals from "../hooks/useLiterals";
 import { useRouter } from 'next/router'
+import { FiMenu } from 'react-icons/fi'
+import { GrClose } from 'react-icons/gr'
 
 const literals = {
   pt: {
@@ -69,7 +71,7 @@ const literals = {
 function Header() {
   const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
 
-  const [toggleMenuButtonText, setToggleMenuText] = useState("menu");
+  const [toggleMenuButtonVisible, setToggleMenuVisible] = useState(false);
   const [toggleEquipmentButtonText, setToggleEquipmentButton] =
     useState("arrow_drop_down");
   const [toggleServicesButtonText, setToggleServicesButton] =
@@ -80,7 +82,7 @@ function Header() {
   const router = useRouter()
 
   const toggleMenu = () =>
-    setToggleMenuText(toggleMenuButtonText === "menu" ? "close" : "menu");
+    setToggleMenuVisible(!toggleMenuButtonVisible);
   const toggleEquipment = () =>
     setToggleEquipmentButton(
       toggleEquipmentButtonText === "arrow_drop_up"
@@ -105,7 +107,7 @@ function Header() {
   const navigateTo = event => {
     event.preventDefault()
 
-    setToggleMenuText('menu')
+    setToggleMenuVisible('menu')
 
     const { href } = event.target
 
@@ -126,10 +128,10 @@ function Header() {
             <img className="w-5" src="/images/social/Instagram-Blanco.png" alt="Instagram" />
           </a>
           <a href="https://www.linkedin.com/company/tesab-spain-sl/?viewAsMember=true">
-            <img className="w-5" src="/images/social/Linkedin-blanco.png" alt="LinkedIn"/>
+            <img className="w-5" src="/images/social/Linkedin-blanco.png" alt="LinkedIn" />
           </a>
           <a href="https://www.facebook.com/tesabspainsl/">
-            <img className="w-5" src="/images/social/Facebook-blanco.png" alt="Facebook"/>
+            <img className="w-5" src="/images/social/Facebook-blanco.png" alt="Facebook" />
           </a>
         </nav>
         <nav className="flex space-x-5">
@@ -180,10 +182,10 @@ function Header() {
           <h2 className="text-sm font-bold">Alquiler y venta de maquinaria</h2>
         </div>
         <button
-          className="material-symbols-outlined justify-self-end self-center cursor-pointer lg:hidden"
+          className="justify-self-end self-center cursor-pointer lg:hidden"
           onClick={toggleMenu}
         >
-          {toggleMenuButtonText}
+          {toggleMenuButtonVisible? <GrClose size="1.5rem" /> : <FiMenu size="1.5rem" />}
         </button>
         <nav className="hidden lg:block">
           <ul className="flex gap-5 font-bold">
@@ -245,7 +247,7 @@ function Header() {
           </ul>
         </nav>
       </div>
-      {toggleMenuButtonText === "close" && (
+      {toggleMenuButtonVisible && (
         <nav className=" h-full bg-white opacity-95 +z-20">
           <ul className="text-lg font-bold">
             <li className="pl-4 text-right ">
