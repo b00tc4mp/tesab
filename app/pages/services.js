@@ -32,7 +32,7 @@ const literals = {
     technicalAssistanceDescription: 'Ea laborum ullamco ad qui quis. Aute sit exercitation nisi laborum tempor ullamco aute enim dolor ut ut. Commodo non eiusmod pariatur magna exercitation aliquip irure ex.',
   }
 }
-export default function services() {
+export default function Services() {
 
   const { servicesTitle, customerAssistanceTitle, customerAssistanceDescription, afterSaleAssistanceTitle, afterSaleAssistanceDescription, technicalAssistanceTitle, technicalAssistanceDescription } = useLiterals(literals)
   return (

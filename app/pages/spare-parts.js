@@ -88,7 +88,7 @@ const literals = {
 }
 
 
-export default function spareParts() {
+export default function SpareParts() {
 
   const {sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = useLiterals(literals)
 

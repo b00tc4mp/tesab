@@ -45,7 +45,7 @@ const literals = {
     }
 }
 
-export default function spareParts() {
+export default function SpareParts() {
 
     const { newsTitle, newItem5Title,newItem5Subtitle, newItem4Title, newItem4Subtitle, newItem3Title, newItem3Subtitle, newItem2Title, newItem2Subtitle, newItem1Title, newItem1Subtitle } = useLiterals(literals)
 

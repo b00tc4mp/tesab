@@ -70,7 +70,7 @@ export default function Equipment() {
         <div id = 'crushers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{crushersTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/crushers/700i.jpeg"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/crushers/700i.jpeg"></img>
           </div>
           <p className='text-justify m-4'>{crushersDescription}</p>
           <div className='flex justify-around my-6'>
@@ -83,7 +83,7 @@ export default function Equipment() {
         <div id = 'impactCrushers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{impactCrushersTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/impactCrusher-coneCrushers/impact1012ts.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/impactCrusher-coneCrushers/impact1012ts.png"></img>
           </div>
           <p className='text-justify m-6'>{impactCrushersDescription}</p>
           <div className='flex justify-around my-6'>
@@ -97,20 +97,20 @@ export default function Equipment() {
         <div id = 'scalpers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{scalpersTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/scalpers/scalper.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/scalpers/scalper.png"></img>
           </div>
           <p className='text-justify m-6'>{scalpersDescription}</p>
           <div className='flex justify-around my-6'>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1550</button>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1860</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1340</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 hover:translate-y-1'>TS1340</button>
           </div>
         </div>
 
         <div id= 'screeners'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{screenersTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/screeners/ts3600.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/screeners/ts3600.png"></img>
           </div>
           <p className='text-justify m-6'>{screenersDescription}</p>
           <div className='flex justify-around my-6'>
@@ -122,7 +122,7 @@ export default function Equipment() {
         <div id='conveyor'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{conveyorTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/trackedStockpilers/8042.jpg"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/trackedStockpilers/8042.jpg"></img>
           </div>
           <p className='text-justify m-6'>{conveyorDescription}</p>
           <div className='flex justify-around my-6'>
@@ -134,21 +134,21 @@ export default function Equipment() {
         <div id='recycling'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{recyclingTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/recycling/tr100e.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/recycling/tr100e.png"></img>
           </div>
           <p className='text-justify m-6'>{recyclingDescription}</p>
           <div className='flex justify-around my-6 flex-wrap'>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TR100</button>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>REC100</button>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>AIR VAC</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded mt-3 hover:bg-[#323A47] hover:text-amber-400'>WINDSHIFTER</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>WINDSHIFTER</button>
           </div>
         </div>
 
         <div id="dust-cannon">
           <div>
             <h2 className='font-bold text-2xl absolute top-5 text-white  inline-block'>{dustCannonTittle}</h2>
-            <img className='-z-10 w-full object-cover lg:h-96' src="images/equipment/accesories/dustCannon.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/accesories/dustCannon.png"></img>
           </div>
           <p className='text-justify m-6'>{dustCannonDescription}</p>
           <div className='flex justify-around my-6'>

@@ -56,7 +56,7 @@ const literals = {
     dustCannon: 'Cañón de polvo',
     usedEquipment: 'Equipos usados',
     spareParts: 'Recambios',
-    services: 'servicios',
+    services: 'Servicios',
     customerAssitance: 'Asesoramiento',
     afterSaleService: 'Post-venta',
     technicalAssistance: 'Asistencia Técnica',
@@ -117,39 +117,19 @@ function Header() {
       <div className="flex justify-between bg-[#323A47] p-2">
         <nav className="flex space-x-5">
           <a href="https://wa.me/34666967923">
-            <img
-              className="w-5"
-              src="/images/social/Wsapp-Blanco.png"
-              alt="WhatsApp"
-            />
+            <img className="w-5" src="/images/social/Wsapp-Blanco.png" alt="WhatsApp" />
           </a>
           <a href="">
-            <img
-              className="w-5"
-              src="/images/social/Youtube-Blanco.png"
-              alt="YouTube"
-            />
+            <img className="w-5" src="/images/social/Youtube-Blanco.png" alt="YouTube" />
           </a>
           <a href="https://www.instagram.com/tesabspain/">
-            <img
-              className="w-5"
-              src="/images/social/Instagram-Blanco.png"
-              alt="Instagram"
-            />
+            <img className="w-5" src="/images/social/Instagram-Blanco.png" alt="Instagram" />
           </a>
           <a href="https://www.linkedin.com/company/tesab-spain-sl/?viewAsMember=true">
-            <img
-              className="w-5"
-              src="/images/social/Linkedin-blanco.png"
-              alt="LinkedIn"
-            />
+            <img className="w-5" src="/images/social/Linkedin-blanco.png" alt="LinkedIn"/>
           </a>
           <a href="https://www.facebook.com/tesabspainsl/">
-            <img
-              className="w-5"
-              src="/images/social/Facebook-blanco.png"
-              alt="Facebook"
-            />
+            <img className="w-5" src="/images/social/Facebook-blanco.png" alt="Facebook"/>
           </a>
         </nav>
         <nav className="flex space-x-5">
@@ -186,7 +166,7 @@ function Header() {
         </nav>
       </div>
 
-      <div className="flex justify-between p-3 bg-white/75">
+      <div className="flex justify-between items-center p-3 bg-white/75">
         <div className="flex flex-col justify-self-center self-center">
           <h1>
             <Link href="/">
@@ -206,10 +186,65 @@ function Header() {
           {toggleMenuButtonText}
         </button>
         <nav className="hidden lg:block">
-          mi menu
+          <ul className="flex gap-5 font-bold">
+            <li><Link href="/who-we-are"><a onClick={navigateTo}>{whoWeAre}</a></Link></li>
+            <li className="flex flex-col">
+              <span className="flex items-center">
+                <a>{equipment}</a>
+                <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonText}</button>
+              </span>
+              {toggleEquipmentButtonText === "arrow_drop_up" && (
+                <ul className="ml-4">
+                  <li className="">
+                    <Link href="/equipment#crushers"><a>{crushers}</a></Link>
+                  </li>
+                  <li className="">
+                    <Link href="/equipment#impactCrusher"><a>{impactCrusher}</a></Link>
+                  </li>
+                  <li className="">
+                    <Link href="/equipment#scalpers"><a>{scalpers}</a></Link>
+                  </li>
+                  <li className="">
+                    <Link href="/equipment#screeners"><a>{screeners}</a></Link>
+                  </li>
+                  <li className="">
+                    <Link href="/equipment#conveyor"><a>{conveyor}</a></Link>
+                  </li>
+                  <li className="">
+                    <Link href="/equipment#recycling"><a>{recycling}</a></Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#dust-cannon"><a>{dustCannon}</a></Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li><Link href="/used-equipment"><a onClick={navigateTo}>{usedEquipment}</a></Link></li>
+            <li><Link href="/spare-parts"><a onClick={navigateTo}>{spareParts}</a></Link></li>
+            <li className="flex flex-col">
+              <span className="flex items-center">
+                <a>{services}</a>
+                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonText}</button>
+              </span>
+              {toggleServicesButtonText === "arrow_drop_up" && (
+                <ul>
+                  <li className="py-1">
+                    <Link href='/services#customerAssistance'><a>{customerAssitance}</a></Link>
+                  </li>
+                  <li className="py-1">
+                    <Link href='/services#afterSaleService'><a>{afterSaleService}</a></Link>
+                  </li>
+                  <li className="py-1">
+                    <Link href='/services#technicalAssistance'><a>{technicalAssistance}</a></Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+            <li><Link href="/news"><a onClick={navigateTo}>{news}</a></Link></li>
+            <li><Link href="/contact"><a onClick={navigateTo}>{contact}</a></Link></li>
+          </ul>
         </nav>
       </div>
-
       {toggleMenuButtonText === "close" && (
         <nav className=" h-full bg-white opacity-95 +z-20">
           <ul className="text-lg font-bold">
@@ -252,22 +287,22 @@ function Header() {
               {toggleEquipmentButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="">
-                    <Link href= "/equipment#crushers"><a>{crushers}</a></Link>
+                    <Link href="/equipment#crushers"><a>{crushers}</a></Link>
                   </li>
                   <li className="">
-                    <Link href= "/equipment#impactCrusher"><a>{impactCrusher}</a></Link>
+                    <Link href="/equipment#impactCrusher"><a>{impactCrusher}</a></Link>
                   </li>
                   <li className="">
-                    <Link href= "/equipment#scalpers"><a>{scalpers}</a></Link>
+                    <Link href="/equipment#scalpers"><a>{scalpers}</a></Link>
                   </li>
                   <li className="">
-                    <Link href= "/equipment#screeners"><a>{screeners}</a></Link>
+                    <Link href="/equipment#screeners"><a>{screeners}</a></Link>
                   </li>
                   <li className="">
-                    <Link href= "/equipment#conveyor"><a>{conveyor}</a></Link>
+                    <Link href="/equipment#conveyor"><a>{conveyor}</a></Link>
                   </li>
                   <li className="">
-                    <Link href= "/equipment#recycling"><a>{recycling}</a></Link>
+                    <Link href="/equipment#recycling"><a>{recycling}</a></Link>
                   </li>
                   <li>
                     <Link href="/equipment#dust-cannon"><a>{dustCannon}</a></Link>
@@ -284,23 +319,18 @@ function Header() {
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
                 <Link href="/services"><a onClick={navigateTo}>{services}</a></Link>
-                <button
-                  className="material-symbols-outlined"
-                  onClick={toggleServices}
-                >
-                  {toggleServicesButtonText}
-                </button>
+                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonText}</button>
               </span>
               {toggleServicesButtonText === "arrow_drop_up" && (
                 <ul className="ml-4">
                   <li className="py-1">
-                    <Link href ='/services#customerAssistance'><a>{customerAssitance}</a></Link>
+                    <Link href='/services#customerAssistance'><a>{customerAssitance}</a></Link>
                   </li>
                   <li className="py-1">
-                    <Link href ='/services#afterSaleService'><a>{afterSaleService}</a></Link>
+                    <Link href='/services#afterSaleService'><a>{afterSaleService}</a></Link>
                   </li>
                   <li className="py-1">
-                    <Link href ='/services#technicalAssistance'><a>{technicalAssistance}</a></Link>
+                    <Link href='/services#technicalAssistance'><a>{technicalAssistance}</a></Link>
                   </li>
                 </ul>
               )}
@@ -313,8 +343,9 @@ function Header() {
             </li>
           </ul>
         </nav>
-      )}
-    </header>
+      )
+      }
+    </header >
   );
 }
 

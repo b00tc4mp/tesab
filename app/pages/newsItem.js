@@ -20,7 +20,7 @@ const literals = {
     }
 }
 
-export default function newsItem() {
+export default function NewsItem() {
 
     const { newsItemTitle, newsItemSubtitle, newsItemText } = useLiterals(literals)
 

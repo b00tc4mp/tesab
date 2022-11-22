@@ -1,3 +1,6 @@
+//TODO- Una vez que tenga el contenido, organizar la info según los tamaños de la pantalla
+
+
 import Link from 'next/link'
 import Footer from "../components/Footer";
 import useLiterals from '../hooks/useLiterals'
@@ -43,7 +46,7 @@ const literals = {
   }
 }
 
-export default function crusher700ie() {
+export default function Crusher700ie() {
   const { descriptionTitle, descriptionText, technicalSpecifications, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, makeQueryButton } = useLiterals(literals)
 
   return (
