@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'bakbak-one': ['"Bakbak One"'],
+      },
       colors: {
         'tesabGray':'#323A47',
       },
