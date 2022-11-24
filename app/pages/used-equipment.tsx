@@ -1,74 +1,130 @@
+//TODO: hace una especie de filtro al costado, sobre todo para la pantalla grande. 
+
 import Link from "next/link";
 import Footer from "../components/Footer";
+import useLiterals from "../hooks/useLiterals";
+
+const literals = {
+  pt: {
+    usedEquipmentTitle: '',
+    model: '',
+    available: '',
+    yearOfManufacture: '',
+    hours: '',
+  },
+
+  en: {
+    usedEquipmentTitle: '',
+    model: '',
+    available: '',
+    yearOfManufacture: '',
+    hours: '',
+  },
+
+  es: {
+    usedEquipmentTitle: 'EQUIPOS USADOS',
+    model: 'Modelo: ',
+    available: 'En stock',
+    yearOfManufacture: 'Año de fabricación: ',
+    hours: 'Horas: ',
+    makeQueryButtom: 'Más información'
+  }
+}
 
 export default function UsedEquipment() {
+
+  const { usedEquipmentTitle, model, available, yearOfManufacture, hours, makeQueryButtom } = useLiterals(literals)
+
   return (
     <>
-      <main className="flex flex-col gap-5">
+      <main className="flex flex-col gap-5 py-5 bg-gray-100" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>
         <h1 className="font-bold text-center text-3xl font-bakbak-one">
-          EQUIPOS USADOS
+          {usedEquipmentTitle}
         </h1>
+        <div className="flex flex-col items-center gap-10">
 
-        <div className="flex flex-col items-center">
-          <h2 className="font-bakbak-one">Modelo: 700i</h2>
-          <div className=" flex overflow-x-auto m-4 border-solid border-black border-4">
-            <img src="images/equipment/crushers/700i.jpeg"></img>
-            <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-            <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 py-6 sm:w-128 py-6 lg:w-240">
+            <h2 className="font-bakbak-one">{model} 700i</h2>
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              <div className=" flex overflow-x-auto m-4 lg:w-160">
+                <img src="/images/equipment/crushers/700i.jpeg"></img>
+                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
+                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <p className="font-bold">{available}</p>
+                <p>{yearOfManufacture} 2022</p>
+                <p>{hours} 560</p>
+                <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
+                  {makeQueryButtom}
+                </buttom></Link>
+              </div>
+            </div>
           </div>
-          <p>En stock</p>
-          <p>Año de fabricación: 2022</p>
-          <p>Horas trabajadas: 560</p>
-          <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 my-4 font-bold rounded">
-            Me interesa
-          </buttom></Link>
-        </div>
 
-        <div className="flex flex-col items-center">
-          <h2 className="font-bakbak-one">Modelo: 800i</h2>
-          <div className=" flex overflow-x-auto m-4 border-solid border-black border-4">
-            <img src="images/equipment/crushers/700i.jpeg"></img>
-            <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-            <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 lg:w-240">
+            <h2 className="font-bakbak-one">{model} 700i</h2>
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              <div className=" flex overflow-x-auto m-4 lg:w-160">
+                <img src="/images/equipment/crushers/700i.jpeg"></img>
+                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
+                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <p className="font-bold">{available}</p>
+                <p>{yearOfManufacture} 2022</p>
+                <p>{hours} 560</p>
+                <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
+                  {makeQueryButtom}
+                </buttom></Link>
+              </div>
+            </div>
           </div>
-          <p>En stock: 5</p>
-          <p>Año de fabricación: 2022</p>
-          <p>Horas trabajadas: 560</p>
-          <buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
-            Me interesa
-          </buttom>
-        </div>
 
-        <div className="flex flex-col items-center">
-          <h2 className="font-bakbak-one">Modelo: 700ie</h2>
-          <div className=" flex overflow-x-auto m-4 border-solid border-black border-4">
-            <img src="images/equipment/crushers/700i.jpeg"></img>
-            <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-            <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
-          </div>
-          <p>En stock: 5</p>
-          <p>Año de fabricación: 2022</p>
-          <p>Horas trabajadas: 560</p>
-          <buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
-            Me interesa
-          </buttom>
-        </div>
 
-        <div className="flex flex-col items-center">
-          <h2 className="font-bakbak-one">Modelo: 623CT</h2>
-          <div className=" flex overflow-x-auto m-4 border-solid border-black border-4">
-            <img src="images/equipment/crushers/700i.jpeg"></img>
-            <img src="images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-            <img src="images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 lg:w-240">
+            <h2 className="font-bakbak-one">{model} 700i</h2>
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              <div className=" flex overflow-x-auto m-4 lg:w-160">
+                <img src="/images/equipment/crushers/700i.jpeg"></img>
+                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
+                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <p className="font-bold">{available}</p>
+                <p>{yearOfManufacture} 2022</p>
+                <p>{hours} 560</p>
+                <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
+                  {makeQueryButtom}
+                </buttom></Link>
+              </div>
+            </div>
           </div>
-          <p>En stock: 5</p>
-          <p>Año de fabricación: 2022</p>
-          <p>Horas trabajadas: 560</p>
-          <buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
-            Me interesa
-          </buttom>
+
+          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 lg:w-240">
+            <h2 className="font-bakbak-one">{model} 700i</h2>
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              <div className=" flex overflow-x-auto m-4 lg:w-160">
+                <img src="/images/equipment/crushers/700i.jpeg"></img>
+                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
+                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <p className="font-bold">{available}</p>
+                <p>{yearOfManufacture} 2022</p>
+                <p>{hours} 560</p>
+                <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 m-4 font-bold rounded hover:bg-[#323A47] hover:text-amber-400">
+                  {makeQueryButtom}
+                </buttom></Link>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </main>
+
 
       <Footer />
     </>

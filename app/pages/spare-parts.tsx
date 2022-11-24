@@ -28,6 +28,7 @@ const literals = {
     tracks: '',
     hydraulicCylinders: '',
     other: '',
+    makeQueryButtom: ''
   },
 
   en: {
@@ -55,6 +56,7 @@ const literals = {
     tracks: '',
     hydraulicCylinders: '',
     other: '',
+    makeQueryButtom: ''
   },
 
   es: {
@@ -82,7 +84,7 @@ const literals = {
     tracks: 'Orugas',
     hydraulicCylinders: 'Botellas hidraúlicas',
     other: 'Otros',
-    makeQueryButtom: 'Contactar'
+    makeQueryButtom: 'Más información'
   }
 
 }

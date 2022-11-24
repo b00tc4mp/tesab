@@ -188,15 +188,15 @@ function Header() {
           {toggleMenuButtonVisible ? <GrClose size="1.5rem" /> : <FiMenu size="1.5rem" />}
         </button>
         <nav className="hidden lg:block">
-          <ul className="flex gap-5 font-bold">
-            <li><Link href="/who-we-are" legacyBehavior onClick={navigateTo}>{whoWeAre}</Link></li>
+          <ul className="flex font-bold gap-x-5">
+            <li><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
             <li className="flex flex-col">
               <span className="flex items-center">
                 <a>{equipment}</a>
                 <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonText}</button>
               </span>
               {toggleEquipmentButtonText === "arrow_drop_up" && (
-                <ul className="ml-4">
+                <ul className="">
                   <li className="">
                     <Link href="/equipment#crushers">{crushers}</Link>
                   </li>
@@ -221,8 +221,8 @@ function Header() {
                 </ul>
               )}
             </li>
-            <li><Link href="/used-equipment" legacyBehavior onClick={navigateTo}>{usedEquipment}</Link></li>
-            <li><Link href="/spare-parts" legacyBehavior onClick={navigateTo}>{spareParts}</Link></li>
+            <li><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
+            <li><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
             <li className="flex flex-col">
               <span className="flex items-center">
                 <a>{services}</a>
@@ -242,8 +242,8 @@ function Header() {
                 </ul>
               )}
             </li>
-            <li><Link href="/news" legacyBehavior onClick={navigateTo}>{news}</Link></li>
-            <li><Link href="/contact" legacyBehavior onClick={navigateTo}>{contact}</Link></li>
+            <li><Link href="/news" onClick={navigateTo}>{news}</Link></li>
+            <li><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
           </ul>
         </nav>
       </div>

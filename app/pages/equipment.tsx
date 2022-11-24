@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Footer from '../components/Footer'
 import useLiterals from '../hooks/useLiterals'
+import useContent from '../hooks/useContent'
 
 const literals = {
   pt: {
@@ -59,15 +60,15 @@ const literals = {
 }
 
 export default function Equipment() {
-  
   const { equipmentTitle, crushersTittle, crushersDescription, impactCrushersTittle, impactCrushersDescription, scalpersTittle, scalpersDescription, screenersTittle, screenersDescription, conveyorTittle, conveyorDescription, recyclingTittle, recyclingDescription, dustCannonTittle, dustCannonDescription } = useLiterals(literals)
-  
+  const content = useContent()
+
   return <>
     <main>
       <h1 className='font-bold text-center text-3xl m-4 font-bakbak-one'>{equipmentTitle}</h1>
       <div className='sm:grid sm:grid-cols-2 sm:gap-x-4 lg:grid lg:grid-cols-3 lg:gap-x-4'>
 
-        <div id = 'crushers'>
+        <div id='crushers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{crushersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/crushers/700i.jpeg"></img>
@@ -75,12 +76,12 @@ export default function Equipment() {
           <p className='text-justify m-4'>{crushersDescription}</p>
           <div className='flex justify-around my-6'>
             <Link href="/crusher700i"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700i</button></Link>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>800i</button>
+            <Link href="/crusher800i"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>800i</button></Link>
             <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700ie</button>
           </div>
         </div>
 
-        <div id = 'impactCrushers'>
+        <div id='impactCrushers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{impactCrushersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/impactCrusher-coneCrushers/impact1012ts.png"></img>
@@ -94,10 +95,10 @@ export default function Equipment() {
           </div>
         </div>
 
-        <div id = 'scalpers'>
+        <div id='scalpers'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{scalpersTittle}</h2>
-            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/scalpers/scalper.png"></img>
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('images/equipment/scalpers/scalper.png')} />
           </div>
           <p className='text-justify m-6'>{scalpersDescription}</p>
           <div className='flex justify-around my-6'>
@@ -107,7 +108,7 @@ export default function Equipment() {
           </div>
         </div>
 
-        <div id= 'screeners'>
+        <div id='screeners'>
           <div className='relative'>
             <h2 className='font-bold text-2xl absolute top-5 text-white left-5 inline-block'>{screenersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src="images/equipment/screeners/ts3600.png"></img>
