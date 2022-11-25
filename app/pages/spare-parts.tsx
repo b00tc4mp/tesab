@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Footer from "../components/Footer";
 import useLiterals from "../hooks/useLiterals";
+import useContent from "../hooks/useContent";
 
 const literals = {
   pt: {
@@ -93,6 +94,7 @@ const literals = {
 export default function SpareParts() {
 
   const {sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = useLiterals(literals)
+  const content = useContent()
 
   return (
     <>
@@ -100,7 +102,7 @@ export default function SpareParts() {
         <div className="relative">
           <img
             className="-z-10 w-128 h-48 object-cover"
-            src="images/spare-parts.jpg"
+            src={content('images/spare-parts.jpg')}
             alt=""
           />
           <h1 className="font-bold text-3xl m-4 absolute top-16 text-white right-48">

@@ -2,6 +2,7 @@
 
 import Footer from "../components/Footer";
 import useLiterals from "../hooks/useLiterals";
+import useContent from "../hooks/useContent";
 
 const literals = {
 
@@ -34,6 +35,7 @@ const literals = {
 export default function WhoWeAre() {
 
   const { whoWeAreTitle, whoWeAreIntroduction, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription }= useLiterals(literals)
+  const content = useContent()
 
   return (
     <>
@@ -41,7 +43,7 @@ export default function WhoWeAre() {
         <div className="relative">
           <img
             className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-112"
-            src="/images/whoWeAre.jpg"
+            src={content('/whoWeAre.jpg')}
             alt=""
           />
           <h1 className="absolute m-4 font-bold text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-44 lg:text-8xl lg:top-72 lg:left-128">

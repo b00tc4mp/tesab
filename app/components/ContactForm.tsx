@@ -71,7 +71,7 @@ function ContactForm() {
         // TODO fetch('/api/contact', ... ) send all the previous data in json format to the api (method post)
     }
 
-    return <form className="p-6 flex flex-col" onSubmit={submit}>
+    return <form className="p-6 flex flex-col lg:grid" onSubmit={submit}>
 
         <label htmlFor="name">{contactName}</label>
         <input id="name" name="name" className='border border-black rounded my-2 py-1 pl-2' placeholder={contactName} />

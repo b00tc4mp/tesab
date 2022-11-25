@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Footer from "../components/Footer";
 import useLiterals from "../hooks/useLiterals";
+import useContent from '../hooks/useContent'
 
 const literals = {
   pt: {
@@ -34,7 +35,7 @@ const literals = {
 export default function UsedEquipment() {
 
   const { usedEquipmentTitle, model, available, yearOfManufacture, hours, makeQueryButtom } = useLiterals(literals)
-
+  const content = useContent()
   return (
     <>
       <main className="flex flex-col gap-5 py-5 bg-gray-100" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>
@@ -47,9 +48,9 @@ export default function UsedEquipment() {
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
               <div className=" flex overflow-x-auto m-4 lg:w-160">
-                <img src="/images/equipment/crushers/700i.jpeg"></img>
-                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+                <img src={content('/equipment/crushers/700i.jpeg')}/>
+                <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
+                <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
               <div className="flex flex-col items-center space-y-4">
                 <p className="font-bold">{available}</p>
@@ -66,9 +67,9 @@ export default function UsedEquipment() {
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
               <div className=" flex overflow-x-auto m-4 lg:w-160">
-                <img src="/images/equipment/crushers/700i.jpeg"></img>
-                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+                <img src={content('/equipment/crushers/700i.jpeg')}/>
+                <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
+                <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
               <div className="flex flex-col items-center space-y-4">
                 <p className="font-bold">{available}</p>
@@ -86,9 +87,9 @@ export default function UsedEquipment() {
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
               <div className=" flex overflow-x-auto m-4 lg:w-160">
-                <img src="/images/equipment/crushers/700i.jpeg"></img>
-                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+                <img src={content('/equipment/crushers/700i.jpeg')}/>
+                <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
+                <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
               <div className="flex flex-col items-center space-y-4">
                 <p className="font-bold">{available}</p>
@@ -105,9 +106,9 @@ export default function UsedEquipment() {
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
               <div className=" flex overflow-x-auto m-4 lg:w-160">
-                <img src="/images/equipment/crushers/700i.jpeg"></img>
-                <img src="/images/equipment/crushers/700i/crusher700ie2.jpg"></img>
-                <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+                <img src={content('/equipment/crushers/700i.jpeg')}/>
+                <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
+                <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
               <div className="flex flex-col items-center space-y-4">
                 <p className="font-bold">{available}</p>

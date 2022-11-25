@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import useLiterals from "../hooks/useLiterals";
 import Link from "next/link";
+import useContent from "../hooks/useContent";
 
 const literals = {
   pt: {
@@ -37,6 +38,8 @@ const literals = {
 export default function Services() {
 
   const { servicesTitle, customerAssistanceTitle, customerAssistanceDescription, afterSaleAssistanceTitle, afterSaleAssistanceDescription, technicalAssistanceTitle, technicalAssistanceDescription, makeQueryButtom} = useLiterals(literals)
+  const content = useContent()
+  
   return (
     <>
       <main>
@@ -46,7 +49,7 @@ export default function Services() {
         <div className="lg:flex">
 
           <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='customerAssistance'>
-            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src="/advasing.jpg" alt="" />
+            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/services/advasing.jpg')} alt="" />
             <div>
               <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 left-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{customerAssistanceTitle}</h2>
               <p className="m-4">{customerAssistanceDescription}</p>
@@ -54,7 +57,7 @@ export default function Services() {
           </div>
 
           <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='afterSaleAssistance' >
-            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src="/images/services/postVenta.jpg" alt="" />
+            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/services/postVenta.jpg')} alt="" />
             <div>
               <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 left-48 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{afterSaleAssistanceTitle}</h2>
               <p className="m-4">{afterSaleAssistanceDescription}</p>
@@ -62,7 +65,7 @@ export default function Services() {
           </div>
 
           <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='technicalAssistance'>
-            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src="/technical-assistance.jpg" alt="" />
+            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/technical-assistance.jpg')} alt="" />
             <div>
               <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{technicalAssistanceTitle}</h2>
               <p className="m-4">{technicalAssistanceDescription}</p>

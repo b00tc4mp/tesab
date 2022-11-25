@@ -1,8 +1,10 @@
 //TODO --> ARREGLAR QUE APARECE DOS VECES EL CONTACT FORM
 
+import { Content } from "@next/font/google";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import useLiterals from "../hooks/useLiterals";
+import useContent from "../hooks/useContent";
 
 const literals = {
     pt: {
@@ -31,7 +33,9 @@ const literals = {
 }
 
 export default function Contact() {
+
     const { title, address, phone, wsapp, contactFormTitle, querytitle, introductionQuery } = useLiterals(literals)
+    const content = useContent()
 
     return (
         <main>
@@ -62,9 +66,8 @@ export default function Contact() {
                     <div className="flex flex-col gap-6">
                         <h4 className="font-bold text-xl">{querytitle}</h4>
                         <p>{introductionQuery}</p>
-                        <img src="/images/equipment/crushers/700ie/crusher700i3.jpg"></img>
+                        <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')} />
                     </div>
-
                     <ContactForm />
                 </div>
             </div>
