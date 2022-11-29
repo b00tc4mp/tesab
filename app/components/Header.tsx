@@ -3,7 +3,8 @@ import Link from "next/link";
 import useLiterals from "../hooks/useLiterals";
 import { useRouter } from 'next/router'
 import { FiMenu } from 'react-icons/fi'
-import { GrClose } from 'react-icons/gr'
+import { GrClose, GrFormUp, GrFormDown } from 'react-icons/gr'
+
 
 const literals = {
   pt: {
@@ -72,10 +73,8 @@ function Header() {
   const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
 
   const [toggleMenuButtonVisible, setToggleMenuVisible] = useState(false);
-  const [toggleEquipmentButtonText, setToggleEquipmentButton] =
-    useState("arrow_drop_down");
-  const [toggleServicesButtonText, setToggleServicesButton] =
-    useState("arrow_drop_down");
+  const [toggleEquipmentButtonVisible, setToggleEquipmentButtonVisible] = useState(false);
+  const [toggleServicesButtonVisible, setToggleServicesButtonVisible] = useState(false);
   const [phoneNumberVisible, setPhoneNumberVisible] = useState(false);
   const [emailVisible, setEmailVisible] = useState(false);
 
@@ -83,18 +82,13 @@ function Header() {
 
   const toggleMenu = () =>
     setToggleMenuVisible(!toggleMenuButtonVisible);
+
   const toggleEquipment = () =>
-    setToggleEquipmentButton(
-      toggleEquipmentButtonText === "arrow_drop_up"
-        ? "arrow_drop_down"
-        : "arrow_drop_up"
-    );
+  setToggleEquipmentButtonVisible(!toggleEquipmentButtonVisible);
+
   const toggleServices = () =>
-    setToggleServicesButton(
-      toggleServicesButtonText === "arrow_drop_up"
-        ? "arrow_drop_down"
-        : "arrow_drop_up"
-    );
+  setToggleServicesButtonVisible(!toggleServicesButtonVisible);
+  
   const togglePhoneNumber = () => {
     setEmailVisible(false);
     setPhoneNumberVisible(!phoneNumberVisible);
@@ -107,7 +101,9 @@ function Header() {
   const navigateTo = event => {
     event.preventDefault()
 
-    setToggleMenuVisible(false)
+    setToggleMenuVisible(false);
+    setToggleEquipmentButtonVisible(false);
+    setToggleServicesButtonVisible(false);
 
     const { href } = event.target
 
@@ -193,30 +189,30 @@ function Header() {
             <li className="flex flex-col">
               <span className="flex items-center">
                 <a>{equipment}</a>
-                <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonText}</button>
+                <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
               </span>
-              {toggleEquipmentButtonText === "arrow_drop_up" && (
-                <ul className="">
-                  <li className="">
-                    <Link href="/equipment#crushers">{crushers}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#impactCrusher">{impactCrusher}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#scalpers">{scalpers}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#screeners">{screeners}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#conveyor">{conveyor}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#recycling">{recycling}</Link>
+              {toggleEquipmentButtonVisible && (
+                <ul className="flex flex-col gap-1 py-2">
+                  <li>
+                    <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
                   </li>
                   <li>
-                    <Link href="/equipment#dust-cannon">{dustCannon}</Link>
+                    <Link href="/equipment#impactCrusher" onClick={navigateTo}>{impactCrusher}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#scalpers" onClick={navigateTo}>{scalpers}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#screeners" onClick={navigateTo}>{screeners}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#conveyor" onClick={navigateTo}>{conveyor}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#recycling" onClick={navigateTo}>{recycling}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#dust-cannon" onClick={navigateTo}>{dustCannon}</Link>
                   </li>
                 </ul>
               )}
@@ -226,9 +222,9 @@ function Header() {
             <li className="flex flex-col">
               <span className="flex items-center">
                 <a>{services}</a>
-                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonText}</button>
+                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
-              {toggleServicesButtonText === "arrow_drop_up" && (
+              {toggleServicesButtonVisible && (
                 <ul>
                   <li className="py-1">
                     <Link href='/services#customerAssistance'>{customerAssitance}</Link>
@@ -275,31 +271,31 @@ function Header() {
                   className="material-symbols-outlined"
                   onClick={toggleEquipment}
                 >
-                  {toggleEquipmentButtonText}
+                  {toggleEquipmentButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}
                 </button>
               </span>
-              {toggleEquipmentButtonText === "arrow_drop_up" && (
+              {toggleEquipmentButtonVisible && (
                 <ul className="ml-4">
-                  <li className="">
-                    <Link href="/equipment#crushers">{crushers}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#impactCrusher">{impactCrusher}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#scalpers">{scalpers}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#screeners">{screeners}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#conveyor">{conveyor}</Link>
-                  </li>
-                  <li className="">
-                    <Link href="/equipment#recycling">{recycling}</Link>
+                  <li>
+                    <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
                   </li>
                   <li>
-                    <Link href="/equipment#dust-cannon">{dustCannon}</Link>
+                    <Link href="/equipment#impactCrusher" onClick={navigateTo}>{impactCrusher}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#scalpers" onClick={navigateTo}>{scalpers}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#screeners" onClick={navigateTo}>{screeners}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#conveyor" onClick={navigateTo}>{conveyor}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#recycling" onClick={navigateTo}>{recycling}</Link>
+                  </li>
+                  <li>
+                    <Link href="/equipment#dust-cannon" onClick={navigateTo}>{dustCannon}</Link>
                   </li>
                 </ul>
               )}
@@ -313,18 +309,18 @@ function Header() {
             <li className="border-b-black border pl-4 py-2">
               <span className="flex items-center">
                 <Link onClick={navigateTo} href="/services">{services}</Link>
-                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonText}</button>
+                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonVisible  ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
-              {toggleServicesButtonText === "arrow_drop_up" && (
+              {toggleServicesButtonVisible && (
                 <ul className="ml-4">
                   <li className="py-1">
-                    <Link href='/services#customerAssistance'>{customerAssitance}</Link>
+                    <Link href='/services#customerAssistance' onClick={navigateTo}>{customerAssitance}</Link>
                   </li>
                   <li className="py-1">
-                    <Link href='/services#afterSaleService'>{afterSaleService}</Link>
+                    <Link href='/services#afterSaleService' onClick={navigateTo}>{afterSaleService}</Link>
                   </li>
                   <li className="py-1">
-                    <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
+                    <Link href='/services#technicalAssistance' onClick={navigateTo}>{technicalAssistance}</Link>
                   </li>
                 </ul>
               )}

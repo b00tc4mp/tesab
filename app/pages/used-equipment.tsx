@@ -44,15 +44,15 @@ export default function UsedEquipment() {
         </h1>
         <div className="flex flex-col items-center gap-10">
 
-          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 py-6 sm:w-128 py-6 lg:w-240">
+          <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 py-6 lg:w-240">
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
-              <div className=" flex overflow-x-auto m-4 lg:w-160">
+              <div className="flex overflow-x-auto m-4 lg:w-160">
                 <img src={content('/equipment/crushers/700i.jpeg')}/>
                 <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
                 <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center gap-4">
                 <p className="font-bold">{available}</p>
                 <p>{yearOfManufacture} 2022</p>
                 <p>{hours} 560</p>
@@ -66,12 +66,12 @@ export default function UsedEquipment() {
           <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 lg:w-240">
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
-              <div className=" flex overflow-x-auto m-4 lg:w-160">
+              <div className="flex overflow-x-auto m-4 lg:w-160">
                 <img src={content('/equipment/crushers/700i.jpeg')}/>
                 <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
                 <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center gap-4">
                 <p className="font-bold">{available}</p>
                 <p>{yearOfManufacture} 2022</p>
                 <p>{hours} 560</p>
@@ -91,7 +91,7 @@ export default function UsedEquipment() {
                 <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
                 <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center gap-4">
                 <p className="font-bold">{available}</p>
                 <p>{yearOfManufacture} 2022</p>
                 <p>{hours} 560</p>
@@ -105,12 +105,12 @@ export default function UsedEquipment() {
           <div className="flex flex-col items-center bg-white border-solid border-slate-300 border-2 py-6 sm:w-128 lg:w-240">
             <h2 className="font-bakbak-one">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center">
-              <div className=" flex overflow-x-auto m-4 lg:w-160">
+              <div className="flex overflow-x-auto m-4 lg:w-160">
                 <img src={content('/equipment/crushers/700i.jpeg')}/>
                 <img src={content('/equipment/crushers/700i/crusher700ie2.jpg')}/>
                 <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')}/>
               </div>
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center gap-4">
                 <p className="font-bold">{available}</p>
                 <p>{yearOfManufacture} 2022</p>
                 <p>{hours} 560</p>

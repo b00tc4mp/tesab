@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .slider {
+            width: 500px;
+        }
+
+        .content {
+            width: 500px;
+            overflow: hidden;
+        }
+
+        .inner {
+            transform: translateX(0px);
+            transition: transform 1s;
+        }
+
+        .slide {
+            min-width: 500px;
+            min-height: 100px;
+            background-color: lightblue;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <button class="slider-back">back</button>
+        <div class="content">
+            <div class="inner flex">
+                <div class="slide">1</div>
+                <div class="slide">2</div>
+                <div class="slide">3</div>
+            </div>
+        </div>
+        <button class="slider-forw">forw</button>
+    </div>
+
+    <script>
+        var slideWith = 500
+
+        var inner = document.querySelector('.inner')
+
+        var slideCount = inner.children.length
+
+        var forw = document.querySelector('.slider-forw')
+        var back = document.querySelector('.slider-back')
+
+        var position = 0
+
+        forw.onclick = () => {
+            if (position < slideWith * (slideCount - 1)) {
+                position += slideWith
+                inner.style.transform =`translateX(-${position}px)`
+            }
+        }
+
+        back.onclick = () => {
+            if (position > 0) {
+                position -= slideWith
+                inner.style.transform =`translateX(-${position}px)`
+            }
+        }
+    </script>
+</body>
+</html>

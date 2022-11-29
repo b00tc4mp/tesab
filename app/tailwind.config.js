@@ -24,7 +24,9 @@ module.exports = {
       borderRadius: {
         'circle': '0'
       },
-     
+      fontFamily: {
+        bakbakone: ['BakBak One', 'cursive']
+      }
     },
   },
   plugins: [],

@@ -140,7 +140,7 @@ export default function SpareParts() {
             <li>{other}</li>
           </ul>
 
-          <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 font-bold rounded">{makeQueryButtom}</buttom></Link>
+          <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 font-bold rounded ">{makeQueryButtom}</buttom></Link>
         </div>
       </main>
 

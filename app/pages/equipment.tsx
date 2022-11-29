@@ -75,9 +75,9 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-4'>{crushersDescription}</p>
           <div className='flex justify-around my-6'>
-            <Link href="/crusher700i"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700i</button></Link>
-            <Link href="/crusher800i"><button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>800i</button></Link>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>700ie</button>
+            <Link href="/crusher700i"><button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>700i</button></Link>
+            <Link href="/crusher800i"><button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>800i</button></Link>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>700ie</button>
           </div>
         </div>
 
@@ -88,10 +88,10 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{impactCrushersDescription}</p>
           <div className='flex justify-around my-6'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>623CT</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>1412T</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>1012TS</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>1150TC</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>623CT</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>1412T</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>1012TS</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>1150TC</button>
           </div>
         </div>
 
@@ -102,9 +102,9 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{scalpersDescription}</p>
           <div className='flex justify-around my-6'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1550</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1860</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS1340</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS1550</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS1860</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS1340</button>
           </div>
         </div>
 
@@ -115,9 +115,9 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{screenersDescription}</p>
           <div className='flex justify-around my-6'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS2430</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS2600</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TS3600</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS2430</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS2600</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TS3600</button>
           </div>
         </div>
 
@@ -128,8 +128,8 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{conveyorDescription}</p>
           <div className='flex justify-around my-6'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>8042T</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>8042TSL</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>8042T</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>8042TSL</button>
           </div>
         </div>
 
@@ -140,10 +140,10 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{recyclingDescription}</p>
           <div className='flex justify-around my-6 flex-wrap'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>TR100</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>REC100</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>AIR VAC</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>WINDSHIFTER</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>TR100</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>REC100</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>AIR VAC</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>WINDSHIFTER</button>
           </div>
         </div>
 
@@ -154,8 +154,8 @@ export default function Equipment() {
           </div>
           <p className='text-justify m-6'>{dustCannonDescription}</p>
           <div className='flex justify-around my-6'>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>S45</button>
-            <button className='bg-amber-400 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400'>S65</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>S45</button>
+            <button className='bg-amber-400 px-4 py-2 font-bold rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>S65</button>
           </div>
         </div>
       </div>
