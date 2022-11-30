@@ -49,13 +49,13 @@ const literals = {
 
 export default function Crusher700ie() {
   const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, technicalSpecificationsText7, makeQueryButton } = useLiterals(literals)
-  const { bakbakOne } = useFonts()
+  
   const content = useContent()
 
   return (
     <>
       <main className='items-center'>
-        <h1 className={`${bakbakOne.className} text-center text-4xl mx-4 lg:my-4`}>700i</h1>
+        <h1 className= 'text-center text-4xl mx-4 lg:my-4'>700i</h1>
 
         <div className='lg:flex justify-center gap-x-32'>
           <div className="flex overflow-x-auto my-4 lg:h-128 lg:w-200 lg:ml-6">

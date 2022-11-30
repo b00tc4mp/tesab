@@ -73,19 +73,19 @@ function ContactForm() {
 
     return <form className="p-6 flex flex-col lg:grid" onSubmit={submit}>
 
-        <label htmlFor="name">{contactName}</label>
+        <label className='font-alexandria' htmlFor="name">{contactName}</label>
         <input id="name" name="name" className='border border-black rounded my-2 py-1 pl-2' placeholder={contactName} />
 
-        <label htmlFor="email">{contactEmail}</label>
+        <label className='font-alexandria' htmlFor="email">{contactEmail}</label>
         <input id="email" name="email" className='border border-black rounded my-2 py-1 pl-2' placeholder={contactEmail} />
 
-        <label htmlFor="phone">{contactPhone}</label>
+        <label className='font-alexandria' htmlFor="phone">{contactPhone}</label>
         <input id="phone" name="phone" className='border border-black rounded my-2 py-1 pl-2' placeholder={contactPhone} />
 
-        <label htmlFor="company">{company}</label>
+        <label className='font-alexandria' htmlFor="company">{company}</label>
         <input id="company" name="company" className='border border-black rounded my-2 py-1 pl-2' placeholder={company} />
 
-        <label htmlFor="location">{companyLocation}</label>
+        <label className='font-alexandria' htmlFor="location">{companyLocation}</label>
         <input id="location" name="location" className='border border-black rounded my-2 py-1 pl-2' placeholder={companyLocation} />
 
         {/* <div className="relative h-72 border border-black rounded my-2">
@@ -93,11 +93,11 @@ function ContactForm() {
             <img className="absolute bottom-0" src="/images/backgroundMachine.png" alt="" />
         </div> */}
 
-        <label htmlFor="description">{description}</label>
+        <label className='font-alexandria' htmlFor="description">{description}</label>
         <textarea id="description" name="description" className='border border-black rounded my-2 py-1 pl-2 bg-contain h-48' placeholder={description} style={{ backgroundImage: 'url(/images/piramide.png)' }} />
 
-        <label htmlFor='subscription'><input id="subscription" name="subscription" type="checkbox" />{subcription}</label>
-        <label htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="material-symbols-outlined" onClick={toggleDataProtection}>{toggleDataProtectionButtomText}</button></label>
+        <label className='font-alexandria' htmlFor='subscription'><input id="subscription" name="subscription" type="checkbox" />{subcription}</label>
+        <label className='font-alexandria' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="material-symbols-outlined" onClick={toggleDataProtection}>{toggleDataProtectionButtomText}</button></label>
         {dataProtectionVisible && (<p className='text-sm text-justify pl-4'>{dataProtectionInfo}</p>)}
         <button className="justify-end font-bakbak-one bg-amber-400 rounded border border-black my-4 p-2">Solicitar información</button>
 

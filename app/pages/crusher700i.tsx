@@ -56,7 +56,7 @@ export default function Crusher700ie() {
   return (
     <>
       <main className='items-center bg-slate-400'>
-        <h1 className="text-center text-4xl mx-4 lg:my-4 font-bakbakone">700i</h1>
+        <h1 className="font-bakbakone text-center text-4xl mx-4 lg:my-4 lg:text-5xl">700i</h1>
 
         <Slider>
           <Slide><img />hola</Slide>
@@ -111,18 +111,18 @@ export default function Crusher700ie() {
 
           <div className='flex flex-col p-4 gap-5 lg:w-160'>
 
-            <h2 className="font-bold">{descriptionTitle}</h2>
-            <p className=" text-justify">{descriptionText}</p>
+            <h2 className="font-bakbakone">{descriptionTitle}</h2>
+            <p className="font-alexandria text-justify">{descriptionText}</p>
 
-            <h2 className="font-bold">{technicalSpecificationsTitle}</h2>
+            <h2 className="font-bakbakone">{technicalSpecificationsTitle}</h2>
             <ul className="list-disc px-4">
-              <li>{technicalSpecificationsText1}</li>
-              <li>{technicalSpecificationsText2}</li>
-              <li>{technicalSpecificationsText3}</li>
-              <li>{technicalSpecificationsText4}</li>
-              <li>{technicalSpecificationsText5}</li>
-              <li>{technicalSpecificationsText6}</li>
-              <li>{technicalSpecificationsText7}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText1}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText2}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText3}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText4}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText5}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText6}</li>
+              <li className='font-alexandria'>{technicalSpecificationsText7}</li>
             </ul>
 
           </div> 

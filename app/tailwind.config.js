@@ -25,7 +25,10 @@ module.exports = {
         'circle': '0'
       },
       fontFamily: {
-        bakbakone: ['BakBak One', 'cursive']
+        bakbakone: ['BakBak One', 'cursive'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        alexandria: ['Alexandria', 'sans-serif'],
+
       }
     },
   },

@@ -43,32 +43,32 @@ export default function Services() {
   return (
     <>
       <main>
-        <h1 className="font-bakbak-one text-center text-3xl m-4">
+        <h1 className="font-bakbakone text-center text-4xl m-4">
           {servicesTitle}
         </h1>
         <div className="lg:flex">
 
-          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='customerAssistance'>
-            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/services/advasing.jpg')} alt="" />
+          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col gap-5" id='customerAssistance'>
+            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/advasing.jpg')} alt="" />
             <div>
-              <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 left-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{customerAssistanceTitle}</h2>
-              <p className="m-4">{customerAssistanceDescription}</p>
+              <h2 className="font-bakbakone text-center text-3xl px-4 absolute top-32 left-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{customerAssistanceTitle}</h2>
+              <p className="p-4 font-alexandria">{customerAssistanceDescription}</p>
             </div>
           </div>
 
-          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='afterSaleAssistance' >
-            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/services/postVenta.jpg')} alt="" />
+          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col gap-5" id='afterSaleAssistance' >
+            <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/postVenta.jpg')} alt="" />
             <div>
-              <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 left-48 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{afterSaleAssistanceTitle}</h2>
-              <p className="m-4">{afterSaleAssistanceDescription}</p>
+              <h2 className="font-bakbakone text-center text-3xl px-4 absolute top-32 left-48 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{afterSaleAssistanceTitle}</h2>
+              <p className="p-4 font-alexandria">{afterSaleAssistanceDescription}</p>
             </div>
           </div>
 
-          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col" id='technicalAssistance'>
+          <div className="relative my-10 sm:flex sm:items-center lg:flex lg:flex-col gap-5" id='technicalAssistance'>
             <img className="-z-10 w-128 h-48 sm:min-w-160 sm:h-96 object-cover" src={content('/technical-assistance.jpg')} alt="" />
             <div>
-              <h2 className="font-bakbak-one text-center text-3xl px-4 absolute top-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{technicalAssistanceTitle}</h2>
-              <p className="m-4">{technicalAssistanceDescription}</p>
+              <h2 className="font-bakbakone text-center text-3xl px-4 absolute top-32 text-black bg-gray-200/50 backdrop-blur-sm rounded sm:static">{technicalAssistanceTitle}</h2>
+              <p className="p-4 font-alexandria">{technicalAssistanceDescription}</p>
             </div>
           </div>
         </div>

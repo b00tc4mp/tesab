@@ -35,61 +35,63 @@ const literals = {
 
 export default function WhoWeAre() {
 
-  const { whoWeAreTitle, whoWeAreIntroduction, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
+  const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
   const content = useContent()
-  const [toggleValueDescriptionIcon, setToggleValueDescriptionIcon] = useState(false);
+  const [toggleValueDescriptionIcon1, setToggleValueDescriptionIcon1] = useState(false);
+  const [toggleValueDescriptionIcon2, setToggleValueDescriptionIcon2] = useState(false);
+  const [toggleValueDescriptionIcon3, setToggleValueDescriptionIcon3] = useState(false);
 
-  const toggleValueDescriptionVisible = () =>
-    setToggleValueDescriptionIcon(!toggleValueDescriptionIcon)
+  const toggleValueDescriptionVisible1 = () =>
+    setToggleValueDescriptionIcon1(!toggleValueDescriptionIcon1)
+
+  const toggleValueDescriptionVisible2 = () =>
+    setToggleValueDescriptionIcon2(!toggleValueDescriptionIcon2)
+
+  const toggleValueDescriptionVisible3 = () =>
+    setToggleValueDescriptionIcon3(!toggleValueDescriptionIcon3)
 
   return (
     <>
       <main>
         <div className="relative">
-          <img
-            className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-112"
-            src={content('/whoWeAre.jpg')}
-            alt=""
-          />
-          <h1 className="absolute m-4 font-bold text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-72 lg:left-84">
+          <img className="-z-10 object-cover w-full h-48 lg:h-112" src={content('/whoWeAre.jpg')} alt="" />
+          <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-72 lg:left-84">
             {whoWeAreTitle}
           </h1>
         </div>
-        <div className="sm:flex sm:flex-col sm:items-center">
+
+        <div className="sm:flex sm:flex-col sm:items-center sm:gap-5">
           <div className="sm:max-w-6xl sm:flex sm:flex-col sm:items-center">
-            <div className="flex  flex-col gap-5 px-4 text-justify">
-              <p className="text-justify m-6">{whoWeAreIntroduction}</p>
-              <p>{whoWeAreIntroduction1}</p>
-              <p>{whoWeAreIntroduction2}</p>
-              <p>{whoWeAreIntroduction3}</p>
-              <p>{whoWeAreIntroduction4}</p>
+            <div className="flex  flex-col gap-5 px-4 pt-10 text-justify">
+              <p className='font-alexandria'>{whoWeAreIntroduction1}</p>
+              <p className='font-alexandria'>{whoWeAreIntroduction2}</p>
+              <p className='font-alexandria'>{whoWeAreIntroduction3}</p>
+              <p className='font-alexandria'>{whoWeAreIntroduction4}</p>
             </div>
 
-            <h2 className="font-bold text-center text-3xl m-4">{ourValuesTitle}</h2>
-            <ul className="mt-10">
-              <span className='flex'>
-                <button onClick={toggleValueDescriptionVisible}>{toggleValueDescriptionIcon ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
-                <li className="font-bold text-left m-4">{firstValueTitle}</li>
-              </span>
-              {toggleValueDescriptionIcon && <p className="text-justify m-6">
-                {firstValueDescription}
-              </p>}
-              <span className='flex'>
-                <button className='text-amber-400
-                ' onClick={toggleValueDescriptionVisible}>{toggleValueDescriptionIcon ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
-                <li className="font-bold text-left m-4">{secondValueTitle}</li>
-              </span>
-              {toggleValueDescriptionIcon && <p className="text-justify m-6">
-                {secondValueDescription}
-              </p>}
-              <span className='flex'>
-                <button onClick={toggleValueDescriptionVisible}>{toggleValueDescriptionIcon ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
-                <li className="font-bold text-left m-4">{thirdValueTitle}</li>
-              </span>
-              {toggleValueDescriptionIcon && <p className="text-justify m-6">
-                {thirdValueDescription}
-              </p>}
-            </ul>
+            <div className='flex flex-col pt-10'>
+
+              <h2 className="font-bakbakone text-center text-3xl">{ourValuesTitle}</h2>
+              <div className='flex flex-col justify-center'>
+                <ul className="pt-5">
+                  <span className='flex'>
+                    <button onClick={toggleValueDescriptionVisible1}>{toggleValueDescriptionIcon1 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    <li className="font-bakbakone text-left m-4">{firstValueTitle}</li>
+                  </span>
+                  {toggleValueDescriptionIcon1 && <p className="font-alexandria text-justify m-6">{firstValueDescription}</p>}
+                  <span className='flex'>
+                    <button onClick={toggleValueDescriptionVisible2}>{toggleValueDescriptionIcon2 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    <li className="font-bakbakone text-left m-4">{secondValueTitle}</li>
+                  </span>
+                  {toggleValueDescriptionIcon2 && <p className="font-alexandria text-justify m-6">{secondValueDescription}</p>}
+                  <span className='flex'>
+                    <button onClick={toggleValueDescriptionVisible3}>{toggleValueDescriptionIcon3 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    <li className="font-bakbakone text-left m-4">{thirdValueTitle}</li>
+                  </span>
+                  {toggleValueDescriptionIcon3 && <p className="font-alexandria text-justify m-6">{thirdValueDescription}</p>}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </main>

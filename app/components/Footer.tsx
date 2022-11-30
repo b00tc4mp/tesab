@@ -19,8 +19,8 @@ function Footer() {
     const {address, phone} = useLiterals(literals)
     return <footer className='bg-[#323A47] p-4'>
         <div>
-            <p className='text-white text-xs text-center'>{address}</p>
-            <p className='text-white text-xs text-center'>{phone}</p>
+            <p className='font-alexandria text-white text-xs text-center'>{address}</p>
+            <p className='font-alexandria text-white text-xs text-center'>{phone}</p>
         </div>
     </footer>
 }

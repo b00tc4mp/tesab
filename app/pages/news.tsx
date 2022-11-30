@@ -54,47 +54,47 @@ export default function SpareParts() {
     return (
         <>
             <main>
-                <h1 className="font-bakbak-one text-center text-3xl m-4">
+                <h1 className="font-bakbakone text-center text-4xl m-4">
                     {newsTitle}
                 </h1>
                 <div className="grid grid-cols-2">
                     <Link href="/newsItem">
                         <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-4">
                             <img src={content('/equipment/accesories/dustCannon.png')}/>
-                            <h2 className="font-bold text-xl">{newItem5Title}</h2>
-                            <h3 className="truncate">{newItem5Subtitle}</h3>
+                            <h2 className="font-bakbakone text-xl">{newItem5Title}</h2>
+                            <h3 className="font-alexandria truncate">{newItem5Subtitle}</h3>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
                         <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-4">
                             <img src={content('/news/meeting.png')}/>
-                            <h2 className="font-bold text-xl">{newItem4Title}</h2>
-                            <h3 className="truncate">{newItem4Subtitle}</h3>
+                            <h2 className="font-bakbakone text-xl">{newItem4Title}</h2>
+                            <h3 className="font-alexandria truncate">{newItem4Subtitle}</h3>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
                         <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-8">
                             <img src={content('/equipment/scalpers/scalper.png')} />
-                            <h2 className="font-bold text-xl">{newItem3Title}</h2>
-                            <h3 className="truncate">{newItem3Subtitle}</h3>
+                            <h2 className="font-bakbakone text-xl">{newItem3Title}</h2>
+                            <h3 className="font-alexandria truncate">{newItem3Subtitle}</h3>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
                         <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4">
                             <img src={content('/equipment/accesories/dustCannon.png')}/>
-                            <h2 className="font-bold text-xl">{newItem2Title}</h2>
-                            <h3 className="truncate">{newItem2Subtitle}</h3>
+                            <h2 className="font-bakbakone text-xl">{newItem2Title}</h2>
+                            <h3 className="font-alexandria truncate">{newItem2Subtitle}</h3>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
                         <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4">
                             <img src={content('/equipment/scalpers/scalper.png')} />
-                            <h2 className="font-bold text-xl">{newItem1Title}</h2>
-                            <h3 className="truncate">{newItem1Subtitle}</h3>
+                            <h2 className="font-bakbakone text-xl">{newItem1Title}</h2>
+                            <h3 className="font-alexandria truncate">{newItem1Subtitle}</h3>
                         </div>
                     </Link>
                 </div>
