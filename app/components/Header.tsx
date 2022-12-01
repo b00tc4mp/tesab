@@ -174,7 +174,7 @@ function Header() {
         </nav>
       </div>
 
-      <div className="flex justify-between items-center p-3 bg-white/75">
+      <div className="flex justify-between _items-center p-3 bg-white/75 lg:overflow-visible h-[100px]">
         <div className="flex flex-col justify-self-center self-center">
           <h1>
             <Link href="/">
@@ -229,7 +229,7 @@ function Header() {
             </li>
             <li className="font-alexandria"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
             <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
-            <li className="font-alexandria flex flex-col">
+            <li className="font-alexandria flex flex-col overflow-visible w-[100px]">
               <span className="flex items-center">
               <Link onClick={navigateTo} href="/services">{services}</Link>
                 <button className="material-symbols-outlined" onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>

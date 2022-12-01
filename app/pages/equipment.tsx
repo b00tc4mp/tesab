@@ -75,7 +75,7 @@ export default function Equipment() {
           </div>
           <p className='font-alexandria text-justify m-6'>{crushersDescription}</p>
           <div className='flex justify-around my-6'>
-            <Link href="/crusher700i"><button className='bg-amber-400 px-4 py-2 font-bakbakone rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>700i</button></Link>
+            <Link href="/equipments/700i"><button className='bg-amber-400 px-4 py-2 font-bakbakone rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>700i</button></Link>
             <Link href="/crusher800i"><button className='bg-amber-400 px-4 py-2 font-bakbakone rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>800i</button></Link>
             <button className='bg-amber-400 px-4 py-2 font-bakbakone rounded ease-in-out duration-300 hover:bg-[#323A47] hover:text-amber-400 hover:px-6 hover:py-3 hover:text-lg'>700ie</button>
           </div>
