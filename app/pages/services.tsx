@@ -42,8 +42,8 @@ export default function Services() {
   
   return (
     <>
-      <main>
-        <h1 className="font-bakbakone text-center text-4xl m-4">
+      <main className="min-h-screen">
+        <h1 className="font-bakbakone text-center text-4xl m-4 ">
           {servicesTitle}
         </h1>
         <div className="lg:flex">

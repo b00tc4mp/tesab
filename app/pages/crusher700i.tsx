@@ -55,13 +55,13 @@ export default function Crusher700ie() {
 
   return (
     <>
-      <main className='items-center bg-slate-400'>
+      <main className='items-center bg-[#323A47]'>
         <h1 className="font-bakbakone text-center text-4xl mx-4 lg:my-4 lg:text-5xl">700i</h1>
 
         <Slider>
-          <Slide><img />hola</Slide>
-          <Slide><img />mundo</Slide>
-          <Slide><img />!</Slide>
+          <Slide><video className="w-[500px] max-w-none" autoPlay loop muted src={content('/equipment/crushers/700i/700iVideo.mp4')} type="video/mp4"/></Slide>
+          <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i1.jpg')}/></Slide>
+          <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i2.jpg')}/></Slide>
         </Slider>
 
 

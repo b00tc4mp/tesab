@@ -98,7 +98,7 @@ export default function SpareParts() {
 
   return (
     <>
-      <main className="flex flex-col gap-4">
+      <main className="flex flex-col gap-4 min-h-screen">
         <div className="relative">
           <img
             className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-112"

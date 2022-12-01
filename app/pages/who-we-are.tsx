@@ -20,7 +20,8 @@ const literals = {
     whoWeAreIntroduction1: 'Somos Tesab Spain S.L., distribuidor oficial de la reconocida marca irlandesa Tesab Engineering y los fabricantes Trackstack, Screenpod y JLM. Estamos especializados en el alquiler y la venta de equipos móviles de clasificación, trituración y reciclajes.',
     whoWeAreIntroduction2: 'Damos servicio principalmente a empresas dedicadas a la minería, fabricación de áridos, obra pública, movimiento de tierra y el tratamiento de residuos de construcción y demolición.',
     whoWeAreIntroduction3: 'Contamos con una amplia experiencia, avalada por nuestros más de 15 años en el mercado, ofreciendo soluciones y equipos móviles de alta calidad y rentabilidad en España, Portugal, Inglaterra y América del Sur.',
-    whoWeAreIntroduction4: 'NUESTRA MISIÓN es proporcionar soluciones eficientes y mejorar los procesos de producción para aumentar la rentabilidad de empresas que desarrollen su actividad en el ámbito de la fabricación de áridos, reciclajes, obra civil, construcción y movimiento de tierras.',
+    ourMision:'NUESTRA MISIÓN ',
+    whoWeAreIntroduction4: 'es proporcionar soluciones eficientes y mejorar los procesos de producción para aumentar la rentabilidad de empresas que desarrollen su actividad en el ámbito de la fabricación de áridos, reciclajes, obra civil, construcción y movimiento de tierras.',
     ourValuesTitle: 'NUESTROS VALORES',
     firstValueTitle: 'ESPECIALIZACIÓN Y ORIENTACIÓN AL CLIENTE',
     firstValueDescription: 'Especialización y conocimientos técnicos y del mercado, diferencian la empresa Tesab Spain  y nos capacitan para ser eﬁciente y diseñar proyectos personalizados. Gracias a nuestra ﬂota extensa de equipos móviles de alquiler, convertimos estos proyectos en reales, dando solución a las necesidades especíﬁcas de cada uno de nuestros clientes.',
@@ -35,7 +36,7 @@ const literals = {
 
 export default function WhoWeAre() {
 
-  const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
+  const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, ourMision, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
   const content = useContent()
   const [toggleValueDescriptionIcon1, setToggleValueDescriptionIcon1] = useState(false);
   const [toggleValueDescriptionIcon2, setToggleValueDescriptionIcon2] = useState(false);
@@ -66,7 +67,7 @@ export default function WhoWeAre() {
               <p className='font-alexandria'>{whoWeAreIntroduction1}</p>
               <p className='font-alexandria'>{whoWeAreIntroduction2}</p>
               <p className='font-alexandria'>{whoWeAreIntroduction3}</p>
-              <p className='font-alexandria'>{whoWeAreIntroduction4}</p>
+              <p className='font-alexandria'><span className='font-bold text-xl text-amber-500'>{ourMision}</span>{whoWeAreIntroduction4}</p>
             </div>
 
             <div className='flex flex-col pt-10'>

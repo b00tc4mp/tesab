@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import useLiterals from '../../hooks/useLiterals'
 import useContent from '../../hooks/useContent'
+import Footer from '../../components/Footer'
 
 const data = {
     '700i': {
@@ -35,25 +37,26 @@ const data = {
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La 700i es una machacadora móvil de alta robustez montada sobre orugas y diseñada para el machaqueo primario en frente de cantera. Dispone de un diseño único de alimentación con dos precribadores independientes que permiten al cliente obtener un producto determinado por la cinta lateral. La 700i está accionada por un motor Caterpillar de 300cv y cuenta con una machacadora de 1100 x 700mm con un sistema de ajuste hidráulico. Es el equipo idóneo para las aplicaciones más exigentes dentro de la industria de la minería, reciclajes y canteras.',
                 technicalSpecificationsTitle: 'Especificaciones Técnicas',
-                technicalSpecificationsText1: 'Dimensiones de la machacadora: 1100 x 700 mm.',
-                technicalSpecificationsText2: 'Profundidad de la machacadora: 1550 mm.',
-                technicalSpecificationsText3: 'Tolva de 9,2 m3.',
-                technicalSpecificationsText4: 'Sistema de doble alimentador independiente.',
-                technicalSpecificationsText5: 'Banda magnética y cinta lateral (opcionales).',
-                technicalSpecificationsText6: 'Motor diésel Caterpillar de 300 CV.',
-                technicalSpecificationsText7: 'Peso: 46.720 kg.',
+                technicalSpecificationsItems: [
+                    'Dimensiones de la machacadora: 1100 x 700 mm.',
+                    'Profundidad de la machacadora: 1550 mm.',
+                    'Tolva de 9,2 m3.',
+                    'Sistema de doble alimentador independiente.',
+                    'Banda magnética y cinta lateral (opcionales).',
+                    'Motor diésel Caterpillar de 300 CV.',
+                    'Peso: 46.720 kg.'
+                ],
                 makeQueryButton: 'Solicitar información',
             }
         },
 
-        image: {
+        content: {
+            video: '/equipment/crushers/700i/700iVideo.mp4',
             image1: '/equipment/crushers/700i/700i1.jpg',
             image2: '/equipment/crushers/700i/700i2.jpg'
 
         },
-
-        video: '/equipment/crushers/700i/700iVideo.mp4'
-
+       
     },
     '800i': {
         literals: {
@@ -96,8 +99,8 @@ const data = {
                 technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
-        }
-            image: ''
+        },
+        image: ''
     },
     '700ie': {
         literals: {
@@ -863,26 +866,23 @@ const data = {
         },
         image: ''
     },
-
 }
-
 
 export default function Equipment() {
     const content = useContent()
     const router = useRouter()
     const { equipmentId } = router.query
-    const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, technicalSpecificationsText7, makeQueryButton } = useLiterals(literals)
-
-
+    
+    
     if (equipmentId) {
         // @ts-ignore
         const { literals, image } = data[equipmentId]
-        const { title, description } = useLiterals(literals)
+        //const { title, description } = useLiterals(literals)
+        const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = useLiterals(literals)
 
-        return (
-            <>
+        return <>
                 <main className='items-center'>
-                    <h1 className={`${bakbakOne.className} text-center text-4xl mx-4 lg:my-4`}>700i</h1>
+                    <h1 className="font-bakbakone text-center text-4xl mx-4 lg:my-4">700i</h1>
 
 
                     <div className='lg:flex justify-center gap-x-32'>
@@ -901,13 +901,7 @@ export default function Equipment() {
 
                             <h2 className="font-bold">{technicalSpecificationsTitle}</h2>
                             <ul className="list-disc px-4">
-                                <li>{technicalSpecificationsText1}</li>
-                                <li>{technicalSpecificationsText2}</li>
-                                <li>{technicalSpecificationsText3}</li>
-                                <li>{technicalSpecificationsText4}</li>
-                                <li>{technicalSpecificationsText5}</li>
-                                <li>{technicalSpecificationsText6}</li>
-                                <li>{technicalSpecificationsText7}</li>
+                                {technicalSpecificationsItems.map(technicalSpecificationsItem => <li>{technicalSpecificationsItem}</li>)}
                             </ul>
 
                         </div>
@@ -915,14 +909,12 @@ export default function Equipment() {
 
                     <div className="flex justify-center sticky">
                         <Link href="/contact"><button className="bg-amber-400 my-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
-                            {" "}
-                            {makeQueryButton}{" "}
+                            {makeQueryButton}
                         </button></Link>
                     </div>
                 </main>
 
                 <Footer />
             </>
-        )
     } else return null
 }

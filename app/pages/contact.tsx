@@ -71,7 +71,9 @@ export default function Contact() {
                     <ContactForm />
                 </div>
             </div>
-            <ContactForm />
+            <div className="lg:hidden">
+                <ContactForm />
+            </div>
 
             <Footer />
         </main>

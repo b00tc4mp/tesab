@@ -73,8 +73,10 @@ function Header() {
   const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
 
   const [toggleMenuButtonVisible, setToggleMenuVisible] = useState(false);
-  const [toggleEquipmentButtonVisible, setToggleEquipmentButtonVisible] = useState(false);
-  const [toggleServicesButtonVisible, setToggleServicesButtonVisible] = useState(false);
+  const [toggleEquipmentButtonVisibleLg, setToggleEquipmentButtonVisibleLg] = useState(false);
+  const [toggleEquipmentButtonVisibleMovil, setToggleEquipmentButtonVisibleMovil] = useState(false);
+  const [toggleServicesButtonVisibleLg, setToggleServicesButtonVisibleLg] = useState(false);
+  const [toggleServicesButtonVisibleMovil, setToggleServicesButtonVisibleMovil] = useState(false);
   const [phoneNumberVisible, setPhoneNumberVisible] = useState(false);
   const [emailVisible, setEmailVisible] = useState(false);
 
@@ -83,11 +85,17 @@ function Header() {
   const toggleMenu = () =>
     setToggleMenuVisible(!toggleMenuButtonVisible);
 
-  const toggleEquipment = () =>
-  setToggleEquipmentButtonVisible(!toggleEquipmentButtonVisible);
+  const toggleEquipmentLg = () =>
+  setToggleEquipmentButtonVisibleLg(!toggleEquipmentButtonVisibleLg);
 
-  const toggleServices = () =>
-  setToggleServicesButtonVisible(!toggleServicesButtonVisible);
+  const toggleEquipmentMovil = () =>
+  setToggleEquipmentButtonVisibleMovil(!toggleEquipmentButtonVisibleMovil);
+
+  const toggleServicesLg = () =>
+  setToggleServicesButtonVisibleLg(!toggleServicesButtonVisibleLg);
+
+  const toggleServicesMovil = () =>
+  setToggleServicesButtonVisibleMovil(!toggleServicesButtonVisibleMovil);
   
   const togglePhoneNumber = () => {
     setEmailVisible(false);
@@ -102,8 +110,10 @@ function Header() {
     event.preventDefault()
 
     setToggleMenuVisible(false);
-    setToggleEquipmentButtonVisible(false);
-    setToggleServicesButtonVisible(false);
+    setToggleEquipmentButtonVisibleLg(false);
+    setToggleEquipmentButtonVisibleMovil(false);
+    setToggleServicesButtonVisibleLg(false);
+    setToggleServicesButtonVisibleMovil(false);
 
     const { href } = event.target
 
@@ -188,10 +198,10 @@ function Header() {
             <li className="font-alexandria"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
             <li className="font-alexandria flex flex-col">
               <span className="flex items-center">
-                <a>{equipment}</a>
-                <button className="material-symbols-outlined" onClick={toggleEquipment}>{toggleEquipmentButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
+              <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
+                <button className="material-symbols-outlined" onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
               </span>
-              {toggleEquipmentButtonVisible && (
+              {toggleEquipmentButtonVisibleLg && (
                 <ul className="flex flex-col gap-1 py-2">
                   <li className="font-alexandria">
                     <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
@@ -221,10 +231,10 @@ function Header() {
             <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
             <li className="font-alexandria flex flex-col">
               <span className="flex items-center">
-                <a>{services}</a>
-                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+              <Link onClick={navigateTo} href="/services">{services}</Link>
+                <button className="material-symbols-outlined" onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
-              {toggleServicesButtonVisible && (
+              {toggleServicesButtonVisibleLg && (
                 <ul>
                   <li className="py-1">
                     <Link href='/services#customerAssistance'>{customerAssitance}</Link>
@@ -244,7 +254,7 @@ function Header() {
         </nav>
       </div>
       {toggleMenuButtonVisible && (
-        <nav className=" h-full bg-white opacity-95 +z-20">
+        <nav className="h-full bg-white opacity-95 +z-20 lg:hidden">
           <ul className="text-lg font-bold">
             <li className="font-alexandria pl-4 text-right ">
               <Link href="" locale="es" className="px-4">
@@ -269,12 +279,12 @@ function Header() {
                 </Link>
                 <button
                   className="material-symbols-outlined"
-                  onClick={toggleEquipment}
+                  onClick={toggleEquipmentMovil}
                 >
-                  {toggleEquipmentButtonVisible ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}
+                  {toggleEquipmentButtonVisibleMovil ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}
                 </button>
               </span>
-              {toggleEquipmentButtonVisible && (
+              {toggleEquipmentButtonVisibleMovil && (
                 <ul className="ml-4">
                   <li className="font-alexandria">
                     <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
@@ -309,9 +319,9 @@ function Header() {
             <li className="font-alexandria border-b-black border pl-4 py-2">
               <span className="flex items-center">
                 <Link onClick={navigateTo} href="/services">{services}</Link>
-                <button className="material-symbols-outlined" onClick={toggleServices}>{toggleServicesButtonVisible  ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                <button className="material-symbols-outlined" onClick={toggleServicesMovil}>{toggleServicesButtonVisibleMovil  ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
-              {toggleServicesButtonVisible && (
+              {toggleServicesButtonVisibleMovil && (
                 <ul className="ml-4">
                   <li className="py-1">
                     <Link href='/services#customerAssistance' onClick={navigateTo}>{customerAssitance}</Link>

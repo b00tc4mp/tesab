@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .flex {
-            display: flex;
-        }
-
         .slider {
             width: 500px;
         }
@@ -20,6 +16,7 @@
         }
 
         .inner {
+            display: flex;
             transform: translateX(0px);
             transition: transform 1s;
         }
@@ -37,7 +34,7 @@
     <div class="slider">
         <button class="slider-back">back</button>
         <div class="content">
-            <div class="inner flex">
+            <div class="inner">
                 <div class="slide">1</div>
                 <div class="slide">2</div>
                 <div class="slide">3</div>
