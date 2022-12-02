@@ -3,7 +3,7 @@ import { useRef } from 'react'
 export default function ({ children }) {
     const content = useRef()
 
-    const slideWith = 500
+    const slideWith = 1024
     const slideCount = children.length
     let position = 0
 
@@ -22,9 +22,9 @@ export default function ({ children }) {
     }
 
     return <div>
-        <button onClick={handleBackward}>back</button>
+        <button onClick={handleBackward} >back</button>
 
-        <div className="w-[500px] overflow-hidden">
+        <div className="w-[700px] overflow-hidden">
             <div className="flex items-center transition-transform duration-1000" ref={content}>
                 {children}
             </div>

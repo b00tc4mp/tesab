@@ -174,7 +174,7 @@ function Header() {
         </nav>
       </div>
 
-      <div className="flex justify-between _items-center p-3 bg-white/75 lg:overflow-visible h-[100px]">
+      <div className="flex justify-between p-3 bg-white/75 lg:overflow-visible h-[90px]">
         <div className="flex flex-col justify-self-center self-center">
           <h1>
             <Link href="/">
@@ -199,10 +199,10 @@ function Header() {
             <li className="font-alexandria flex flex-col">
               <span className="flex items-center">
               <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
-                <button className="material-symbols-outlined" onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
+                <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
               </span>
               {toggleEquipmentButtonVisibleLg && (
-                <ul className="flex flex-col gap-1 py-2">
+                <ul className="flex flex-col gap-1 p-2 bg-white/50">
                   <li className="font-alexandria">
                     <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
                   </li>
@@ -232,10 +232,10 @@ function Header() {
             <li className="font-alexandria flex flex-col overflow-visible w-[100px]">
               <span className="flex items-center">
               <Link onClick={navigateTo} href="/services">{services}</Link>
-                <button className="material-symbols-outlined" onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                <button onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
               {toggleServicesButtonVisibleLg && (
-                <ul>
+                <ul className="flex flex-col gap-1 py-2 bg-white/50">
                   <li className="py-1">
                     <Link href='/services#customerAssistance'>{customerAssitance}</Link>
                   </li>
