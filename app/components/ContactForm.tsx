@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import useLiterals from '../hooks/useLiterals'
+import sendEmail from '../logic/sendEmail'
 
 const literals = {
     pt: {
@@ -41,8 +42,6 @@ const literals = {
 
 }
 
-
-
 function ContactForm() {
     const { formTitle, contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo } = useLiterals(literals)
 
@@ -69,6 +68,14 @@ function ContactForm() {
         const dataProtection = form['data-protection'].value
 
         // TODO fetch('/api/contact', ... ) send all the previous data in json format to the api (method post)
+
+        try {
+            sendEmail(email, `mail from ${name}`, description)
+                .then(() => alert('mail sent!'))
+                .catch(error => alert(error.message))
+        } catch (error) {
+            alert(error.message)
+        }
     }
 
     return <form className="p-6 flex flex-col lg:grid" onSubmit={submit}>

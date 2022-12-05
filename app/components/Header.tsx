@@ -86,17 +86,17 @@ function Header() {
     setToggleMenuVisible(!toggleMenuButtonVisible);
 
   const toggleEquipmentLg = () =>
-  setToggleEquipmentButtonVisibleLg(!toggleEquipmentButtonVisibleLg);
+    setToggleEquipmentButtonVisibleLg(!toggleEquipmentButtonVisibleLg);
 
   const toggleEquipmentMovil = () =>
-  setToggleEquipmentButtonVisibleMovil(!toggleEquipmentButtonVisibleMovil);
+    setToggleEquipmentButtonVisibleMovil(!toggleEquipmentButtonVisibleMovil);
 
   const toggleServicesLg = () =>
-  setToggleServicesButtonVisibleLg(!toggleServicesButtonVisibleLg);
+    setToggleServicesButtonVisibleLg(!toggleServicesButtonVisibleLg);
 
   const toggleServicesMovil = () =>
-  setToggleServicesButtonVisibleMovil(!toggleServicesButtonVisibleMovil);
-  
+    setToggleServicesButtonVisibleMovil(!toggleServicesButtonVisibleMovil);
+
   const togglePhoneNumber = () => {
     setEmailVisible(false);
     setPhoneNumberVisible(!phoneNumberVisible);
@@ -198,8 +198,8 @@ function Header() {
             <li className="font-alexandria"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
             <li className="font-alexandria flex flex-col">
               <span className="flex items-center">
-              <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
-                <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" /> }</button>
+                <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
+                <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
               {toggleEquipmentButtonVisibleLg && (
                 <ul className="flex flex-col gap-1 p-2 bg-white/50">
@@ -229,24 +229,22 @@ function Header() {
             </li>
             <li className="font-alexandria"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
             <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
-            <li className="font-alexandria flex flex-col overflow-visible w-[100px]">
-              <span className="flex items-center">
-              <Link onClick={navigateTo} href="/services">{services}</Link>
+            <li className="font-alexandria flex flex-col overflow-visible w-auto">
+              <span className="flex items-center justify-center">
+                <Link onClick={navigateTo} href="/services">{services}</Link>
                 <button onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
-              {toggleServicesButtonVisibleLg && (
-                <ul className="flex flex-col gap-1 py-2 bg-white/50">
-                  <li className="py-1">
-                    <Link href='/services#customerAssistance'>{customerAssitance}</Link>
-                  </li>
-                  <li className="py-1">
-                    <Link href='/services#afterSaleService'>{afterSaleService}</Link>
-                  </li>
-                  <li className="py-1">
-                    <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
-                  </li>
-                </ul>
-              )}
+              <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleServicesButtonVisibleLg ? 'visible' : 'invisible'}`}>
+                <li className="py-1">
+                  <Link href='/services#customerAssistance'>{customerAssitance}</Link>
+                </li>
+                <li className="py-1">
+                  <Link href='/services#afterSaleService'>{afterSaleService}</Link>
+                </li>
+                <li className="py-1">
+                  <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
+                </li>
+              </ul>
             </li>
             <li className="font-alexandria"><Link href="/news" onClick={navigateTo}>{news}</Link></li>
             <li className="font-alexandria"><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
@@ -319,7 +317,7 @@ function Header() {
             <li className="font-alexandria border-b-black border pl-4 py-2">
               <span className="flex items-center">
                 <Link onClick={navigateTo} href="/services">{services}</Link>
-                <button className="material-symbols-outlined" onClick={toggleServicesMovil}>{toggleServicesButtonVisibleMovil  ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                <button className="material-symbols-outlined" onClick={toggleServicesMovil}>{toggleServicesButtonVisibleMovil ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
               </span>
               {toggleServicesButtonVisibleMovil && (
                 <ul className="ml-4">
