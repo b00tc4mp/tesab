@@ -1,4 +1,3 @@
-//TODO- Una vez que tenga el contenido, organizar la info según los tamaños de la pantalla
 
 import Link from 'next/link'
 import Footer from "../components/Footer";
@@ -58,7 +57,7 @@ export default function Crusher700ie() {
         <h1 className= 'text-center text-4xl mx-4 lg:my-4'>700i</h1>
 
         <div className='lg:flex justify-center gap-x-32'>
-          <div className="flex overflow-x-auto my-4 lg:h-128 lg:w-200 lg:ml-6">
+          <div className="colums-2">
             <video autoPlay loop muted>
               <source src={content('/equipment/crushers/700i/700iVideo.mp4')} type="video/mp4" />
             </video>

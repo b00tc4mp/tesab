@@ -24,7 +24,7 @@ export default function ({ children }) {
     }
 
     return <div className="w-[500px] relative">
-        <button  className="absolute z-10 top-40 left-4 bg-white" onClick={handleBackward} ><GrFormPrevious size="1.5rem" /></button>
+        <button  className="absolute z-10 top-40 left-4 bg-amber-400 rounded-full w-10 h-10 hover:bg-amber-300" onClick={handleBackward}><GrFormPrevious size="1.5rem" /></button>
 
         <div className="w-[500px] overflow-hidden">
             <div className="flex items-center transition-transform duration-1000" ref={content}>
@@ -32,6 +32,6 @@ export default function ({ children }) {
             </div>
         </div>
 
-        <button className="absolute z-10 top-40 right-4 bg-white" onClick={handleForward}> <GrFormNext size="1.5rem" /> </button>
+        <button className="absolute z-10 top-40 right-4 bg-amber-400 rounded-full w-10 h-10 hover:bg-amber-300" onClick={handleForward}> <GrFormNext size="1.5rem" /> </button>
     </div>
 }

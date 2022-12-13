@@ -3,6 +3,9 @@ import Link from 'next/link'
 import useLiterals from '../../hooks/useLiterals'
 import useContent from '../../hooks/useContent'
 import Footer from '../../components/Footer'
+import Slider from '../../components/Slider'
+import Slide from '../../components/Slide'
+
 
 const data = {
     '700i': {
@@ -42,9 +45,9 @@ const data = {
 
         content: {
             video: '/equipment/crushers/700i/700iVideo.mp4',
-            image1: '/equipment/crushers/700i/700i1.jpg',
-            image2: '/equipment/crushers/700i/700i2.jpg'
-
+            image1: '/equipment/crushers/700i/700i-1.jpg',
+            image2: '/equipment/crushers/700i/700i-2.jpg',
+            image3: '/equipment/crushers/700i/700i-3.jpg'
         },
 
     },
@@ -82,7 +85,12 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '/equipment/crushers/800i/800Video.mp4',
+            image1: '/equipment/crushers/800i/800i-1.jpg',
+            image2: '/equipment/crushers/800i/800i-2.jpg',
+            image3: '/equipment/crushers/800i/800i-3.jpg'
+        }
     },
     '700ie': {
         literals: {
@@ -118,7 +126,12 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '/equipment/crushers/700ie/700ieVideo.mp4',
+            image1: '/equipment/crushers/700ie/700ie-1.jpg',
+            image2: '/equipment/crushers/700ie/700ie-2.jpg',
+            image3: '/equipment/crushers/700ie/700ie-3.jpg'
+        }
     },
 
     '623CT': {
@@ -153,7 +166,12 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '/equipment/impactCrusher-coneCrushers/623CT/623CTVideo.mp4',
+            image1: '/equipment/impactCrusher-coneCrushers/623CT/623CT-1.jpg',
+            image2: '/equipment/impactCrusher-coneCrushers/623CT/623CT-2.jpg',
+            image3: '/equipment/impactCrusher-coneCrushers/623CT/623CT-3.jpg',
+        }
     },
 
     '1412T': {
@@ -188,7 +206,11 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '/equipment/impactCrusher-coneCrushers/1412T/1412TVideo.mp4',
+            image1: '/equipment/impactCrusher-coneCrushers/1412T/1412T-1.jpg',
+            image2: '/equipment/impactCrusher-coneCrushers/1412T/1412T-2.jpg',
+        }
     },
 
     '1012TS': {
@@ -224,7 +246,10 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     '1150TC': {
@@ -241,7 +266,7 @@ const data = {
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
-               technicalSpecificationsItems: [],
+                technicalSpecificationsItems: [],
                 makeQueryButton: 'More information',
             },
 
@@ -250,11 +275,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS1550': {
@@ -277,20 +304,23 @@ const data = {
 
             es: {
                 descriptionTitle: 'Descripción',
-                descriptionText: 'El equipo Tesab 1150TC es un cono de trituración robusto sobre orugas diseñado para producir áridos triturados de alta calidad. Consiste en una cámara de trituración conﬁgurable según el  material con sistema de detección de objetos metálicos, y cinta principal de descarga con  sistema  hidráulico,  que  le  permite  mayor  eﬁciencia.  Es  un  equipo  altamente versátil diseñado para ofrecer al cliente los máximos niveles de rendimiento y calidad de producto triturado.',
+                descriptionText: 'Diseñado para trabajar en los entornos más difíciles y exigentes, la versatilidad del TS1550 le permite trabajar en un amplio rango de aplicaciones. Desde circuitos primarios de machaqueo, reciclaje de escombros y materiales de construcción hasta la separación de arcilla pegajosa, la máquina es capaz de clasificar incluso los materiales más difíciles.  La habilidad del TS1550 de rendir con tanto éxito en todo tipo de aplicación, especialmente con materiales húmedos y pegajosos, se basa principalmente en el rendimiento de su criba, con una superficie de clasificación de 7,2m3 y su sistema de vibración agresiva. El equipo cuenta con una tolva grande y una apertura ancha de la salida del alimentador, lo que permite la libre circulación de material sin atascos lo que mejora el rendimiento del equipo sobre todo en aplicaciones de frente de cantera.',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [
-                    'Anchura alimentador de banda: 1200 mm.',
-                    'Anchura cinta de descarga: 1050 mm.  ',
-                    'Diámetro de cono: 1150 mm.',
-                    'Capacidad de tolva 8,7 m3.',
-                    'Motor diésel Caterpillar de 450 CV.',
-                    'Peso: 42.000 kg.',
+                    'Tolva de 8m3 de capacidad.',
+                    'Dimensiones de la Criba: 4800 x 1525mm.',
+                    'Nº de Pisos: 2',
+                    'Tres cintas transportadoras de acopio.',
+                    'Motor diésel Caterpillar 4,4 de 125cv.',
+                    'Peso: 34.000kgs',
                 ],
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS1860': {
@@ -313,14 +343,23 @@ const data = {
 
             es: {
                 descriptionTitle: 'Descripción',
-                descriptionText: '',
+                descriptionText: 'Siendo el equipo más grande del rango de precribadores Tesab, el modelo TS1860 se encuentra sin rivales en cuanto a rendimiento y versatilidad. Esta máquina puede trabajar en solitario produciendo unos productos determinados o como un precribador primario en aplicaciones de machaqueo en frente de cantera. Accionada por un motor CAT de 225cv, el equipo cuenta con una criba de 6,1 x 1,8m de alta vibración que garantiza los rendimientos más altos en un amplio rango de aplicaciones incluyendo aplicaciones de reciclaje, arena y grava, carbón y frente de cantera.',
                 technicalSpecificationsTitle: 'Especificación técnica',
-                technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
+                technicalSpecificationsItems: [
+                    'Tolva de 10m3 de capacidad.',
+                    'Dimensiones de la Criba: 6100 x 1525mm.',
+                    'Nº de Pisos: 2',
+                    'Tres cintas transportadoras de acopio.',
+                    'Motor diésel Caterpillar 6,6 de 225cv.',
+                    'Peso: 40.000kgs',
+                ],
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS1340': {
@@ -343,14 +382,23 @@ const data = {
 
             es: {
                 descriptionTitle: 'Descripción',
-                descriptionText: '',
+                descriptionText: 'Ofreciendo muchas de las características habituales que se encuentran en precribadores más grandes, el TS1340 es la máquina idónea para contratistas que no requieren producciones muy elevadas, pero exigen el mismo nivel de calidad de material clasificado. Debido a su diseño compacto y su movilidad superior, el equipo es la herramienta idónea para clasificar materiales en sitios donde el espacio es limitado o donde hay necesidad de mover la máquina con frecuencia entre distintos lugares de trabajo, con un tiempo de instalación típico de 15 minutos.',
                 technicalSpecificationsTitle: 'Especificación técnica',
-                technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
+                technicalSpecificationsItems: [
+                    'Tolva de 6m3 de capacidad.',
+                    'Dimensiones de la Criba: 3660 x 1370mm.',
+                    'Nº de Pisos: 2',
+                    'Tres cintas transportadoras de acopio.',
+                    'Motor diesel Caterpillar 4,4 de 100cv.',
+                    'Peso: 23.000kgs',
+                ],
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS2430': {
@@ -376,11 +424,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS2600': {
@@ -416,7 +466,10 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TS3600': {
@@ -452,7 +505,10 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     '8042T': {
@@ -478,11 +534,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     '8042TSL': {
@@ -508,11 +566,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'TR100': {
@@ -538,11 +598,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'REC100': {
@@ -568,11 +630,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'AIR-VAC': {
@@ -598,11 +662,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 
     'windshifter': {
@@ -628,11 +694,13 @@ const data = {
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [],
-                technicalSpecificationsText7: '',
                 makeQueryButton: 'Más información',
             }
         },
-        image: ''
+        content: {
+            video: '',
+            image: '/equipment'
+        }
     },
 }
 
@@ -649,29 +717,23 @@ export default function Equipment() {
         const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = useLiterals(literals)
 
         return <>
-            <main className='items-center'>
-                <h1 className="font-bakbakone text-center text-4xl mx-4 lg:my-4">700i</h1>
-
-
-                <div className='lg:flex justify-center gap-x-32'>
-                    <div className="flex overflow-x-auto my-4 lg:h-128 lg:w-200 lg:ml-6">
-                        <video autoPlay loop muted>
-                            <source src={content('/equipment/crushers/700i/700iVideo.mp4')} type="video/mp4" />
-                        </video>
-                        <img src={content('/equipment/crushers/700i/700i1.jpg')} />
-                        <img src={content('/equipment/crushers/700i/700i2.jpg')} />
-                    </div>
+            <main>
+                <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">700i</h1>
+                <div className='flex flex-col lg:flex-row lg:place-content-around'>
+                    <Slider>
+                        <Slide><video className="w-[500px] max-w-none" autoPlay loop muted src={content('/equipment/crushers/700i/700iVideo.mp4')} type="video/mp4" /></Slide>
+                        <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i1.jpg')} /></Slide>
+                        <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i2.jpg')} /></Slide>
+                    </Slider>
 
                     <div className='flex flex-col p-4 gap-5 lg:w-160'>
+                        <h2 className="font-bakbakone">{descriptionTitle}</h2>
+                        <p className="font-alexandria text-justify">{descriptionText}</p>
 
-                        <h2 className="font-bold">{descriptionTitle}</h2>
-                        <p className=" text-justify">{descriptionText}</p>
-
-                        <h2 className="font-bold">{technicalSpecificationsTitle}</h2>
-                        <ul className="list-disc px-4">
+                        <h2 className="font-bakbakone">{technicalSpecificationsTitle}</h2>
+                        <ul className="font-alexandria list-disc px-4">
                             {technicalSpecificationsItems.map(technicalSpecificationsItem => <li>{technicalSpecificationsItem}</li>)}
                         </ul>
-
                     </div>
                 </div>
 

@@ -53,50 +53,56 @@ export default function SpareParts() {
     const content = useContent()
     return (
         <>
-            <main>
+            <main className="bg-gray-200">
                 <h1 className="font-bakbakone text-center text-4xl m-4">
                     {newsTitle}
                 </h1>
-                <div className="grid grid-cols-2">
+
+
+
+
+                <div className="flex flex-col items-center gap-10">
                     <Link href="/newsItem">
-                        <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-4">
-                            <img src={content('/equipment/accesories/dustCannon.png')}/>
-                            <h2 className="font-bakbakone text-xl">{newItem5Title}</h2>
-                            <h3 className="font-alexandria truncate">{newItem5Subtitle}</h3>
+                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
+                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src='/images/tesab-logo.png'/>
+                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-4">
-                            <img src={content('/news/meeting.png')}/>
-                            <h2 className="font-bakbakone text-xl">{newItem4Title}</h2>
-                            <h3 className="font-alexandria truncate">{newItem4Subtitle}</h3>
+                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
+                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
+                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4 border-solid border-yellow-100 border-8">
-                            <img src={content('/equipment/scalpers/scalper.png')} />
-                            <h2 className="font-bakbakone text-xl">{newItem3Title}</h2>
-                            <h3 className="font-alexandria truncate">{newItem3Subtitle}</h3>
+                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
+                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
+                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
                         </div>
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4">
-                            <img src={content('/equipment/accesories/dustCannon.png')}/>
-                            <h2 className="font-bakbakone text-xl">{newItem2Title}</h2>
-                            <h3 className="font-alexandria truncate">{newItem2Subtitle}</h3>
+                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
+                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
+                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
                         </div>
                     </Link>
 
-                    <Link href="/newsItem">
-                        <div className="bg-yellow-200 flex flex-col gap-2 my-4 pb-4">
-                            <img src={content('/equipment/scalpers/scalper.png')} />
-                            <h2 className="font-bakbakone text-xl">{newItem1Title}</h2>
-                            <h3 className="font-alexandria truncate">{newItem1Subtitle}</h3>
-                        </div>
-                    </Link>
+                    
                 </div>
             </main>
 

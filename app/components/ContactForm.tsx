@@ -106,7 +106,7 @@ function ContactForm() {
         <label className='font-alexandria' htmlFor='subscription'><input id="subscription" name="subscription" type="checkbox" />{subcription}</label>
         <label className='font-alexandria' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="material-symbols-outlined" onClick={toggleDataProtection}>{toggleDataProtectionButtomText}</button></label>
         {dataProtectionVisible && (<p className='text-sm text-justify pl-4'>{dataProtectionInfo}</p>)}
-        <button className="justify-end font-bakbak-one bg-amber-400 rounded border border-black my-4 p-2">Solicitar información</button>
+        <button className="justify-end font-bakbak-one bg-amber-400 rounded border border-black my-4 p-2 hover:shadow-lg transition duration-300 ease-in-out">Solicitar información</button>
 
     </form>
 }
