@@ -59,7 +59,7 @@ const literals = {
   }
 }
 
-export default function Equipment() {
+export default function Equipment({  isMobile }) {
   const { equipmentTitle, crushersTittle, crushersDescription, impactCrushersTittle, impactCrushersDescription, scalpersTittle, scalpersDescription, screenersTittle, screenersDescription, conveyorTittle, conveyorDescription, recyclingTittle, recyclingDescription, dustCannonTittle, dustCannonDescription } = useLiterals(literals)
   const content = useContent()
 

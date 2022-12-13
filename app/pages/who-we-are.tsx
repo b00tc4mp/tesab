@@ -34,13 +34,13 @@ const literals = {
 }
 
 
-export default function WhoWeAre() {
+export default function WhoWeAre({ isMobile }) {
 
   const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, ourMision, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
   const content = useContent()
-  const [toggleValueDescriptionIcon1, setToggleValueDescriptionIcon1] = useState(false);
-  const [toggleValueDescriptionIcon2, setToggleValueDescriptionIcon2] = useState(false);
-  const [toggleValueDescriptionIcon3, setToggleValueDescriptionIcon3] = useState(false);
+  const [toggleValueDescriptionIcon1, setToggleValueDescriptionIcon1] = useState(!isMobile);
+  const [toggleValueDescriptionIcon2, setToggleValueDescriptionIcon2] = useState(!isMobile);
+  const [toggleValueDescriptionIcon3, setToggleValueDescriptionIcon3] = useState(!isMobile);
 
   const toggleValueDescriptionVisible1 = () =>
     setToggleValueDescriptionIcon1(!toggleValueDescriptionIcon1)
@@ -76,17 +76,17 @@ export default function WhoWeAre() {
               <div className='flex flex-col justify-center'>
                 <ul className="pt-5">
                   <span className='flex'>
-                    <button onClick={toggleValueDescriptionVisible1}>{toggleValueDescriptionIcon1 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    {isMobile && <button onClick={toggleValueDescriptionVisible1}>{toggleValueDescriptionIcon1 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>}
                     <li className="font-bakbakone text-left m-4">{firstValueTitle}</li>
                   </span>
                   {toggleValueDescriptionIcon1 && <p className="font-alexandria text-justify m-6">{firstValueDescription}</p>}
                   <span className='flex'>
-                    <button onClick={toggleValueDescriptionVisible2}>{toggleValueDescriptionIcon2 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    {isMobile && <button onClick={toggleValueDescriptionVisible2}>{toggleValueDescriptionIcon2 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>}
                     <li className="font-bakbakone text-left m-4">{secondValueTitle}</li>
                   </span>
                   {toggleValueDescriptionIcon2 && <p className="font-alexandria text-justify m-6">{secondValueDescription}</p>}
                   <span className='flex'>
-                    <button onClick={toggleValueDescriptionVisible3}>{toggleValueDescriptionIcon3 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                    {isMobile && <button onClick={toggleValueDescriptionVisible3}>{toggleValueDescriptionIcon3 ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>}
                     <li className="font-bakbakone text-left m-4">{thirdValueTitle}</li>
                   </span>
                   {toggleValueDescriptionIcon3 && <p className="font-alexandria text-justify m-6">{thirdValueDescription}</p>}

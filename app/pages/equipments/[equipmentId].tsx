@@ -11,6 +11,7 @@ const data = {
     '700i': {
         literals: {
             pt: {
+                title: '700i',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -19,6 +20,7 @@ const data = {
             },
 
             en: {
+                title: '700i',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -27,6 +29,7 @@ const data = {
             },
 
             es: {
+                title: '700i',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La 700i es una machacadora móvil de alta robustez montada sobre orugas y diseñada para el machaqueo primario en frente de cantera. Dispone de un diseño único de alimentación con dos precribadores independientes que permiten al cliente obtener un producto determinado por la cinta lateral. La 700i está accionada por un motor Caterpillar de 300cv y cuenta con una machacadora de 1100 x 700mm con un sistema de ajuste hidráulico. Es el equipo idóneo para las aplicaciones más exigentes dentro de la industria de la minería, reciclajes y canteras.',
                 technicalSpecificationsTitle: 'Especificaciones Técnicas',
@@ -43,13 +46,12 @@ const data = {
             }
         },
 
-        content: {
-            video: '/equipment/crushers/700i/700iVideo.mp4',
-            image1: '/equipment/crushers/700i/700i-1.jpg',
-            image2: '/equipment/crushers/700i/700i-2.jpg',
-            image3: '/equipment/crushers/700i/700i-3.jpg'
-        },
-
+        media: [
+            { type: 'video', path: '/equipment/crushers/700i/700iVideo.mp4' },
+            { type: 'image', path: '/equipment/crushers/700i/700i-1.jpg' },
+            { type: 'image', path: '/equipment/crushers/700i/700i-2.jpeg' },
+            { type: 'image', path: '/equipment/crushers/700i/700i-3.jpg' }
+        ]
     },
     '800i': {
         literals: {
@@ -704,7 +706,7 @@ const data = {
     },
 }
 
-export default function Equipment() {
+export default function Equipment({isMobile}) {
     const content = useContent()
     const router = useRouter()
     const { equipmentId } = router.query
@@ -712,18 +714,21 @@ export default function Equipment() {
 
     if (equipmentId) {
         // @ts-ignore
-        const { literals, image } = data[equipmentId]
+        const { literals, media } = data[equipmentId]
         //const { title, description } = useLiterals(literals)
-        const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = useLiterals(literals)
+        const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = useLiterals(literals)
 
         return <>
             <main>
-                <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">700i</h1>
+                <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
                 <div className='flex flex-col lg:flex-row lg:place-content-around'>
-                    <Slider>
-                        <Slide><video className="w-[500px] max-w-none" autoPlay loop muted src={content('/equipment/crushers/700i/700iVideo.mp4')} type="video/mp4" /></Slide>
-                        <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i1.jpg')} /></Slide>
-                        <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i/700i2.jpg')} /></Slide>
+                    <Slider isMobile={isMobile}>
+                        {media && media.map(({ type, path }) =>
+                            type === 'video' ?
+                                <video className="w-[500px] max-w-none" autoPlay loop muted src={content(path)} type="video/mp4" />
+                                :
+                                <img className="w-[500px] max-w-none" src={content(path)} />
+                        )}
                     </Slider>
 
                     <div className='flex flex-col p-4 gap-5 lg:w-160'>

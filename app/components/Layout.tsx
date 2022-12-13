@@ -1,7 +1,7 @@
 import Header from './Header'
 import Head from 'next/head'
 
-export default function Layout({ children }) {
+export default function Layout({ children, isMobile }) {
   return (
     <div className="h-screen">
       <Head>
@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
 
-      <Header />
+      <Header isMobile={isMobile} />
 
       <div className='w-full pt-32 -z-10 h-full'>{children}</div>
 

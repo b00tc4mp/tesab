@@ -69,7 +69,7 @@ const literals = {
   }
 }
 
-function Header() {
+function Header({ isMobile }) {
   const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
 
   const [toggleMenuButtonVisible, setToggleMenuVisible] = useState(false);
@@ -187,70 +187,72 @@ function Header() {
           </h1>
           <h2 className="text-sm font-bold">Alquiler y venta de maquinaria</h2>
         </div>
-        <button
-          className="justify-self-end self-center cursor-pointer lg:hidden"
-          onClick={toggleMenu}
-        >
-          {toggleMenuButtonVisible ? <GrClose size="1.5rem" /> : <FiMenu size="1.5rem" />}
-        </button>
-        <nav className="hidden lg:block">
-          <ul className="flex font-bold gap-x-5">
-            <li className="font-alexandria"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
-            <li className="font-alexandria flex flex-col w-auto">
-              <span className="flex items-center justify-center">
-                <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
-                <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
-              </span>
-              <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleEquipmentButtonVisibleLg ? 'block' : 'hidden'}`}>
-                <li className="font-alexandria">
-                  <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#impactCrusher" onClick={navigateTo}>{impactCrusher}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#scalpers" onClick={navigateTo}>{scalpers}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#screeners" onClick={navigateTo}>{screeners}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#conveyor" onClick={navigateTo}>{conveyor}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#recycling" onClick={navigateTo}>{recycling}</Link>
-                </li>
-                <li className="font-alexandria">
-                  <Link href="/equipment#dust-cannon" onClick={navigateTo}>{dustCannon}</Link>
-                </li>
-              </ul>
-              
-            </li>
-            <li className="font-alexandria"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
-            <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
-            <li className="font-alexandria flex flex-col w-auto">
-              <span className="flex items-center justify-center">
-                <Link onClick={navigateTo} href="/services">{services}</Link>
-                <button onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
-              </span>
-              <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleServicesButtonVisibleLg ? 'block' : 'hidden'}`}>
-                <li className="font-alexandria py-1">
-                  <Link href='/services#customerAssistance'>{customerAssitance}</Link>
-                </li>
-                <li className="font-alexandria py-1">
-                  <Link href='/services#afterSaleService'>{afterSaleService}</Link>
-                </li>
-                <li className="font-alexandria py-1">
-                  <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
-                </li>
-              </ul>
-            </li>
-            <li className="font-alexandria"><Link href="/news" onClick={navigateTo}>{news}</Link></li>
-            <li className="font-alexandria"><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
-          </ul>
-        </nav>
+        {isMobile ?
+          <button
+            className="justify-self-end self-center cursor-pointer lg:hidden"
+            onClick={toggleMenu}
+          >
+            {toggleMenuButtonVisible ? <GrClose size="1.5rem" /> : <FiMenu size="1.5rem" />}
+          </button>
+          :
+          <nav className="hidden lg:block">
+            <ul className="flex font-bold gap-x-5">
+              <li className="font-alexandria"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
+              <li className="font-alexandria flex flex-col w-auto">
+                <span className="flex items-center justify-center">
+                  <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
+                  <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                </span>
+                <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleEquipmentButtonVisibleLg ? 'block' : 'hidden'}`}>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#impactCrusher" onClick={navigateTo}>{impactCrusher}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#scalpers" onClick={navigateTo}>{scalpers}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#screeners" onClick={navigateTo}>{screeners}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#conveyor" onClick={navigateTo}>{conveyor}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#recycling" onClick={navigateTo}>{recycling}</Link>
+                  </li>
+                  <li className="font-alexandria">
+                    <Link href="/equipment#dust-cannon" onClick={navigateTo}>{dustCannon}</Link>
+                  </li>
+                </ul>
+
+              </li>
+              <li className="font-alexandria"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
+              <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
+              <li className="font-alexandria flex flex-col w-auto">
+                <span className="flex items-center justify-center">
+                  <Link onClick={navigateTo} href="/services">{services}</Link>
+                  <button onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
+                </span>
+                <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleServicesButtonVisibleLg ? 'block' : 'hidden'}`}>
+                  <li className="font-alexandria py-1">
+                    <Link href='/services#customerAssistance'>{customerAssitance}</Link>
+                  </li>
+                  <li className="font-alexandria py-1">
+                    <Link href='/services#afterSaleService'>{afterSaleService}</Link>
+                  </li>
+                  <li className="font-alexandria py-1">
+                    <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="font-alexandria"><Link href="/news" onClick={navigateTo}>{news}</Link></li>
+              <li className="font-alexandria"><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
+            </ul>
+          </nav>}
       </div>
-      {toggleMenuButtonVisible && (
+      {isMobile && toggleMenuButtonVisible && (
         <nav className="h-full bg-white opacity-95 +z-20 lg:hidden">
           <ul className="text-lg font-bold">
             <li className="font-alexandria pl-4 text-right ">
