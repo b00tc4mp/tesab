@@ -70,7 +70,13 @@ function ContactForm() {
         // TODO fetch('/api/contact', ... ) send all the previous data in json format to the api (method post)
 
         try {
-            sendEmail(email, `mail from ${name}`, description)
+            sendEmail(email, `contact from the web (${name})`, `name: ${name}
+phone: ${phone}
+company: ${company}
+location: ${location}
+description: ${description}
+subscription: ${subscription}
+dataProtecton: ${dataProtection}`)
                 .then(() => alert('mail sent!'))
                 .catch(error => alert(error.message))
         } catch (error) {
