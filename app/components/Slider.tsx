@@ -24,7 +24,7 @@ export default function ({ children, isMobile }) {
     }
 
     return <div className={`w-[${slideWidth}px] relative`}>
-        <button  className="absolute z-10 top-40 left-4 bg-amber-400 rounded-full w-10 h-10 hover:bg-amber-300 flex justify-center items-center" onClick={handleBackward}><GrFormPrevious size="1.5rem" /></button>
+        <button  className="absolute z-10 top-40 left-4 bg-white/50 rounded-full w-10 h-10 hover:bg-gray-300/75 hover:border-solid hover:border hover:border-gray-100 flex justify-center items-center" onClick={handleBackward}><GrFormPrevious size="1.5rem" /></button>
 
         <div className={`w-[${slideWidth}px] overflow-hidden`}>
             <div className="flex items-center transition-transform duration-1000" ref={content}>
@@ -32,6 +32,6 @@ export default function ({ children, isMobile }) {
             </div>
         </div>
 
-        <button className="absolute z-10 top-40 right-4 bg-amber-400 rounded-full w-10 h-10 hover:bg-amber-300 flex justify-center items-center" onClick={handleForward}> <GrFormNext size="1.5rem" /> </button>
+        <button className="absolute z-10 top-40 right-4 bg-white/50 rounded-full w-10 h-10 hover:bg-gray-300/75 hover:border-solid hover:border hover:border-gray-100 flex justify-center items-center" onClick={handleForward}> <GrFormNext size="1.5rem" /> </button>
     </div>
 }

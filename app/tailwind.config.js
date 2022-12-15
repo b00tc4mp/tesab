@@ -4,10 +4,11 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
       colors: {
-        'tesabGray':'#323A47',
+        'tesabGray': '#323A47',
       },
       width: {
         '112': '28rem',
@@ -29,8 +30,27 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         alexandria: ['Alexandria', 'sans-serif'],
 
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+
+        div : {
+          'from':{ml: '100%'},
+          'to': {ml: '0%'}
+        }
+
+
+      },
+
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
       }
-    },
+        
+    }
   },
-  plugins: [],
+
+plugins: [],
 }

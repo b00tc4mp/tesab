@@ -56,7 +56,7 @@ export default function WhoWeAre({ isMobile }) {
       <main>
         <div className="relative">
           <img className="-z-10 object-cover w-full h-48 lg:h-112" src={content('/whoWeAre.jpg')} alt="" />
-          <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-72 lg:left-84">
+          <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-24 sm:left-28 lg:text-8xl lg:top-72 lg:left-84">
             {whoWeAreTitle}
           </h1>
         </div>

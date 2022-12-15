@@ -53,19 +53,17 @@ export default function SpareParts() {
     const content = useContent()
     return (
         <>
-            <main className="bg-gray-200">
-                <h1 className="font-bakbakone text-center text-4xl m-4">
+            <main className="bg-repeat py-12" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>
+                <h1 className="font-bakbakone text-center text-4xl m-4 ">
                     {newsTitle}
                 </h1>
 
 
-
-
-                <div className="flex flex-col items-center gap-10">
+                <div className="flex flex-col gap-10 p-4 sm:grid sm:grid-cols-2">
                     <Link href="/newsItem">
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src='/images/tesab-logo.png'/>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
                                 <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
                                 <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
                             </div>
@@ -73,9 +71,9 @@ export default function SpareParts() {
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
                                 <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
                                 <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
                             </div>
@@ -83,9 +81,9 @@ export default function SpareParts() {
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
                                 <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
                                 <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
                             </div>
@@ -93,17 +91,37 @@ export default function SpareParts() {
                     </Link>
 
                     <Link href="/newsItem">
-                        <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                            <img className='h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden' src={content('/whoWeAre.jpg')}/>
-                            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
                                 <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
                                 <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
                             </div>
                         </div>
                     </Link>
 
-                    
+                    <Link href="/newsItem">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
+                        </div>
+                    </Link>
+
+                    <Link href="/newsItem">
+                        <div className="max-w-sm w-full shadow-lg lg:max-w-full flex flex-col xl:flex-row">
+                            <img className='h-auto w-screen text-center rounded-t sm:h-48 lg:h-64 lg:w-auto lg:rounded-t-none lg:rounded-l' src={content('/whoWeAre.jpg')} />
+                            <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal">
+                                <h2 className="text-gray-900 font-bold text-xl mb-2">{newItem5Title}</h2>
+                                <h3 className="text-gray-700 text-base">{newItem5Subtitle}</h3>
+                            </div>
+                        </div>
+                    </Link>
+
                 </div>
+
             </main>
 
             <Footer />

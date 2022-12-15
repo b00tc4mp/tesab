@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import useLiterals from '../hooks/useLiterals'
 import sendEmail from '../logic/sendEmail'
+import { GrFormUp, GrFormDown } from 'react-icons/gr'
 
 const literals = {
     pt: {
@@ -43,9 +44,9 @@ const literals = {
 }
 
 function ContactForm() {
-    const { formTitle, contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo } = useLiterals(literals)
+    const {contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo } = useLiterals(literals)
 
-    const [toggleDataProtectionButtomText, setToggleDataProtectionButtomText] = useState('arrow_drop_down')
+    const [toggleDataProtectionButtomText, setToggleDataProtectionButtomText] = useState(false)
     const [dataProtectionVisible, setDataProtectionVisible] = useState(false);
 
     const toggleDataProtection = () => {
@@ -71,12 +72,12 @@ function ContactForm() {
 
         try {
             sendEmail(email, `contact from the web (${name})`, `name: ${name}
-phone: ${phone}
-company: ${company}
-location: ${location}
-description: ${description}
-subscription: ${subscription}
-dataProtecton: ${dataProtection}`)
+            phone: ${phone}
+            company: ${company}
+            location: ${location}
+            description: ${description}
+            subscription: ${subscription}
+            dataProtecton: ${dataProtection}`)
                 .then(() => alert('mail sent!'))
                 .catch(error => alert(error.message))
         } catch (error) {
@@ -110,9 +111,11 @@ dataProtecton: ${dataProtection}`)
         <textarea id="description" name="description" className='border border-black rounded my-2 py-1 pl-2 bg-contain h-48' placeholder={description} style={{ backgroundImage: 'url(/images/piramide.png)' }} />
 
         <label className='font-alexandria' htmlFor='subscription'><input id="subscription" name="subscription" type="checkbox" />{subcription}</label>
-        <label className='font-alexandria' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="material-symbols-outlined" onClick={toggleDataProtection}>{toggleDataProtectionButtomText}</button></label>
-        {dataProtectionVisible && (<p className='text-sm text-justify pl-4'>{dataProtectionInfo}</p>)}
-        <button className="justify-end font-bakbak-one bg-amber-400 rounded border border-black my-4 p-2 hover:shadow-lg transition duration-300 ease-in-out">Solicitar información</button>
+        <label className='font-alexandria pb-4' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="" onClick={toggleDataProtection}>{toggleDataProtectionButtomText ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button></label>
+        {dataProtectionVisible && (<p className='text-sm text-justify pl-4 pb-4'>{dataProtectionInfo}</p>)}
+        <div className='flex justify-center'>
+            <button className="btn w-56">Solicitar información</button>
+        </div>
 
     </form>
 }

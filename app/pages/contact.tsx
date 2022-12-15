@@ -65,8 +65,8 @@ export default function Contact() {
                 <div className="grid grid-cols-2 items-start px-24">
                     <div className="flex flex-col gap-6">
                         <h4 className="font-bakbakone text-xl">{querytitle}</h4>
-                        <p>{introductionQuery}</p>
-                        <img src={content('/equipment/crushers/700ie/crusher700i3.jpg')} />
+                        <p className="font-alexandria">{introductionQuery}</p>
+                        <img src={content('/equipment/crushers/700ie/700ie-2.jpg')} />
                     </div>
                     <ContactForm />
                 </div>

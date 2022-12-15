@@ -101,11 +101,11 @@ export default function SpareParts() {
       <main className="flex flex-col gap-4 min-h-screen">
         <div className="relative">
           <img
-            className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-112"
-            src={content('spare-parts.jpg')}
+            className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-96"
+            src={content('/spare-parts.jpg')}
             alt=""
           />
-          <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-72 lg:left-84">
+          <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-48 lg:left-84">
              {sparePartsTitle}
           </h1>
         </div>
