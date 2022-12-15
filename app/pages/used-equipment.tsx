@@ -34,7 +34,7 @@ const literals = {
   }
 }
 
-export default function UsedEquipment() {
+export default function UsedEquipment({ isMobile }) {
 
   const { usedEquipmentTitle, model, available, yearOfManufacture, hours, makeQueryButton } = useLiterals(literals)
   const content = useContent()
@@ -49,12 +49,32 @@ export default function UsedEquipment() {
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-200">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
+              <Slider isMobile={isMobile} width={500} height={300}>
+                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
+                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
+                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
+              </Slider>
+
+              <div className="flex flex-col items-center gap-4">
+                <p className="font-bakbakone">{available}</p>
+                <p className="font-alexandria">{yearOfManufacture} 2022</p>
+                <p className="font-alexandria">{hours} 560</p>
+                <Link href="/contact"><button className='btn'>
+                  {makeQueryButton}
+                </button></Link>
+              </div>
+            </div>
+          </div>
+{/*
+          <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-200">
+            <h2 className="font-bakbakone text-xl">{model} 700i</h2>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
               <Slider>
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
               </Slider>
-             
+
               <div className="flex flex-col items-center gap-4">
                 <p className="font-bakbakone">{available}</p>
                 <p className="font-alexandria">{yearOfManufacture} 2022</p>
@@ -74,7 +94,7 @@ export default function UsedEquipment() {
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
               </Slider>
-             
+
               <div className="flex flex-col items-center gap-4">
                 <p className="font-bakbakone">{available}</p>
                 <p className="font-alexandria">{yearOfManufacture} 2022</p>
@@ -94,7 +114,7 @@ export default function UsedEquipment() {
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
                 <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
               </Slider>
-             
+
               <div className="flex flex-col items-center gap-4">
                 <p className="font-bakbakone">{available}</p>
                 <p className="font-alexandria">{yearOfManufacture} 2022</p>
@@ -105,27 +125,7 @@ export default function UsedEquipment() {
               </div>
             </div>
           </div>
-
-          <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-200">
-            <h2 className="font-bakbakone text-xl">{model} 700i</h2>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
-              <Slider>
-                <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
-                <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
-                <Slide><img className="w-[500px] max-w-none" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
-              </Slider>
-             
-              <div className="flex flex-col items-center gap-4">
-                <p className="font-bakbakone">{available}</p>
-                <p className="font-alexandria">{yearOfManufacture} 2022</p>
-                <p className="font-alexandria">{hours} 560</p>
-                <Link href="/contact"><button className='btn'>
-                  {makeQueryButton}
-                </button></Link>
-              </div>
-            </div>
-          </div>
-
+  */}
 
         </div>
       </main>

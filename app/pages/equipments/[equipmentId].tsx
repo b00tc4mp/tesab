@@ -722,12 +722,12 @@ export default function Equipment({isMobile}) {
             <main>
                 <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
                 <div className='flex flex-col lg:flex-row lg:place-content-around'>
-                    <Slider isMobile={isMobile}>
+                    <Slider isMobile={isMobile} width={550} height={600}>
                         {media && media.map(({ type, path }) =>
                             type === 'video' ?
-                                <video className="w-[500px] max-w-none" autoPlay loop muted src={content(path)} type="video/mp4" />
+                                <video className="w-full" autoPlay loop muted src={content(path)} type="video/mp4" />
                                 :
-                                <img className="w-[500px] max-w-none" src={content(path)} />
+                                <img className="w-full" src={content(path)} />
                         )}
                     </Slider>
 
