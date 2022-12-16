@@ -4,7 +4,7 @@ import useLiterals from '../../hooks/useLiterals'
 import useContent from '../../hooks/useContent'
 import Footer from '../../components/Footer'
 import Slider from '../../components/Slider'
-import Slide from '../../components/Slide'
+
 
 
 const data = {
