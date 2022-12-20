@@ -49,8 +49,10 @@ function ContactForm() {
     const [toggleDataProtectionButtomText, setToggleDataProtectionButtomText] = useState(false)
     const [dataProtectionVisible, setDataProtectionVisible] = useState(false);
 
-    const toggleDataProtection = () => {
-        setToggleDataProtectionButtomText(toggleDataProtectionButtomText === "arrow_drop_down" ? "arrow_drop_up" : "arrow_drop_down");
+    const toggleDataProtection = event => {
+        event.stopPropagation()
+        
+        setToggleDataProtectionButtomText(!toggleDataProtectionButtomText);
         setDataProtectionVisible(!dataProtectionVisible);
     }
 
@@ -111,10 +113,10 @@ function ContactForm() {
         <textarea id="description" name="description" className='border border-black rounded my-2 py-1 pl-2 bg-contain h-48' placeholder={description} style={{ backgroundImage: 'url(/images/piramide.png)' }} />
 
         <label className='font-alexandria' htmlFor='subscription'><input id="subscription" name="subscription" type="checkbox" />{subcription}</label>
-        <label className='font-alexandria pb-4' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button className="" onClick={toggleDataProtection}>{toggleDataProtectionButtomText ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button></label>
+        <label className='font-alexandria pb-4' htmlFor='data-protection'><input id="data-protection" name="data-protection" type="checkbox" />{dataProtectionInputText}<button type="button" className="" onClick={toggleDataProtection}>{toggleDataProtectionButtomText ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button></label>
         {dataProtectionVisible && (<p className='text-sm text-justify pl-4 pb-4'>{dataProtectionInfo}</p>)}
         <div className='flex justify-center'>
-            <button className="btn w-56">Solicitar información</button>
+            <button type="submit" id="queryButton" className="btn w-56">Solicitar información</button>
         </div>
 
     </form>
