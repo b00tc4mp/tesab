@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
+import prepareLiterals from "../helpers/prepareLiterals";
 import Link from "next/link";
-import useContent from "../hooks/useContent";
+import prepareContent from "../helpers/prepareContent";
 
 const literals = {
   pt: {
@@ -37,8 +37,8 @@ const literals = {
 }
 export default function Services() {
 
-  const { servicesTitle, customerAssistanceTitle, customerAssistanceDescription, afterSaleAssistanceTitle, afterSaleAssistanceDescription, technicalAssistanceTitle, technicalAssistanceDescription, makeQueryButtom} = useLiterals(literals)
-  const content = useContent()
+  const { servicesTitle, customerAssistanceTitle, customerAssistanceDescription, afterSaleAssistanceTitle, afterSaleAssistanceDescription, technicalAssistanceTitle, technicalAssistanceDescription, makeQueryButtom} = prepareLiterals(literals)
+  const content = prepareContent()
   
   return (
     <>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import useLiterals from "../hooks/useLiterals";
+import prepareLiterals from "../helpers/prepareLiterals";
 import { useRouter } from 'next/router'
 import { FiMenu } from 'react-icons/fi'
 import { GrClose, GrFormUp, GrFormDown } from 'react-icons/gr'
@@ -70,7 +70,7 @@ const literals = {
 }
 
 function Header({ isMobile }) {
-  const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = useLiterals(literals)
+  const { whoWeAre, equipment, crushers, impactCrusher, scalpers, screeners, conveyor, recycling, dustCannon, usedEquipment, spareParts, services, customerAssitance, afterSaleService, technicalAssistance, news, contact } = prepareLiterals(literals)
 
   const [toggleMenuButtonVisible, setToggleMenuVisible] = useState(false);
   const [toggleEquipmentButtonVisibleLg, setToggleEquipmentButtonVisibleLg] = useState(false);

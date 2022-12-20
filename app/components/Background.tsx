@@ -1,7 +1,7 @@
-import useContent from '../hooks/useContent'
+import prepareContent from '../helpers/prepareContent'
 
 function Background() {
-  const content = useContent()
+  const content = prepareContent()
 
   return <video
       autoPlay

@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 
-function useLiterals(literals) {
+function prepareLiterals(literals) {
     const { locale } = useRouter()
 
     return literals[locale] || {}
 }
 
-export default useLiterals
+export default prepareLiterals

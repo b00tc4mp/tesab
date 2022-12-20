@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Footer from '../components/Footer'
-import useLiterals from '../hooks/useLiterals'
-import useContent from '../hooks/useContent'
+import prepareLiterals from '../helpers/prepareLiterals'
+import prepareContent from '../helpers/prepareContent'
 
 const literals = {
   pt: {
@@ -60,8 +60,8 @@ const literals = {
 }
 
 export default function Equipment({ isMobile }) {
-  const { equipmentTitle, crushersTittle, crushersDescription, impactCrushersTittle, impactCrushersDescription, scalpersTittle, scalpersDescription, screenersTittle, screenersDescription, conveyorTittle, conveyorDescription, recyclingTittle, recyclingDescription, dustCannonTittle, dustCannonDescription } = useLiterals(literals)
-  const content = useContent()
+  const { equipmentTitle, crushersTittle, crushersDescription, impactCrushersTittle, impactCrushersDescription, scalpersTittle, scalpersDescription, screenersTittle, screenersDescription, conveyorTittle, conveyorDescription, recyclingTittle, recyclingDescription, dustCannonTittle, dustCannonDescription } = prepareLiterals(literals)
+  const content = prepareContent()
 
   return <>
     <main className='mb-8'>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
-import useContent from "../hooks/useContent";
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from "../helpers/prepareContent";
 
 const literals = {
   pt: {
@@ -93,8 +93,8 @@ const literals = {
 
 export default function SpareParts() {
 
-  const {sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = useLiterals(literals)
-  const content = useContent()
+  const {sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = prepareLiterals(literals)
+  const content = prepareContent()
 
   return (
     <>

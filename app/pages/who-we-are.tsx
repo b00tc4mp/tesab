@@ -1,8 +1,8 @@
 //TODO : Agregar en la versión móvil los iconos de los valores para que se desplieguen y muestren la información
 import { useState } from 'react';
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
-import useContent from "../hooks/useContent";
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from "../helpers/prepareContent";
 import { GrFormUp, GrFormDown } from 'react-icons/gr'
 
 const literals = {
@@ -36,8 +36,8 @@ const literals = {
 
 export default function WhoWeAre({ isMobile }) {
 
-  const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, ourMision, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = useLiterals(literals)
-  const content = useContent()
+  const { whoWeAreTitle, whoWeAreIntroduction1, whoWeAreIntroduction2, whoWeAreIntroduction3, ourMision, whoWeAreIntroduction4, ourValuesTitle, firstValueTitle, firstValueDescription, secondValueTitle, secondValueDescription, thirdValueTitle, thirdValueDescription } = prepareLiterals(literals)
+  const content = prepareContent()
   const [toggleValueDescriptionIcon1, setToggleValueDescriptionIcon1] = useState(!isMobile);
   const [toggleValueDescriptionIcon2, setToggleValueDescriptionIcon2] = useState(!isMobile);
   const [toggleValueDescriptionIcon3, setToggleValueDescriptionIcon3] = useState(!isMobile);

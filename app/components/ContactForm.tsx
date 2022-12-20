@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import useLiterals from '../hooks/useLiterals'
+import prepareLiterals from '../helpers/prepareLiterals'
 import sendEmail from '../logic/sendEmail'
 import { GrFormUp, GrFormDown } from 'react-icons/gr'
 
@@ -44,7 +44,7 @@ const literals = {
 }
 
 function ContactForm() {
-    const {contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo } = useLiterals(literals)
+    const {contactName, contactEmail, contactPhone, company, companyLocation, description, subcription, dataProtectionInputText, dataProtectionInfo } = prepareLiterals(literals)
 
     const [toggleDataProtectionButtomText, setToggleDataProtectionButtomText] = useState(false)
     const [dataProtectionVisible, setDataProtectionVisible] = useState(false);

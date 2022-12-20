@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr'
 
 
-export default function ({ children, width, height }) {
+export default function Slider({ children, width, height }) {
     const content = useRef()
 
     // @ts-ignore

@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
-import useContent from "../hooks/useContent";
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from "../helpers/prepareContent";
 
 
 
@@ -24,8 +24,8 @@ const literals = {
 
 export default function NewsItem() {
 
-    const { newsItemTitle, newsItemSubtitle, newsItemText } = useLiterals(literals)
-    const content = useContent()
+    const { newsItemTitle, newsItemSubtitle, newsItemText } = prepareLiterals(literals)
+    const content = prepareContent()
     return (
 
         <>

@@ -1,4 +1,4 @@
-import useLiterals from "../hooks/useLiterals"
+import prepareLiterals from "../helpers/prepareLiterals"
 
 const literals = {
     pt: {
@@ -16,7 +16,7 @@ const literals = {
 }
 function Footer() {
 
-    const {address, phone} = useLiterals(literals)
+    const {address, phone} = prepareLiterals(literals)
     return <footer className='bg-[#323A47] p-4'>
         <div>
             <p className='font-alexandria text-white text-xs text-center'>{address}</p>

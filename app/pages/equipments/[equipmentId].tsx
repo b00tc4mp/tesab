@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import useLiterals from '../../hooks/useLiterals'
-import useContent from '../../hooks/useContent'
+import prepareLiterals from '../../helpers/prepareLiterals'
+import prepareContent from '../../helpers/prepareContent'
 import Footer from '../../components/Footer'
 import Slider from '../../components/Slider'
 import Slide from '../../components/Slide'
@@ -707,7 +707,7 @@ const data = {
 }
 
 export default function Equipment({isMobile}) {
-    const content = useContent()
+    const content = prepareContent()
     const router = useRouter()
     const { equipmentId } = router.query
 
@@ -715,8 +715,7 @@ export default function Equipment({isMobile}) {
     if (equipmentId) {
         // @ts-ignore
         const { literals, media } = data[equipmentId]
-        //const { title, description } = useLiterals(literals)
-        const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = useLiterals(literals)
+        const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = prepareLiterals(literals)
 
         return <>
             <main>

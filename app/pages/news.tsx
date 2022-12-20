@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Link from "next/link";
-import useLiterals from "../hooks/useLiterals";
-import useContent from "../hooks/useContent";
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from "../helpers/prepareContent";
 
 
 const literals = {
@@ -49,8 +49,8 @@ const literals = {
 
 export default function SpareParts() {
 
-    const { newsTitle, newItem5Title, newItem5Subtitle, newItem4Title, newItem4Subtitle, newItem3Title, newItem3Subtitle, newItem2Title, newItem2Subtitle, newItem1Title, newItem1Subtitle } = useLiterals(literals)
-    const content = useContent()
+    const { newsTitle, newItem5Title, newItem5Subtitle, newItem4Title, newItem4Subtitle, newItem3Title, newItem3Subtitle, newItem2Title, newItem2Subtitle, newItem1Title, newItem1Subtitle } = prepareLiterals(literals)
+    const content = prepareContent()
     return (
         <>
             <main className="bg-repeat py-12" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>

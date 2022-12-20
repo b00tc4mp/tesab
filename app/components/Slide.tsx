@@ -1,3 +1,3 @@
-export default function({ children }) {
+export default function Slide({ children }) {
     return <>{children}</>
 }

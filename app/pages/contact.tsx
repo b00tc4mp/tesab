@@ -3,8 +3,8 @@
 import { Content } from "@next/font/google";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
-import useContent from "../hooks/useContent";
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from "../helpers/prepareContent";
 
 const literals = {
     pt: {
@@ -34,8 +34,8 @@ const literals = {
 
 export default function Contact() {
 
-    const { title, address, phone, wsapp, contactFormTitle, querytitle, introductionQuery } = useLiterals(literals)
-    const content = useContent()
+    const { title, address, phone, wsapp, contactFormTitle, querytitle, introductionQuery } = prepareLiterals(literals)
+    const content = prepareContent()
 
     return (
         <main>

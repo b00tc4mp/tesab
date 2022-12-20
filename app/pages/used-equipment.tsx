@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Footer from "../components/Footer";
-import useLiterals from "../hooks/useLiterals";
-import useContent from '../hooks/useContent'
+import prepareLiterals from "../helpers/prepareLiterals";
+import prepareContent from '../helpers/prepareContent'
 import Slide from "../components/Slide";
 import Slider from "../components/Slider";
 
@@ -36,8 +36,8 @@ const literals = {
 
 export default function UsedEquipment({ isMobile }) {
 
-  const { usedEquipmentTitle, model, available, yearOfManufacture, hours, makeQueryButton } = useLiterals(literals)
-  const content = useContent()
+  const { usedEquipmentTitle, model, available, yearOfManufacture, hours, makeQueryButton } = prepareLiterals(literals)
+  const content = prepareContent()
   return (
     <>
       <main className="flex flex-col gap-5 py-5 bg-gray-100" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>

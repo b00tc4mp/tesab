@@ -1,8 +1,8 @@
 
 import Link from 'next/link'
 import Footer from "../components/Footer";
-import useLiterals from '../hooks/useLiterals'
-import useContent from '../hooks/useContent'
+import prepareLiterals from '../helpers/prepareLiterals'
+import prepareContent from '../helpers/prepareContent'
 
 const literals = {
   pt: {
@@ -47,9 +47,9 @@ const literals = {
 }
 
 export default function Crusher700ie() {
-  const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, technicalSpecificationsText7, makeQueryButton } = useLiterals(literals)
+  const { descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsText1, technicalSpecificationsText2, technicalSpecificationsText3, technicalSpecificationsText4, technicalSpecificationsText5, technicalSpecificationsText6, technicalSpecificationsText7, makeQueryButton } = prepareLiterals(literals)
   
-  const content = useContent()
+  const content = prepareContent()
 
   return (
     <>
