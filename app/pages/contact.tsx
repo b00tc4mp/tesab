@@ -1,6 +1,5 @@
 //TODO --> ARREGLAR QUE APARECE DOS VECES EL CONTACT FORM
 
-import { Content } from "@next/font/google";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";

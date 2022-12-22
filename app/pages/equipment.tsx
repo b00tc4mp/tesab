@@ -66,12 +66,12 @@ export default function Equipment({ isMobile }) {
   return <>
     <main className='mb-8'>
       <h1 className='font-bakbakone text-center text-4xl m-4 font-bakbak-one'>{equipmentTitle}</h1>
-      <div className='flex flex-col gap-10 pt-6 sm:grid sm:grid-cols-2 sm:gap-x-4 lg:grid lg:grid-cols-3 lg:gap-x-4'>
+      <div className='flex flex-col gap-10 pt-6 mx-2 sm:grid sm:grid-cols-2 sm:gap-x-4 lg:grid lg:grid-cols-3 lg:gap-x-4'>
 
         <div id='crushers' className='flex flex-col gap-7 shadow-lg pb-4'>
           <div className='relative'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{crushersTittle}</h2>
-            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/crushers/700i.jpeg')} />
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/crushers/700i.jpg')} />
           </div>
           <div className='flex flex-col gap-6'>
             <p className='font-alexandria text-justify mx-4'>{crushersDescription}</p>
@@ -153,8 +153,8 @@ export default function Equipment({ isMobile }) {
           <div className='flex justify-around gap-1 flex-wrap'>
             <Link href="/equipments/TR100"><button className='btn'>TR100</button></Link>
             <Link href="/equipments/REC100"><button className='btn'>REC100</button></Link>
-            <Link href="/equipments/Airvac"><button className='btn'>AIR VAC</button></Link>
-            <Link href="/equipments/Windshifter"><button className='btn'>WINDSHIFTER</button></Link>
+            <Link href="/equipments/AIR-VAC"><button className='btn'>AIR VAC</button></Link>
+            <Link href="/equipments/windshifter"><button className='btn'>WINDSHIFTER</button></Link>
           </div>
           </div>
         </div>
@@ -167,8 +167,8 @@ export default function Equipment({ isMobile }) {
           <div className='flex flex-col gap-6'>
           <p className='font-alexandria text-justify mx-4'>{dustCannonDescription}</p>
           <div className='flex justify-around'>
-            <Link href="/equipments/S45"><button className='btn'>S45</button></Link>
-            <Link href="/equipments/S65"><button className='btn'>S65</button></Link>
+            <Link href="/equipments/dustCannon"><button className='btn'>S45</button></Link>
+            <Link href="/equipments/dustCannon"><button className='btn'>S65</button></Link>
           </div>
           </div>
         </div>

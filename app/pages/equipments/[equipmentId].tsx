@@ -4,7 +4,6 @@ import prepareLiterals from '../../helpers/prepareLiterals'
 import prepareContent from '../../helpers/prepareContent'
 import Footer from '../../components/Footer'
 import Slider from '../../components/Slider'
-import Slide from '../../components/Slide'
 
 
 const data = {
@@ -56,6 +55,7 @@ const data = {
     '800i': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -87,16 +87,18 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '/equipment/crushers/800i/800Video.mp4',
-            image1: '/equipment/crushers/800i/800i-1.jpg',
-            image2: '/equipment/crushers/800i/800i-2.jpg',
-            image3: '/equipment/crushers/800i/800i-3.jpg'
-        }
+
+        media: [
+            { type: 'video', path: '/equipment/crushers/800i/800iVideo.mp4' },
+            { type: 'image', path: '/equipment/crushers/800i/800i-1.jpg' },
+            { type: 'image', path: '/equipment/crushers/800i/800i-2.jpg' },
+            { type: 'image', path: '/equipment/crushers/800i/800i-3.jpg' }
+        ]
     },
     '700ie': {
         literals: {
             pt: {
+                title:'TODO',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -128,17 +130,19 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '/equipment/crushers/700ie/700ieVideo.mp4',
-            image1: '/equipment/crushers/700ie/700ie-1.jpg',
-            image2: '/equipment/crushers/700ie/700ie-2.jpg',
-            image3: '/equipment/crushers/700ie/700ie-3.jpg'
-        }
+        media: [
+            { type: 'video', path: '/equipment/crushers/700ie/700ieVideo.mp4' },
+            { type: 'image', path: '/equipment/crushers/700ie/700ie-1.jpg' },
+            { type: 'image', path: '/equipment/crushers/700ie/700ie-2.jpg' },
+            { type: 'image', path: '/equipment/crushers/700ie/700ie-3.jpg' }
+        ]
+
     },
 
     '623CT': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -168,17 +172,18 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '/equipment/impactCrusher-coneCrushers/623CT/623CTVideo.mp4',
-            image1: '/equipment/impactCrusher-coneCrushers/623CT/623CT-1.jpg',
-            image2: '/equipment/impactCrusher-coneCrushers/623CT/623CT-2.jpg',
-            image3: '/equipment/impactCrusher-coneCrushers/623CT/623CT-3.jpg',
-        }
+        media: [
+            { type: 'video', path: '/equipment/impactCrusher-coneCrushers/623CT/623CTVideo.mp4' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-1.jpg' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-2.jpg' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-3.jpg' },
+        ]
     },
 
     '1412T': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -208,16 +213,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '/equipment/impactCrusher-coneCrushers/1412T/1412TVideo.mp4',
-            image1: '/equipment/impactCrusher-coneCrushers/1412T/1412T-1.jpg',
-            image2: '/equipment/impactCrusher-coneCrushers/1412T/1412T-2.jpg',
-        }
+        media: [
+            { type: 'video', path: '/equipment/impactCrusher-coneCrushers/1412T/1412TVideo.mp4' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1412T/1412T-1.jpg' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1412T/1412T-2.jpg' },
+        ]
     },
 
     '1012TS': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -248,15 +254,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1012TS/1012TS-1.jpg' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1012TS/1012TS-2.jpg' },
+        ]
     },
 
     '1150TC': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -280,15 +287,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1150TC/1150TC-1.jpg' },
+            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1150TC/1150TC-2.png' },
+        ]
     },
 
     'TS1550': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -319,15 +327,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-1.jpg' },
+            { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-2.jpg' },
+            { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-3.jpg' },
+        ]
     },
 
     'TS1860': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -358,15 +368,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/scalpers/TS1860/TS1860-1.jpg' },
+            { type: 'image', path: '/equipment/scalpers/TS1860/TS1860-2.jpg' },
+        ]
     },
 
     'TS1340': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -397,15 +408,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-1.jpg' },
+            { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-2.jpg' },
+            { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-3.jpg' },
+        ]
     },
 
     'TS2430': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -429,15 +442,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/screeners/TS2430/TS2430-1.jpg' },
+            { type: 'image', path: '/equipment/screeners/TS2430/TS2430-2.jpg' },
+            { type: 'image', path: '/equipment/screeners/TS2430/TS2430-3.jpg' },
+        ]
     },
 
     'TS2600': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -468,15 +483,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/screeners/TS2600/TS2600-3.png' },
+            { type: 'image', path: '/equipment/screeners/TS2600/TS2600-2.jpg' },
+            { type: 'image', path: '/equipment/screeners/TS2600/TS2600-1.png' },
+        ]
     },
 
     'TS3600': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -507,15 +524,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/screeners/TS3600/TS3600-1.jpg' },
+            { type: 'image', path: '/equipment/screeners/TS3600/TS3600-2.jpg' },
+            { type: 'image', path: '/equipment/screeners/TS3600/TS3600-3.jpg' },
+        ]
     },
 
     '8042T': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -539,15 +558,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/trackedStockpilers/8042T/8042T-1.jpg' },
+            { type: 'image', path: '/equipment/trackedStockpilers/8042T/8042T-2.jpeg' },
+        ]
     },
 
     '8042TSL': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -571,15 +591,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/trackedStockpilers/8042TSL/8042TSL-1.jpg' },
+            { type: 'image', path: '/equipment/trackedStockpilers/8042TSL/8042TSL-2.jpg' },
+        ]
     },
 
     'TR100': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -603,15 +624,16 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/recycling/TR100E/TR100E-1.jpeg' },
+            { type: 'image', path: '/equipment/recycling/TR100E/TR100E-2.jpeg' },
+        ]
     },
 
     'REC100': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -635,15 +657,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-1.jpeg' },
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpeg' },
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpeg' },
+        ]
     },
 
     'AIR-VAC': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -667,15 +691,17 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-1.png' },
+            { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-2.png' },
+            { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-3.png' },
+        ]
     },
 
     'windshifter': {
         literals: {
             pt: {
+                title:'',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -699,18 +725,55 @@ const data = {
                 makeQueryButton: 'Más información',
             }
         },
-        content: {
-            video: '',
-            image: '/equipment'
-        }
+        media: [
+            { type: 'image', path: '/equipment/recycling/WINDSHIFTER/Windshifter-1.png' },
+            { type: 'image', path: '/equipment/recycling/WINDSHIFTER/Windshifter-2.png' },
+            { type: 'image', path: '/equipment/recycling/WINDSHIFTER/Windshifter-3.png' },
+        ]
     },
+
+    'dustCannon': {
+        literals: {
+            pt: {
+                title:'',
+                descriptionTittle: 'Descrição',
+                descriptionText: '',
+                technicalSpecificationsTitle: 'Especificações técnicas',
+                technicalSpecificationsItems: [],
+                makeQueryButton: 'Pedido de informação',
+            },
+
+            en: {
+                descriptionTittle: 'Description',
+                descriptionText: '',
+                technicalSpecificationsTitle: 'Technical Specifications',
+                technicalSpecificationsItems: [],
+                makeQueryButton: 'More information',
+            },
+
+            es: {
+                descriptionTitle: 'Descripción',
+                descriptionText: '',
+                technicalSpecificationsTitle: 'Especificación técnica',
+                technicalSpecificationsItems: [],
+                makeQueryButton: 'Más información',
+            }
+        },
+        media: [
+            { type: 'video', path: '/equipment/accesories/dustCannonVideo.mp4' },
+            { type: 'image', path: '/equipment/accesories/dustCannon-1.png' },
+            { type: 'image', path: '/equipment/accesories/dustCannon-2.jpg' },
+            { type: 'image', path: '/equipment/accesories/dustCannon-3.jpg' },
+        ]
+    },
+
+
 }
 
-export default function Equipment({isMobile}) {
+export default function Equipment({ isMobile }) {
     const content = prepareContent()
     const router = useRouter()
     const { equipmentId } = router.query
-
 
     if (equipmentId) {
         // @ts-ignore
@@ -720,15 +783,17 @@ export default function Equipment({isMobile}) {
         return <>
             <main>
                 <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
-                <div className='flex flex-col lg:flex-row lg:place-content-around'>
-                    <Slider isMobile={isMobile} width={550} height={600}>
-                        {media && media.map(({ type, path }) =>
-                            type === 'video' ?
-                                <video className="w-full" autoPlay loop muted src={content(path)} type="video/mp4" />
-                                :
-                                <img className="w-full" src={content(path)} />
-                        )}
-                    </Slider>
+                <div className='flex flex-col  lg:flex-row lg:place-content-around'>
+                    <div className='max-w-[800px]'>
+                        <Slider id="slider">
+                            {media && media.map(({ type, path }) =>
+                                type === 'video' ?
+                                    <video className="w-full" autoPlay loop muted src={content(path)} type="video/mp4" />
+                                    :
+                                    <img className="w-full block" src={content(path)} />
+                            )}
+                        </Slider>
+                    </div>
 
                     <div className='flex flex-col p-4 gap-5 lg:w-160'>
                         <h2 className="font-bakbakone">{descriptionTitle}</h2>

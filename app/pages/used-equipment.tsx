@@ -46,13 +46,13 @@ export default function UsedEquipment({ isMobile }) {
         </h1>
         <div className="flex flex-col items-center gap-10 pt-5 lg:grid lg:grid-cols-2">
 
-          <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-200">
+          <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-full">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
-              <Slider isMobile={isMobile} width={500} height={300}>
-                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
-                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
-                <Slide><img className="w-full" src={content('/equipment/crushers/700i.jpeg')} /></Slide>
+            <div className="flex flex-col lg:items-center lg:gap-x-16">
+              <Slider id="slider">
+                <img className="w-full" src={content('/equipment/crushers/700i/700i-1.jpg')} />
+                <img className="w-full" src={content('/equipment/crushers/700i/700i-2.jpeg')} />
+                <img className="w-full" src={content('/equipment/crushers/700i/700i-3.jpg')} />
               </Slider>
 
               <div className="flex flex-col items-center gap-4">

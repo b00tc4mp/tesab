@@ -1,50 +1,50 @@
-import { useRef } from 'react'
-import { GrFormPrevious, GrFormNext } from 'react-icons/gr'
-
-
-export default function Slider({ children, width, height }) {
-    const content = useRef()
-
-    // @ts-ignore
-    const slideCount = children.length
-    const slideWidth = parseInt(width)
-    const slideHeight = parseInt(height)
-    let position = 0
-
-    const handleForward = () => {
-        if (position < slideWidth * (slideCount - 1)) {
-            position += slideWidth
-            content.current.style.transform =`translateX(-${position}px)`
-        }
-    }
-
-    const handleBackward = () => {
-        if (position > 0) {
-            position -= slideWidth
-            content.current.style.transform =`translateX(-${position}px)`
-        }
-    }
-
-    return <div className={`relative`} style={{width: `${slideWidth}px`, height: `${slideHeight}px`}}>
-        <button  
-            className="absolute z-10 top-40 left-4 bg-white/50 rounded-full w-10 h-10 hover:bg-gray-300/75 hover:border-solid hover:border hover:border-gray-100 flex justify-center items-center" 
-            onClick={handleBackward}
-            style={{top: `${slideHeight/2 - 20}px`}}
-        ><GrFormPrevious size="1.5rem" /></button>
-
-        <div className={`overflow-hidden`} style={{width: `${slideWidth}px`, height: `${slideHeight}px`}}>
-            <div 
-                className={`grid grid-flow-col auto-cols-fr items-center transition-transform duration-1000`} ref={content}
-                style={{width: `${slideWidth * slideCount}px`, height: `${slideHeight}px`}}
-            >
-                {children}
-            </div>
+export default function Slider({ id, children }) {
+    return <div id={`${id}`} className="carousel slide relative" data-bs-ride="carousel">
+        <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            {children.map((child, index) => index === 0?
+                <button
+                    type="button"
+                    data-bs-target={`#${id}`}
+                    data-bs-slide-to={index}
+                    className="active"
+                    aria-current="true"
+                    aria-label={`Slide ${index + 1}`}
+                ></button>
+                :
+                <button
+                    type="button"
+                    data-bs-target={`#${id}`}
+                    data-bs-slide-to={index}
+                    aria-label={`Slide ${index + 1}`}
+                ></button>
+            )}
         </div>
-
-        <button 
-            className="absolute z-10 right-4 bg-white/50 rounded-full w-10 h-10 hover:bg-gray-300/75 hover:border-solid hover:border hover:border-gray-100 flex justify-center items-center" 
-            onClick={handleForward}
-            style={{top: `${slideHeight/2 - 20}px`}}
-        > <GrFormNext size="1.5rem" /> </button>
+        <div className="carousel-inner relative w-full overflow-hidden">
+            {children.map((child, index) => <div className={`carousel-item ${index === 0? 'active' : ''}  relative float-left w-full`}>
+                {child}
+                {/* <div className="carousel-caption hidden md:block absolute text-center">
+                    <h5 className="text-xl">First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div> */}
+            </div>)}
+        </div>
+        <button
+            className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+            type="button"
+            data-bs-target={`#${id}`}
+            data-bs-slide="prev"
+        >
+            <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+            className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+            type="button"
+            data-bs-target={`#${id}`}
+            data-bs-slide="next"
+        >
+            <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+        </button>
     </div>
 }
