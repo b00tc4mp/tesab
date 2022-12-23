@@ -68,10 +68,10 @@ export default function Equipment({ isMobile }) {
       <h1 className='font-bakbakone text-center text-4xl m-4 font-bakbak-one'>{equipmentTitle}</h1>
       <div className='flex flex-col gap-10 pt-6 mx-2 sm:grid sm:grid-cols-2 sm:gap-x-4 lg:grid lg:grid-cols-3 lg:gap-x-4'>
 
-        <div id='crushers' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='crushers' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{crushersTittle}</h2>
-            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/crushers/700i.jpg')} />
+            <img className='-z-10 w-full object-cover sm:h-72 lg:h-96  ' src={content('/equipment/crushers/700i.jpg')} />
           </div>
           <div className='flex flex-col gap-6'>
             <p className='font-alexandria text-justify mx-4'>{crushersDescription}</p>
@@ -83,8 +83,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='impactCrushers' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='impactCrushers' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{impactCrushersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/impactCrusher-coneCrushers/impact1012ts.png')} />
           </div>
@@ -99,8 +99,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='scalpers' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='scalpers' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{scalpersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/scalpers/scalper.png')} />
           </div>
@@ -114,8 +114,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='screeners' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='screeners' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{screenersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/screeners/ts3600.png')} />
           </div>
@@ -129,8 +129,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='conveyor' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='conveyor' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{conveyorTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/trackedStockpilers/8042.jpg')} />
           </div>
@@ -143,8 +143,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='recycling' className='flex flex-col gap-7 shadow-lg pb-4'>
-          <div className='relative'>
+        <div id='recycling' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{recyclingTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/recycling/tr100e.png')} />
           </div>
@@ -159,8 +159,8 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id="dust-cannon" className='flex flex-col gap-7 shadow-lg pb-4 col-start-2'>
-          <div className='relative'>
+        <div id="dust-cannon" className='flex flex-col gap-7 shadow-lg pb-4 col-start-2 overflow-hidden bg-no-repeat bg-cover'>
+          <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 right-5 text-white inline-block'>{dustCannonTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/accesories/dustCannon.png')} />
           </div>

@@ -55,7 +55,7 @@ const data = {
     '800i': {
         literals: {
             pt: {
-                title:'',
+                title:'800i',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -64,6 +64,7 @@ const data = {
             },
 
             en: {
+                title: '800i',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -72,6 +73,7 @@ const data = {
             },
 
             es: {
+                title: '800i',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La 800i es una machacadora de alta robustez montado sobre orugas diseñado para el machaqueo primario en frente de cantera. Gracias al diseño único de la machacadora con un óptimo ángulo de trituración y mandíbulas largas, la 800i se ha convertido en la herramienta idónea para aplicaciones de piedra dura.  Gracias a su diseño de accionamiento directo y un gran volante que proporciona mucha inercia, representa un equipo de machaqueo altamente eficiente. La 800i está accionada por un motor Caterpillar C13 de 400cv y cuenta con una machacadora robusta con una boca de 1100 x 800mm.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -98,7 +100,7 @@ const data = {
     '700ie': {
         literals: {
             pt: {
-                title:'TODO',
+                title:'700ie',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -107,6 +109,7 @@ const data = {
             },
 
             en: {
+                title: '700ie',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -115,6 +118,7 @@ const data = {
             },
 
             es: {
+                title: '700ie',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La machacadora 700ie es la última novedad de Tesab. Es un equipo híbrido, accionado por un grupo electrógeno Caterpillar. Está repleta de nuevas funciones, incluye operación inversa de la machacadora, desbloqueo automático, y además, cuenta con un panel de control personalizado con aire acondicionado integrado. El modelo 700ie ofrece las mismas ventajas y altos niveles de rendimiento que las otras machacadoras Tesab y, además, es un 33% más eficiente en el consumo de combustible.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -142,7 +146,7 @@ const data = {
     '623CT': {
         literals: {
             pt: {
-                title:'',
+                title:'623CT',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -151,6 +155,7 @@ const data = {
             },
 
             en: {
+                title: '623CT',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -159,6 +164,7 @@ const data = {
             },
 
             es: {
+                title: '623CT',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'El Tesab 623CT es un equipo compacto de trituración secundaria sobre orugas. Debido al diseño único de la unidad de trituración, se puede conseguir una excelente cubicidad de producto con alto ratio de reducción. La fiabilidad y regularidad de esta máquina han sido probadas durante muchos años y es incomparable a la hora de conseguir un producto final de alta calidad con bajos costes de producción. El 623CT está accionado por un motor Caterpillar de 275cv y cuenta con un molino robusto dotado de un rotor con tres martillos y cuenta con un paladar inferior para asegurar el máximo nivel de trituración y cubicidad de producto final.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -183,7 +189,7 @@ const data = {
     '1412T': {
         literals: {
             pt: {
-                title:'',
+                title:'1412T',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -192,6 +198,7 @@ const data = {
             },
 
             en: {
+                title: '1412T',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -200,6 +207,7 @@ const data = {
             },
 
             es: {
+                title: '1412T',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'El Tesab 1412T es un molino móvil secundario grande montado sobre orugas y diseñado para triturar una gran variedad de tamaño de material. La máquina viene equipada con una tolva de alimentación robusta completa con un alimentador de banda. El molino de trituración incorpora el diseño único de Tesab con paladares de impacto, lo que se traduce en un alto ratio de reducción y la garantía de una excelente cubicidad de material triturado. El 1412T está accionado por un motor Caterpillar de 450cv de potencia y ofrece producciones hasta 350+ tn/h.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -223,7 +231,7 @@ const data = {
     '1012TS': {
         literals: {
             pt: {
-                title:'',
+                title:'1012TS',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -232,6 +240,7 @@ const data = {
             },
 
             en: {
+                title: '1012TS',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -240,6 +249,7 @@ const data = {
             },
 
             es: {
+                title: '1012TS',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'El Tesab 1012TS es un equipo móvil de altas producciones diseñado para conseguir un producto final de alta calidad de forma constante con un coste por tonelada bajo. La máquina cuenta con un sistema de dos alimentadores independientes de dos pisos lo que permite al cliente obtener un producto determinado por la cinta lateral. El 1012TS está accionado por un motor Caterpillar de 450cv y cuenta con un molino robusto con un rotor de 1200mm de diámetro y con tres paladares de impacto para asegurar el máximo nivel de  trituración y cubicidad de producto final.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -263,7 +273,7 @@ const data = {
     '1150TC': {
         literals: {
             pt: {
-                title:'',
+                title:'1150TC',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -272,6 +282,7 @@ const data = {
             },
 
             en: {
+                title: '1150TC',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -280,6 +291,7 @@ const data = {
             },
 
             es: {
+                title: '1150TC',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -296,7 +308,7 @@ const data = {
     'TS1550': {
         literals: {
             pt: {
-                title:'',
+                title:'TS1550',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -305,6 +317,7 @@ const data = {
             },
 
             en: {
+                title: 'TS1550',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -313,6 +326,7 @@ const data = {
             },
 
             es: {
+                title: 'TS1550',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'Diseñado para trabajar en los entornos más difíciles y exigentes, la versatilidad del TS1550 le permite trabajar en un amplio rango de aplicaciones. Desde circuitos primarios de machaqueo, reciclaje de escombros y materiales de construcción hasta la separación de arcilla pegajosa, la máquina es capaz de clasificar incluso los materiales más difíciles.  La habilidad del TS1550 de rendir con tanto éxito en todo tipo de aplicación, especialmente con materiales húmedos y pegajosos, se basa principalmente en el rendimiento de su criba, con una superficie de clasificación de 7,2m3 y su sistema de vibración agresiva. El equipo cuenta con una tolva grande y una apertura ancha de la salida del alimentador, lo que permite la libre circulación de material sin atascos lo que mejora el rendimiento del equipo sobre todo en aplicaciones de frente de cantera.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -337,7 +351,7 @@ const data = {
     'TS1860': {
         literals: {
             pt: {
-                title:'',
+                title:'TS1860',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -346,6 +360,7 @@ const data = {
             },
 
             en: {
+                title: 'TS1860',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -354,6 +369,7 @@ const data = {
             },
 
             es: {
+                title: 'TS1860',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'Siendo el equipo más grande del rango de precribadores Tesab, el modelo TS1860 se encuentra sin rivales en cuanto a rendimiento y versatilidad. Esta máquina puede trabajar en solitario produciendo unos productos determinados o como un precribador primario en aplicaciones de machaqueo en frente de cantera. Accionada por un motor CAT de 225cv, el equipo cuenta con una criba de 6,1 x 1,8m de alta vibración que garantiza los rendimientos más altos en un amplio rango de aplicaciones incluyendo aplicaciones de reciclaje, arena y grava, carbón y frente de cantera.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -377,7 +393,7 @@ const data = {
     'TS1340': {
         literals: {
             pt: {
-                title:'',
+                title:'TS1340',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -386,6 +402,7 @@ const data = {
             },
 
             en: {
+                title: 'TS1340',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -394,6 +411,7 @@ const data = {
             },
 
             es: {
+                title: 'TS1340',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'Ofreciendo muchas de las características habituales que se encuentran en precribadores más grandes, el TS1340 es la máquina idónea para contratistas que no requieren producciones muy elevadas, pero exigen el mismo nivel de calidad de material clasificado. Debido a su diseño compacto y su movilidad superior, el equipo es la herramienta idónea para clasificar materiales en sitios donde el espacio es limitado o donde hay necesidad de mover la máquina con frecuencia entre distintos lugares de trabajo, con un tiempo de instalación típico de 15 minutos.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -418,7 +436,7 @@ const data = {
     'TS2430': {
         literals: {
             pt: {
-                title:'',
+                title:'TS2430',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -427,6 +445,7 @@ const data = {
             },
 
             en: {
+                title: 'TS2430',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -435,6 +454,7 @@ const data = {
             },
 
             es: {
+                title: 'TS2430',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -452,7 +472,7 @@ const data = {
     'TS2600': {
         literals: {
             pt: {
-                title:'',
+                title:'TS2600',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -461,6 +481,7 @@ const data = {
             },
 
             en: {
+                title: 'TS2600',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -469,6 +490,7 @@ const data = {
             },
 
             es: {
+                title: 'TS2600',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La TS2600 es  modelo de referencia en el mercado de las grandes cribas. Su rendimiento extraordinario, uso fácil, fiabilidad y la calidad del producto clasificado están consiguiendo excelentes resultados para clientes en todas partes del mundo. Debido a la acción agresiva de su criba y su sistema de inclinación variable, la máquina es increíblemente versátil y es el equipo ideal para trabajar en un amplio rango de aplicaciones incluyendo arena, grava, carbón y tierra vegetal.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -493,7 +515,7 @@ const data = {
     'TS3600': {
         literals: {
             pt: {
-                title:'',
+                title:'TS3600',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -502,6 +524,7 @@ const data = {
             },
 
             en: {
+                title: 'TS3600',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -510,6 +533,7 @@ const data = {
             },
 
             es: {
+                title: 'TS3600',
                 descriptionTitle: 'Descripción',
                 descriptionText: 'La criba Tesab TS3600 es un grupo móvil de referencia de su clase, dirigida a clientes que buscan elevadas producciones y la más alta calidad del producto clasificado. Incorpora una potente criba 	de tres  pisos  y  cuatro  transportadores  de  acopio  que  se  pliegan  hidráulicamente para el transporte.  Debido a la acción agresiva de su criba y su sistema de inclinación variable, la máquina es increíblemente versátil y es el equipo ideal para trabajar en un amplio rango de aplicaciones incluyendo arena, grava, carbón y  tierra vegetal. Construida utilizando componentes de alta calidad, esta máquina siempre garantiza óptimos resultados incluso en las aplicaciones más exigentes.',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -534,7 +558,7 @@ const data = {
     '8042T': {
         literals: {
             pt: {
-                title:'',
+                title:'8042T',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -543,6 +567,7 @@ const data = {
             },
 
             en: {
+                title: '8042T',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -551,6 +576,7 @@ const data = {
             },
 
             es: {
+                title: '8042T',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -567,7 +593,7 @@ const data = {
     '8042TSL': {
         literals: {
             pt: {
-                title:'',
+                title:'8042TSL',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -576,6 +602,7 @@ const data = {
             },
 
             en: {
+                title: '8042TSL',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -584,6 +611,7 @@ const data = {
             },
 
             es: {
+                title: '8042TSL',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -600,7 +628,7 @@ const data = {
     'TR100': {
         literals: {
             pt: {
-                title:'',
+                title:'TR100',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -609,6 +637,7 @@ const data = {
             },
 
             en: {
+                title: 'TR100',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -617,6 +646,7 @@ const data = {
             },
 
             es: {
+                title: 'TR100',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -633,7 +663,7 @@ const data = {
     'REC100': {
         literals: {
             pt: {
-                title:'',
+                title:'REC100',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -642,6 +672,7 @@ const data = {
             },
 
             en: {
+                title: 'REC100',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -650,6 +681,7 @@ const data = {
             },
 
             es: {
+                title: 'REC100',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -667,7 +699,7 @@ const data = {
     'AIR-VAC': {
         literals: {
             pt: {
-                title:'',
+                title:'AIR-VAC',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -676,6 +708,7 @@ const data = {
             },
 
             en: {
+                title: 'AIR-VAC',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -684,6 +717,7 @@ const data = {
             },
 
             es: {
+                title: 'AIR-VAC',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -701,7 +735,7 @@ const data = {
     'windshifter': {
         literals: {
             pt: {
-                title:'',
+                title:'Windshifter',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -710,6 +744,7 @@ const data = {
             },
 
             en: {
+                title: 'Windshifter',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -718,6 +753,7 @@ const data = {
             },
 
             es: {
+                title: 'Windshifter',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
@@ -735,7 +771,7 @@ const data = {
     'dustCannon': {
         literals: {
             pt: {
-                title:'',
+                title:'Cañón supresor de polvo',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -744,6 +780,7 @@ const data = {
             },
 
             en: {
+                title: 'Cañón supresor de polvo',
                 descriptionTittle: 'Description',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Technical Specifications',
@@ -752,6 +789,7 @@ const data = {
             },
 
             es: {
+                title: 'Cañón supresor de polvo',
                 descriptionTitle: 'Descripción',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificación técnica',
