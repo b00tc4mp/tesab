@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cube-border {
+	display: flex;
+    position: absolute;
+}
+
+.cube-border-left {
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  border-left: 5px solid orange;
+  border-bottom: 5px solid orange;
+  transform: skewY(20deg);
+}
+
+.cube-border-text {
+	position: relative;
+    top: 80px;
+    font-size: 24px;
+}
+
+.cube-border-right {
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  border-right: 5px solid orange;
+  border-bottom: 5px solid orange;
+  transform: skewY(-20deg);
+}
+</style>
+</head>
+<body>
+
+<div class="cube-border">
+<div class="cube-border-left"></div>
+<p class="cube-border-text">hola mundo</p>
+<div class="cube-border-right"></div>
+</div>
+
+</body>
+</html>
+
+
