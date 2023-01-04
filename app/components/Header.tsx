@@ -4,6 +4,7 @@ import prepareLiterals from "../helpers/prepareLiterals";
 import { useRouter } from 'next/router'
 import { FiMenu } from 'react-icons/fi'
 import { GrClose, GrFormUp, GrFormDown } from 'react-icons/gr'
+import Head from 'next/head'
 
 
 const literals = {
@@ -120,7 +121,11 @@ function Header({ isMobile }) {
     router.push(href)
   }
 
-  return (
+  return <>
+    <Head>
+      <title>Tesab Spain S.L.</title>
+    </Head>
+
     <header className="z-10 absolute top-0 w-full">
       <div className="flex justify-between bg-[#323A47] p-2">
         <nav className="flex space-x-5">
@@ -177,11 +182,11 @@ function Header({ isMobile }) {
       <div className="flex justify-between p-3 bg-white/75 lg:overflow-visible h-[90px]">
         <div className="flex flex-col justify-self-center self-center">
           <h1>
-            <Link href="/">
+            <Link href="/" title="Tesab Spain S.L.">
               <img
                 className="h-8 cursor-pointer"
                 src="/images/tesab-logo.png"
-                alt="Tesab Spain"
+                alt="Tesab Spain S.L."
               />
             </Link>
           </h1>
@@ -197,58 +202,58 @@ function Header({ isMobile }) {
           :
           <nav className="hidden lg:block">
             <ul className="flex font-bold gap-x-5">
-              <li className="font-alexandria"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
-              <li className="font-alexandria flex flex-col w-auto">
+              <li className="font-alexandria p-2 rounded hover:bg-amber-200 ease-in-out duration-300"><Link href="/who-we-are" onClick={navigateTo}>{whoWeAre}</Link></li>
+              <li className="font-alexandria flex flex-col w-auto p-2 rounded hover:bg-amber-200 ease-in-out duration-300">
                 <span className="flex items-center justify-center">
                   <Link href="/equipment" onClick={navigateTo}>{equipment}</Link>
                   <button onClick={toggleEquipmentLg}>{toggleEquipmentButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
                 </span>
-                <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleEquipmentButtonVisibleLg ? 'block' : 'hidden'}`}>
-                  <li className="font-alexandria">
+                <ul className={`flex flex-col gap-1 py-2 ${toggleEquipmentButtonVisibleLg ? 'block' : 'hidden'}`}>
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#crushers" onClick={navigateTo}>{crushers}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#impactCrusher" onClick={navigateTo}>{impactCrusher}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#scalpers" onClick={navigateTo}>{scalpers}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#screeners" onClick={navigateTo}>{screeners}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#conveyor" onClick={navigateTo}>{conveyor}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#recycling" onClick={navigateTo}>{recycling}</Link>
                   </li>
-                  <li className="font-alexandria">
+                  <li className="font-alexandria hover:scale-105 transition duration-300 ease-in-out">
                     <Link href="/equipment#dust-cannon" onClick={navigateTo}>{dustCannon}</Link>
                   </li>
                 </ul>
 
               </li>
-              <li className="font-alexandria"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
-              <li className="font-alexandria"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
-              <li className="font-alexandria flex flex-col w-auto">
+              <li className="font-alexandria p-2 rounded hover:bg-amber-200 ease-in-out duration-300"><Link href="/used-equipment" onClick={navigateTo}>{usedEquipment}</Link></li>
+              <li className="font-alexandria p-2 rounded hover:bg-amber-200 ease-in-out duration-300"><Link href="/spare-parts" onClick={navigateTo}>{spareParts}</Link></li>
+              <li className="font-alexandria flex flex-col w-auto p-2 rounded hover:bg-amber-200 ease-in-out duration-300">
                 <span className="flex items-center justify-center">
                   <Link onClick={navigateTo} href="/services">{services}</Link>
                   <button onClick={toggleServicesLg}>{toggleServicesButtonVisibleLg ? <GrFormUp size="1.5rem" /> : <GrFormDown size="1.5rem" />}</button>
                 </span>
-                <ul className={`flex flex-col gap-1 py-2 bg-white/50 ${toggleServicesButtonVisibleLg ? 'block' : 'hidden'}`}>
-                  <li className="font-alexandria py-1">
+                <ul className={`flex flex-col gap-1 py-2 ${toggleServicesButtonVisibleLg ? 'block' : 'hidden'}`}>
+                  <li className="font-alexandria py-1 hover:scale-105 transition duration-300 ease-in-out">
                     <Link href='/services#customerAssistance'>{customerAssitance}</Link>
                   </li>
-                  <li className="font-alexandria py-1">
+                  <li className="font-alexandria py-1 hover:scale-105 transition duration-300 ease-in-out">
                     <Link href='/services#afterSaleService'>{afterSaleService}</Link>
                   </li>
-                  <li className="font-alexandria py-1">
+                  <li className="font-alexandria py-1 hover:scale-105 transition duration-300 ease-in-out">
                     <Link href='/services#technicalAssistance'>{technicalAssistance}</Link>
                   </li>
                 </ul>
               </li>
-              <li className="font-alexandria"><Link href="/news" onClick={navigateTo}>{news}</Link></li>
-              <li className="font-alexandria"><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
+              <li className="font-alexandria p-2 rounded hover:bg-amber-200 ease-in-out duration-300"><Link href="/news" onClick={navigateTo}>{news}</Link></li>
+              <li className="font-alexandria p-2 rounded hover:bg-amber-200 ease-in-out duration-300"><Link href="/contact" onClick={navigateTo}>{contact}</Link></li>
             </ul>
           </nav>}
       </div>
@@ -345,7 +350,7 @@ function Header({ isMobile }) {
       )
       }
     </header >
-  );
+  </>
 }
 
 export default Header;

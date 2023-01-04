@@ -4,6 +4,7 @@ import prepareLiterals from '../../helpers/prepareLiterals'
 import prepareContent from '../../helpers/prepareContent'
 import Footer from '../../components/Footer'
 import Slider from '../../components/Slider'
+import Head from 'next/head'
 
 
 const data = {
@@ -55,7 +56,7 @@ const data = {
     '800i': {
         literals: {
             pt: {
-                title:'800i',
+                title: '800i',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -100,7 +101,7 @@ const data = {
     '700ie': {
         literals: {
             pt: {
-                title:'700ie',
+                title: '700ie',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -146,7 +147,7 @@ const data = {
     '623CT': {
         literals: {
             pt: {
-                title:'623CT',
+                title: '623CT',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -189,7 +190,7 @@ const data = {
     '1412T': {
         literals: {
             pt: {
-                title:'1412T',
+                title: '1412T',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -231,7 +232,7 @@ const data = {
     '1012TS': {
         literals: {
             pt: {
-                title:'1012TS',
+                title: '1012TS',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -273,7 +274,7 @@ const data = {
     '1150TC': {
         literals: {
             pt: {
-                title:'1150TC',
+                title: '1150TC',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -308,7 +309,7 @@ const data = {
     'TS1550': {
         literals: {
             pt: {
-                title:'TS1550',
+                title: 'TS1550',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -351,7 +352,7 @@ const data = {
     'TS1860': {
         literals: {
             pt: {
-                title:'TS1860',
+                title: 'TS1860',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -393,7 +394,7 @@ const data = {
     'TS1340': {
         literals: {
             pt: {
-                title:'TS1340',
+                title: 'TS1340',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -436,7 +437,7 @@ const data = {
     'TS2430': {
         literals: {
             pt: {
-                title:'TS2430',
+                title: 'TS2430',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -472,7 +473,7 @@ const data = {
     'TS2600': {
         literals: {
             pt: {
-                title:'TS2600',
+                title: 'TS2600',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -495,7 +496,7 @@ const data = {
                 descriptionText: 'La TS2600 es  modelo de referencia en el mercado de las grandes cribas. Su rendimiento extraordinario, uso fácil, fiabilidad y la calidad del producto clasificado están consiguiendo excelentes resultados para clientes en todas partes del mundo. Debido a la acción agresiva de su criba y su sistema de inclinación variable, la máquina es increíblemente versátil y es el equipo ideal para trabajar en un amplio rango de aplicaciones incluyendo arena, grava, carbón y tierra vegetal.',
                 technicalSpecificationsTitle: 'Especificación técnica',
                 technicalSpecificationsItems: [
-                    'Tolva de 10 m3 de  capacidad.',
+                    'Tolva de 10 m3 de capacidad.',
                     'Dimensiones de la criba: 6100 x 1525 mm.',
                     'N° de pisos: 2.',
                     'Tres cintas transportadoras de acopio.',
@@ -515,7 +516,7 @@ const data = {
     'TS3600': {
         literals: {
             pt: {
-                title:'TS3600',
+                title: 'TS3600',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -558,7 +559,7 @@ const data = {
     '8042T': {
         literals: {
             pt: {
-                title:'8042T',
+                title: '8042T',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -593,7 +594,7 @@ const data = {
     '8042TSL': {
         literals: {
             pt: {
-                title:'8042TSL',
+                title: '8042TSL',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -628,7 +629,7 @@ const data = {
     'TR100': {
         literals: {
             pt: {
-                title:'TR100',
+                title: 'TR100',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -663,7 +664,7 @@ const data = {
     'REC100': {
         literals: {
             pt: {
-                title:'REC100',
+                title: 'REC100',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -699,7 +700,7 @@ const data = {
     'AIR-VAC': {
         literals: {
             pt: {
-                title:'AIR-VAC',
+                title: 'AIR-VAC',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -735,7 +736,7 @@ const data = {
     'windshifter': {
         literals: {
             pt: {
-                title:'Windshifter',
+                title: 'Windshifter',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -771,7 +772,7 @@ const data = {
     'dustCannon': {
         literals: {
             pt: {
-                title:'Cañón supresor de polvo',
+                title: 'Cañón supresor de polvo',
                 descriptionTittle: 'Descrição',
                 descriptionText: '',
                 technicalSpecificationsTitle: 'Especificações técnicas',
@@ -819,6 +820,9 @@ export default function Equipment({ isMobile }) {
         const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = prepareLiterals(literals)
 
         return <>
+            <Head>
+                <title>{title} - Tesab Spain</title>
+            </Head>
             <main>
                 <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
                 <div className='flex flex-col  lg:flex-row lg:place-content-around'>

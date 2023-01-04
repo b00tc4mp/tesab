@@ -5,7 +5,6 @@ export default function Layout({ children, isMobile }) {
   return (
     <div className="h-screen">
       <Head>
-        <title>Tesab Spain SL</title>
         <meta name="description" content="TODO set tesab description here" />
         <link rel="icon" href="https://www.tesab.com/wp-content/uploads/2020/03/favicon-16.png" type="image/png" sizes="16x16" />
         <link rel="icon" href="https://www.tesab.com/wp-content/uploads/2020/03/favicon-32.png" type="image/png" sizes="32x32" />
@@ -16,7 +15,10 @@ export default function Layout({ children, isMobile }) {
 
       <Header isMobile={isMobile} />
 
-      <div className='w-full pt-32 -z-10 h-full'>{children}</div>
+
+      <div className='w-full pt-32 -z-10 h-full'>
+        {children}
+      </div>
 
     </div>
   )

@@ -4,8 +4,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from '../helpers/prepareContent'
-import Slide from "../components/Slide";
 import Slider from "../components/Slider";
+import Head from 'next/head'
 
 const literals = {
   pt: {
@@ -40,15 +40,18 @@ export default function UsedEquipment({ isMobile }) {
   const content = prepareContent()
   return (
     <>
+      <Head>
+        <title>{usedEquipmentTitle} - Tesab Spain</title>
+      </Head>
       <main className="flex flex-col gap-5 py-5 bg-gray-100 px-2" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>
         <h1 className="font-bakbakone text-center text-4xl font-bakbak-one">
           {usedEquipmentTitle}
         </h1>
         <div className="flex flex-col items-center gap-10 pt-5 lg:grid lg:grid-cols-3 lg:justify-items-center">
 
-          
-          
-        <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
+
+
+          <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:items-center lg:gap-x-16">
               <Slider id="slider">
@@ -87,7 +90,7 @@ export default function UsedEquipment({ isMobile }) {
               </div>
             </div>
           </div>
-          
+
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:items-center lg:gap-x-16">
@@ -107,7 +110,7 @@ export default function UsedEquipment({ isMobile }) {
               </div>
             </div>
           </div>
-{/*
+          {/*
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:w-200">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">

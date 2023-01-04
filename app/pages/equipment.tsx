@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Footer from '../components/Footer'
 import prepareLiterals from '../helpers/prepareLiterals'
 import prepareContent from '../helpers/prepareContent'
+import Head from 'next/head'
 
 const literals = {
   pt: {
@@ -64,18 +65,22 @@ export default function Equipment({ isMobile }) {
   const content = prepareContent()
 
   return <>
+    <Head>
+      <title>{equipmentTitle} - Tesab Spain</title>
+    </Head>
+
     <main className='mb-8'>
       <h1 className='font-bakbakone text-center text-4xl m-4 font-bakbak-one'>{equipmentTitle}</h1>
       <div className='flex flex-col gap-10 pt-6 mx-2 sm:grid sm:grid-cols-2 sm:gap-x-4 lg:grid lg:grid-cols-3 lg:gap-x-4'>
 
-        <div id='crushers' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+        <div id='crushers' className='flex flex-col gap-7 shadow-lg overflow-hidden bg-no-repeat bg-cover'>
           <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{crushersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96  ' src={content('/equipment/crushers/700i.jpg')} />
           </div>
-          <div className='flex flex-col gap-6'>
-            <p className='font-alexandria text-justify mx-4'>{crushersDescription}</p>
-            <div className='flex justify-around'>
+          <div className='flex flex-col gap-6 h-full justify-between mx-4 pb-4'>
+            <p className='font-alexandria text-justify'>{crushersDescription}</p>
+            <div className='flex justify-around justify-self-end'>
               <Link href="/equipments/700i"><button className='btn'>700i</button></Link>
               <Link href="/equipments/800i"><button className='btn'>800i</button></Link>
               <Link href="/equipments/700ie"><button className='btn'>700ie</button></Link>
@@ -83,19 +88,19 @@ export default function Equipment({ isMobile }) {
           </div>
         </div>
 
-        <div id='impactCrushers' className='flex flex-col gap-7 shadow-lg pb-4 overflow-hidden bg-no-repeat bg-cover'>
+        <div id='impactCrushers' className='flex flex-col gap-7 shadow-lg overflow-hidden bg-no-repeat bg-cover'>
           <div className='relative hover:opacity-75 hover:scale-105 transition duration-300 ease-in-out'>
             <h2 className='font-bakbakone text-2xl absolute top-5 left-5 text-white inline-block'>{impactCrushersTittle}</h2>
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/impactCrusher-coneCrushers/impact1012ts.png')} />
           </div>
-          <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{impactCrushersDescription}</p>
-          <div className='flex justify-around'>
-            <Link href="/equipments/623CT"><button className='btn'>623CT</button></Link>
-            <Link href="/equipments/1412T"><button className='btn'>1412T</button></Link>
-            <Link href="/equipments/1012TS"><button className='btn'>1012TS</button></Link>
-            <Link href="/equipments/1150TC"><button className='btn'>1150TC</button></Link>
-          </div>
+          <div className='flex flex-col gap-6 h-full justify-between mx-4 pb-4'>
+            <p className='font-alexandria text-justify'>{impactCrushersDescription}</p>
+            <div className='flex justify-around justify-self-end'>
+              <Link href="/equipments/623CT"><button className='btn'>623CT</button></Link>
+              <Link href="/equipments/1412T"><button className='btn'>1412T</button></Link>
+              <Link href="/equipments/1012TS"><button className='btn'>1012TS</button></Link>
+              <Link href="/equipments/1150TC"><button className='btn'>1150TC</button></Link>
+            </div>
           </div>
         </div>
 
@@ -105,12 +110,12 @@ export default function Equipment({ isMobile }) {
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/scalpers/scalper.png')} />
           </div>
           <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{scalpersDescription}</p>
-          <div className='flex justify-around'>
-            <Link href="/equipments/TS1550"><button className='btn'>TS1550</button></Link>
-            <Link href="/equipments/TS1860"><button className='btn'>TS1860</button></Link>
-            <Link href="/equipments/TS1340"><button className='btn'>TS1340</button></Link>
-          </div>
+            <p className='font-alexandria text-justify mx-4'>{scalpersDescription}</p>
+            <div className='flex justify-around'>
+              <Link href="/equipments/TS1550"><button className='btn'>TS1550</button></Link>
+              <Link href="/equipments/TS1860"><button className='btn'>TS1860</button></Link>
+              <Link href="/equipments/TS1340"><button className='btn'>TS1340</button></Link>
+            </div>
           </div>
         </div>
 
@@ -120,12 +125,12 @@ export default function Equipment({ isMobile }) {
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/screeners/ts3600.png')} />
           </div>
           <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{screenersDescription}</p>
-          <div className='flex justify-around'>
-            <Link href="/equipments/TS2430"><button className='btn'>TS2430</button></Link>
-            <Link href="/equipments/TS2600"><button className='btn'>TS2600</button></Link>
-            <Link href="/equipments/TS3600"><button className='btn'>TS3600</button></Link>
-          </div>
+            <p className='font-alexandria text-justify mx-4'>{screenersDescription}</p>
+            <div className='flex justify-around justify-self-end'>
+              <Link href="/equipments/TS2430"><button className='btn'>TS2430</button></Link>
+              <Link href="/equipments/TS2600"><button className='btn'>TS2600</button></Link>
+              <Link href="/equipments/TS3600"><button className='btn'>TS3600</button></Link>
+            </div>
           </div>
         </div>
 
@@ -135,11 +140,11 @@ export default function Equipment({ isMobile }) {
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/trackedStockpilers/8042.jpg')} />
           </div>
           <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{conveyorDescription}</p>
-          <div className='flex justify-around'>
-            <Link href="/equipments/8042T"><button className='btn'>8042T</button></Link>
-            <Link href="/equipments/8042TSL"><button className='btn'>8042TSL</button></Link>
-          </div>
+            <p className='font-alexandria text-justify mx-4'>{conveyorDescription}</p>
+            <div className='flex justify-around justify-self-end'>
+              <Link href="/equipments/8042T"><button className='btn'>8042T</button></Link>
+              <Link href="/equipments/8042TSL"><button className='btn'>8042TSL</button></Link>
+            </div>
           </div>
         </div>
 
@@ -149,13 +154,13 @@ export default function Equipment({ isMobile }) {
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/recycling/tr100e.png')} />
           </div>
           <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{recyclingDescription}</p>
-          <div className='flex justify-around gap-1 flex-wrap'>
-            <Link href="/equipments/TR100"><button className='btn'>TR100</button></Link>
-            <Link href="/equipments/REC100"><button className='btn'>REC100</button></Link>
-            <Link href="/equipments/AIR-VAC"><button className='btn'>AIR VAC</button></Link>
-            <Link href="/equipments/windshifter"><button className='btn'>WINDSHIFTER</button></Link>
-          </div>
+            <p className='font-alexandria text-justify mx-4'>{recyclingDescription}</p>
+            <div className='flex justify-around gap-1 flex-wrap justify-self-end'>
+              <Link href="/equipments/TR100"><button className='btn'>TR100</button></Link>
+              <Link href="/equipments/REC100"><button className='btn'>REC100</button></Link>
+              <Link href="/equipments/AIR-VAC"><button className='btn'>AIR VAC</button></Link>
+              <Link href="/equipments/windshifter"><button className='btn'>WINDSHIFTER</button></Link>
+            </div>
           </div>
         </div>
 
@@ -165,11 +170,11 @@ export default function Equipment({ isMobile }) {
             <img className='-z-10 w-full object-cover sm:h-72 lg:h-96' src={content('/equipment/accesories/dustCannon.png')} />
           </div>
           <div className='flex flex-col gap-6'>
-          <p className='font-alexandria text-justify mx-4'>{dustCannonDescription}</p>
-          <div className='flex justify-around'>
-            <Link href="/equipments/dustCannon"><button className='btn'>S45</button></Link>
-            <Link href="/equipments/dustCannon"><button className='btn'>S65</button></Link>
-          </div>
+            <p className='font-alexandria text-justify mx-4'>{dustCannonDescription}</p>
+            <div className='flex justify-around justify-self-end'>
+              <Link href="/equipments/dustCannon"><button className='btn'>S45</button></Link>
+              <Link href="/equipments/dustCannon"><button className='btn'>S65</button></Link>
+            </div>
           </div>
         </div>
       </div>

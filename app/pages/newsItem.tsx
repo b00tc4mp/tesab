@@ -1,19 +1,19 @@
 import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from "../helpers/prepareContent";
-
+import Head from 'next/head'
 
 
 const literals = {
     pt: {
         newsItemTitle: '',
         newsItemSubtitle: '',
-        newsItemText:'',
+        newsItemText: '',
     },
     en: {
         newsItemTitle: '',
         newsItemSubtitle: '',
-        newsItemText:'',
+        newsItemText: '',
     },
     es: {
         newsItemTitle: 'Reprehenderit consectetur pariatur nulla occaecat eiusmod.',
@@ -29,11 +29,17 @@ export default function NewsItem() {
     return (
 
         <>
+            <Head>
+                <title>{newsItemTitle} - Tesab Spain</title>
+            </Head>
             <main className="mb-6 flex flex-col gap-4">
-                <h1 className="text-xl font-bold px-2">{newsItemTitle}</h1>
-                <h2 className="text-lg px-2">{newsItemSubtitle}</h2>
-                <img src={content('/equipment/recycling/tr100e.png')}/>
-                <p className="text-justify px-3">{newsItemText}</p>
+                <h1 className="text-center text-xl font-bold px-2">{newsItemTitle}</h1>
+                <h2 className="text-center text-lg px-2">{newsItemSubtitle}</h2>
+                <div className="flex flex-cols justify-around">
+
+                <img className="object-cover w-240 h-128" src={content('/equipment/recycling/tr100e.png')} />
+                <p className="text-justify self-center px-3 w-128 h-96">{newsItemText}</p>
+                </div>
 
             </main>
             <Footer />

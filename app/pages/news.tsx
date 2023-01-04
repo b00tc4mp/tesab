@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from "../helpers/prepareContent";
+import Head from 'next/head'
 
 
 const literals = {
@@ -53,6 +54,10 @@ export default function SpareParts() {
     const content = prepareContent()
     return (
         <>
+
+            <Head>
+                <title>{newsTitle} - Tesab Spain</title>
+            </Head>
             <main className="bg-repeat py-12" style={{ backgroundImage: 'url(/images/piramide2.png)' }}>
                 <h1 className="font-bakbakone text-center text-4xl m-4 ">
                     {newsTitle}

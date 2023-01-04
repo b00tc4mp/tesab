@@ -2,6 +2,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from "../helpers/prepareContent";
+import Head from 'next/head'
 
 const literals = {
   pt: {
@@ -93,20 +94,23 @@ const literals = {
 
 export default function SpareParts() {
 
-  const {sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = prepareLiterals(literals)
+  const { sparePartsTitle, sparePartsDescription, wearPlates, drums, millHammers, millGrindingWheels, springs, rollers, bearing, hydraulicFilters, engineFilters, bibs, belts, magnet, screens, crushingJaws, motors, clutches, radiators, oilCoolers, couplings, tracks, hydraulicCylinders, other, makeQueryButtom } = prepareLiterals(literals)
   const content = prepareContent()
 
   return (
     <>
+    <Head>
+        <title>{sparePartsTitle} - Tesab Spain</title>
+      </Head>
       <main className="flex flex-col gap-4 min-h-screen">
         <div className="relative">
           <img
             className="-z-10 object-cover w-full h-48 sm:h-64 lg:h-96"
-            src={content('/spare-parts.jpg')}
+            src={content('/spare-parts/spare-parts.jpg')}
             alt=""
           />
           <h1 className="absolute m-4 font-bakbakone text-center text-3xl text-white top-24 left-10 sm:text-6xl sm:top-36 sm:left-28 lg:text-8xl lg:top-48 lg:left-84">
-             {sparePartsTitle}
+            {sparePartsTitle}
           </h1>
         </div>
 
@@ -114,31 +118,36 @@ export default function SpareParts() {
           <p className="font-alexandria text-justify">
             {sparePartsDescription}
           </p>
-
-          <ul className="grid grid-cols-2 gap-x-5 list-disc pl-6">
-            <li className="font-alexandria">{wearPlates}</li>
-            <li className="font-alexandria">{drums}</li>
-            <li className="font-alexandria">{millHammers}</li>
-            <li className="font-alexandria">{millGrindingWheels}</li>
-            <li className="font-alexandria">{springs}</li>
-            <li className="font-alexandria">{rollers}</li>
-            <li className="font-alexandria">{bearing}</li>
-            <li className="font-alexandria">{hydraulicFilters}</li>
-            <li className="font-alexandria">{engineFilters}</li>
-            <li className="font-alexandria">{bibs}</li>
-            <li className="font-alexandria">{belts}</li>
-            <li className="font-alexandria">{magnet}</li>
-            <li className="font-alexandria">{screens}</li>
-            <li className="font-alexandria">{crushingJaws}</li>
-            <li className="font-alexandria">{motors}</li>
-            <li className="font-alexandria">{clutches}</li>
-            <li className="font-alexandria">{radiators}</li>
-            <li className="font-alexandria">{oilCoolers}</li>
-            <li className="font-alexandria">{couplings}</li>
-            <li className="font-alexandria">{tracks}</li>
-            <li className="font-alexandria">{hydraulicCylinders}</li>
-            <li className="font-alexandria">{other}</li>
-          </ul>
+          <div className="grid grid-cols-2">
+            <img
+              src={content('/spare-parts/spare-parts2.jpg')}
+              alt=""
+            />
+            <ul className="grid grid-cols-2 gap-x-5 list-disc pl-6">
+              <li className="font-alexandria">{wearPlates}</li>
+              <li className="font-alexandria">{drums}</li>
+              <li className="font-alexandria">{millHammers}</li>
+              <li className="font-alexandria">{millGrindingWheels}</li>
+              <li className="font-alexandria">{springs}</li>
+              <li className="font-alexandria">{rollers}</li>
+              <li className="font-alexandria">{bearing}</li>
+              <li className="font-alexandria">{hydraulicFilters}</li>
+              <li className="font-alexandria">{engineFilters}</li>
+              <li className="font-alexandria">{bibs}</li>
+              <li className="font-alexandria">{belts}</li>
+              <li className="font-alexandria">{magnet}</li>
+              <li className="font-alexandria">{screens}</li>
+              <li className="font-alexandria">{crushingJaws}</li>
+              <li className="font-alexandria">{motors}</li>
+              <li className="font-alexandria">{clutches}</li>
+              <li className="font-alexandria">{radiators}</li>
+              <li className="font-alexandria">{oilCoolers}</li>
+              <li className="font-alexandria">{couplings}</li>
+              <li className="font-alexandria">{tracks}</li>
+              <li className="font-alexandria">{hydraulicCylinders}</li>
+              <li className="font-alexandria">{other}</li>
+            </ul>
+          </div>
 
           <Link href="/contact"><buttom className="bg-amber-400 px-4 py-2 font-bakbakone rounded ">{makeQueryButtom}</buttom></Link>
         </div>

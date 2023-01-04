@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import Link from "next/link";
 import prepareContent from "../helpers/prepareContent";
+import Head from 'next/head'
 
 const literals = {
   pt: {
@@ -42,6 +43,9 @@ export default function Services() {
   
   return (
     <>
+    <Head>
+      <title>{servicesTitle}- Tesab Spain</title>
+    </Head>
       <main className="min-h-screen">
         <h1 className="font-bakbakone text-center text-4xl m-4 ">
           {servicesTitle}
@@ -73,7 +77,7 @@ export default function Services() {
           </div>
         </div>
         <div className="flex justify-center sticky bottom-5">
-        <Link href="/contact"><buttom className="btn">{makeQueryButtom}</buttom></Link>
+        <Link href="/contact"><button className="btn">{makeQueryButtom}</button></Link>
         </div>
       </main>
 

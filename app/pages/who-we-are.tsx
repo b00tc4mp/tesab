@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from "../helpers/prepareContent";
 import { GrFormUp, GrFormDown } from 'react-icons/gr'
+import Head from 'next/head'
 
 const literals = {
 
@@ -20,7 +21,7 @@ const literals = {
     whoWeAreIntroduction1: 'Somos Tesab Spain S.L., distribuidor oficial de la reconocida marca irlandesa Tesab Engineering y los fabricantes Trackstack, Screenpod y JLM. Estamos especializados en el alquiler y la venta de equipos móviles de clasificación, trituración y reciclajes.',
     whoWeAreIntroduction2: 'Damos servicio principalmente a empresas dedicadas a la minería, fabricación de áridos, obra pública, movimiento de tierra y el tratamiento de residuos de construcción y demolición.',
     whoWeAreIntroduction3: 'Contamos con una amplia experiencia, avalada por nuestros más de 15 años en el mercado, ofreciendo soluciones y equipos móviles de alta calidad y rentabilidad en España, Portugal, Inglaterra y América del Sur.',
-    ourMision:'NUESTRA MISIÓN ',
+    ourMision: 'NUESTRA MISIÓN ',
     whoWeAreIntroduction4: 'es proporcionar soluciones eficientes y mejorar los procesos de producción para aumentar la rentabilidad de empresas que desarrollen su actividad en el ámbito de la fabricación de áridos, reciclajes, obra civil, construcción y movimiento de tierras.',
     ourValuesTitle: 'NUESTROS VALORES',
     firstValueTitle: 'ESPECIALIZACIÓN Y ORIENTACIÓN AL CLIENTE',
@@ -53,6 +54,9 @@ export default function WhoWeAre({ isMobile }) {
 
   return (
     <>
+      <Head>
+        <title>{whoWeAreTitle} - Tesab Spain</title>
+      </Head>
       <main>
         <div className="relative">
           <img className="-z-10 object-cover w-full h-48 lg:h-112" src={content('/whoWeAre.jpg')} alt="" />

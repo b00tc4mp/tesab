@@ -4,6 +4,7 @@ import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import prepareLiterals from "../helpers/prepareLiterals";
 import prepareContent from "../helpers/prepareContent";
+import Head from 'next/head'
 
 const literals = {
     pt: {
@@ -36,7 +37,11 @@ export default function Contact() {
     const { title, address, phone, wsapp, contactFormTitle, querytitle, introductionQuery } = prepareLiterals(literals)
     const content = prepareContent()
 
-    return (
+    return <>
+        <Head>
+            <title>{title} - Tesab Spain</title>
+        </Head>
+
         <main>
             <h1 className="font-bakbakone text-center text-4xl m-4">
                 {title}
@@ -76,5 +81,5 @@ export default function Contact() {
 
             <Footer />
         </main>
-    );
+    </>;
 }
