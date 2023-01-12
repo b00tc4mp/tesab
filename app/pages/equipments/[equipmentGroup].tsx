@@ -8,140 +8,146 @@ import Head from 'next/head'
 
 
 const data = {
-    '700i': {
-        literals: {
-            pt: {
-                title: '700i',
-                descriptionTittle: 'Descrição',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Especificações técnicas',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'Pedido de informação',
-            },
+    crushers: {
+        title: 'Crushers',
+        machines: [
+            {
+                literals: {
+                    pt: {
+                        title: '700i',
+                        descriptionTittle: 'Descrição',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Especificações técnicas',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'Pedido de informação',
+                    },
 
-            en: {
-                title: '700i',
-                descriptionTittle: 'Description',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Technical Specifications',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'More information',
-            },
+                    en: {
+                        title: '700i',
+                        descriptionTittle: 'Description',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Technical Specifications',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'More information',
+                    },
 
-            es: {
-                title: '700i',
-                descriptionTitle: 'Descripción',
-                descriptionText: 'La 700i es una machacadora móvil de alta robustez montada sobre orugas y diseñada para el machaqueo primario en frente de cantera. Dispone de un diseño único de alimentación con dos precribadores independientes que permiten al cliente obtener un producto determinado por la cinta lateral. La 700i está accionada por un motor Caterpillar de 300cv y cuenta con una machacadora de 1100 x 700mm con un sistema de ajuste hidráulico. Es el equipo idóneo para las aplicaciones más exigentes dentro de la industria de la minería, reciclajes y canteras.',
-                technicalSpecificationsTitle: 'Especificaciones Técnicas',
-                technicalSpecificationsItems: [
-                    'Dimensiones de la machacadora: 1100 x 700 mm.',
-                    'Profundidad de la machacadora: 1550 mm.',
-                    'Tolva de 9,2 m3.',
-                    'Sistema de doble alimentador independiente.',
-                    'Banda magnética y cinta lateral (opcionales).',
-                    'Motor diésel Caterpillar de 300 CV.',
-                    'Peso: 46.720 kg.'
-                ],
-                makeQueryButton: 'Solicitar información',
+                    es: {
+                        title: '700i',
+                        descriptionTitle: 'Descripción',
+                        descriptionText: 'La 700i es una machacadora móvil de alta robustez montada sobre orugas y diseñada para el machaqueo primario en frente de cantera. Dispone de un diseño único de alimentación con dos precribadores independientes que permiten al cliente obtener un producto determinado por la cinta lateral. La 700i está accionada por un motor Caterpillar de 300cv y cuenta con una machacadora de 1100 x 700mm con un sistema de ajuste hidráulico. Es el equipo idóneo para las aplicaciones más exigentes dentro de la industria de la minería, reciclajes y canteras.',
+                        technicalSpecificationsTitle: 'Especificaciones Técnicas',
+                        technicalSpecificationsItems: [
+                            'Dimensiones de la machacadora: 1100 x 700 mm.',
+                            'Profundidad de la machacadora: 1550 mm.',
+                            'Tolva de 9,2 m3.',
+                            'Sistema de doble alimentador independiente.',
+                            'Banda magnética y cinta lateral (opcionales).',
+                            'Motor diésel Caterpillar de 300 CV.',
+                            'Peso: 46.720 kg.'
+                        ],
+                        makeQueryButton: 'Solicitar información',
+                    }
+                },
+
+                media: [
+                    { type: 'video', path: '/equipment/crushers/700i/700iVideo.mp4' },
+                    { type: 'image', path: '/equipment/crushers/700i/700i-1.jpg' },
+                    { type: 'image', path: '/equipment/crushers/700i/700i-2.jpg' },
+                    { type: 'image', path: '/equipment/crushers/700i/700i-3.jpg' },
+                    { type: 'image', path: '/equipment/crushers/700i/700i-4.jpg' }
+                ]
+            },
+            {
+                literals: {
+                    pt: {
+                        title: '800i',
+                        descriptionTittle: 'Descrição',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Especificações técnicas',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'Pedido de informação',
+                    },
+
+                    en: {
+                        title: '800i',
+                        descriptionTittle: 'Description',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Technical Specifications',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'More information',
+                    },
+
+                    es: {
+                        title: '800i',
+                        descriptionTitle: 'Descripción',
+                        descriptionText: 'La 800i es una machacadora de alta robustez montado sobre orugas diseñado para el machaqueo primario en frente de cantera. Gracias al diseño único de la machacadora con un óptimo ángulo de trituración y mandíbulas largas, la 800i se ha convertido en la herramienta idónea para aplicaciones de piedra dura.  Gracias a su diseño de accionamiento directo y un gran volante que proporciona mucha inercia, representa un equipo de machaqueo altamente eficiente. La 800i está accionada por un motor Caterpillar C13 de 400cv y cuenta con una machacadora robusta con una boca de 1100 x 800mm.',
+                        technicalSpecificationsTitle: 'Especificación técnica',
+                        technicalSpecificationsItems: [
+                            'Dimensiones de la machacadora: 1100 x 800 mm.',
+                            'Profundidad de la machacadora: 1820 mm.',
+                            'Tolva de 10,4 m3 con alimentador vibrante.',
+                            'Disponible con banda magnética y cinta lateral (opcionales).',
+                            'Motor diésel Caterpillar de 440 CV.',
+                            'Peso: 60.000 kg.',
+                        ],
+
+                        makeQueryButton: 'Más información',
+                    }
+                },
+
+                media: [
+                    { type: 'video', path: '/equipment/crushers/800i/800iVideo.mp4' },
+                    { type: 'image', path: '/equipment/crushers/800i/800i-1.jpg' },
+                    { type: 'image', path: '/equipment/crushers/800i/800i-2.jpg' },
+                    { type: 'image', path: '/equipment/crushers/800i/800i-3.jpg' }
+                ]
+            },
+            {
+                literals: {
+                    pt: {
+                        title: '700ie',
+                        descriptionTittle: 'Descrição',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Especificações técnicas',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'Pedido de informação',
+                    },
+
+                    en: {
+                        title: '700ie',
+                        descriptionTittle: 'Description',
+                        descriptionText: '',
+                        technicalSpecificationsTitle: 'Technical Specifications',
+                        technicalSpecificationsItems: [],
+                        makeQueryButton: 'More information',
+                    },
+
+                    es: {
+                        title: '700ie',
+                        descriptionTitle: 'Descripción',
+                        descriptionText: 'La machacadora 700ie es la última novedad de Tesab. Es un equipo híbrido, accionado por un grupo electrógeno Caterpillar. Está repleta de nuevas funciones, incluye operación inversa de la machacadora, desbloqueo automático, y además, cuenta con un panel de control personalizado con aire acondicionado integrado. El modelo 700ie ofrece las mismas ventajas y altos niveles de rendimiento que las otras machacadoras Tesab y, además, es un 33% más eficiente en el consumo de combustible.',
+                        technicalSpecificationsTitle: 'Especificación técnica',
+                        technicalSpecificationsItems: [
+                            'Dimensiones de la machacadora: 1100 x 700 mm.',
+                            'Profundidad de la machacadora: 1550 mm.',
+                            'Sistema de doble alimentador independiente',
+                            'Grupo electrónico Caterpillar C7,1, 225Kw, 230Kvas.',
+                            'Machacadora accionada por un motor eléctrico WEG de 150 CV.',
+                            'Tolva de 10 m3.',
+                            'Peso: 46.720 kg.',
+                        ],
+                        makeQueryButton: 'Más información',
+                    }
+                },
+                media: [
+                    { type: 'video', path: '/equipment/crushers/700ie/700ieVideo.mp4' },
+                    { type: 'image', path: '/equipment/crushers/700ie/700ie-1.jpg' },
+                    { type: 'image', path: '/equipment/crushers/700ie/700ie-2.jpg' },
+                    { type: 'image', path: '/equipment/crushers/700ie/700ie-3.jpg' }
+                ]
+
             }
-        },
-
-        media: [
-            { type: 'video', path: '/equipment/crushers/700i/700iVideo.mp4' },
-            { type: 'image', path: '/equipment/crushers/700i/700i-1.jpg' },
-            { type: 'image', path: '/equipment/crushers/700i/700i-2.jpeg' },
-            { type: 'image', path: '/equipment/crushers/700i/700i-3.jpg' }
         ]
-    },
-    '800i': {
-        literals: {
-            pt: {
-                title: '800i',
-                descriptionTittle: 'Descrição',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Especificações técnicas',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'Pedido de informação',
-            },
-
-            en: {
-                title: '800i',
-                descriptionTittle: 'Description',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Technical Specifications',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'More information',
-            },
-
-            es: {
-                title: '800i',
-                descriptionTitle: 'Descripción',
-                descriptionText: 'La 800i es una machacadora de alta robustez montado sobre orugas diseñado para el machaqueo primario en frente de cantera. Gracias al diseño único de la machacadora con un óptimo ángulo de trituración y mandíbulas largas, la 800i se ha convertido en la herramienta idónea para aplicaciones de piedra dura.  Gracias a su diseño de accionamiento directo y un gran volante que proporciona mucha inercia, representa un equipo de machaqueo altamente eficiente. La 800i está accionada por un motor Caterpillar C13 de 400cv y cuenta con una machacadora robusta con una boca de 1100 x 800mm.',
-                technicalSpecificationsTitle: 'Especificación técnica',
-                technicalSpecificationsItems: [
-                    'Dimensiones de la machacadora: 1100 x 800 mm.',
-                    'Profundidad de la machacadora: 1820 mm.',
-                    'Tolva de 10,4 m3 con alimentador vibrante.',
-                    'Disponible con banda magnética y cinta lateral (opcionales).',
-                    'Motor diésel Caterpillar de 440 CV.',
-                    'Peso: 60.000 kg.',
-                ],
-
-                makeQueryButton: 'Más información',
-            }
-        },
-
-        media: [
-            { type: 'video', path: '/equipment/crushers/800i/800iVideo.mp4' },
-            { type: 'image', path: '/equipment/crushers/800i/800i-1.jpg' },
-            { type: 'image', path: '/equipment/crushers/800i/800i-2.jpg' },
-            { type: 'image', path: '/equipment/crushers/800i/800i-3.jpg' }
-        ]
-    },
-    '700ie': {
-        literals: {
-            pt: {
-                title: '700ie',
-                descriptionTittle: 'Descrição',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Especificações técnicas',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'Pedido de informação',
-            },
-
-            en: {
-                title: '700ie',
-                descriptionTittle: 'Description',
-                descriptionText: '',
-                technicalSpecificationsTitle: 'Technical Specifications',
-                technicalSpecificationsItems: [],
-                makeQueryButton: 'More information',
-            },
-
-            es: {
-                title: '700ie',
-                descriptionTitle: 'Descripción',
-                descriptionText: 'La machacadora 700ie es la última novedad de Tesab. Es un equipo híbrido, accionado por un grupo electrógeno Caterpillar. Está repleta de nuevas funciones, incluye operación inversa de la machacadora, desbloqueo automático, y además, cuenta con un panel de control personalizado con aire acondicionado integrado. El modelo 700ie ofrece las mismas ventajas y altos niveles de rendimiento que las otras machacadoras Tesab y, además, es un 33% más eficiente en el consumo de combustible.',
-                technicalSpecificationsTitle: 'Especificación técnica',
-                technicalSpecificationsItems: [
-                    'Dimensiones de la machacadora: 1100 x 700 mm.',
-                    'Profundidad de la machacadora: 1550 mm.',
-                    'Sistema de doble alimentador independiente',
-                    'Grupo electrónico Caterpillar C7,1, 225Kw, 230Kvas.',
-                    'Machacadora accionada por un motor eléctrico WEG de 150 CV.',
-                    'Tolva de 10 m3.',
-                    'Peso: 46.720 kg.',
-                ],
-                makeQueryButton: 'Más información',
-            }
-        },
-        media: [
-            { type: 'video', path: '/equipment/crushers/700ie/700ieVideo.mp4' },
-            { type: 'image', path: '/equipment/crushers/700ie/700ie-1.jpg' },
-            { type: 'image', path: '/equipment/crushers/700ie/700ie-2.jpg' },
-            { type: 'image', path: '/equipment/crushers/700ie/700ie-3.jpg' }
-        ]
-
     },
 
     '623CT': {
@@ -183,7 +189,6 @@ const data = {
             { type: 'video', path: '/equipment/impactCrusher-coneCrushers/623CT/623CTVideo.mp4' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-1.jpg' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-2.jpg' },
-            { type: 'image', path: '/equipment/impactCrusher-coneCrushers/623CT/623CT-3.jpg' },
         ]
     },
 
@@ -266,6 +271,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/impactCrusher-coneCrushers/1012TS/1012TSVideo.mp4' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1012TS/1012TS-1.jpg' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1012TS/1012TS-2.jpg' },
         ]
@@ -301,6 +307,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/impactCrusher-coneCrushers/1150TC/1150TCVideo.mp4' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1150TC/1150TC-1.jpg' },
             { type: 'image', path: '/equipment/impactCrusher-coneCrushers/1150TC/1150TC-2.png' },
         ]
@@ -343,9 +350,9 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/scalpers/TS1550/TS1550Video.mp4' },
             { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-1.jpg' },
             { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-2.jpg' },
-            { type: 'image', path: '/equipment/scalpers/TS1550/TS1550-3.jpg' },
         ]
     },
 
@@ -386,6 +393,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/scalpers/TS1860/TS1860Video.mp4' },
             { type: 'image', path: '/equipment/scalpers/TS1860/TS1860-1.jpg' },
             { type: 'image', path: '/equipment/scalpers/TS1860/TS1860-2.jpg' },
         ]
@@ -428,9 +436,9 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/scalpers/TS1340/TS1340Video.mp4' },
             { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-1.jpg' },
             { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-2.jpg' },
-            { type: 'image', path: '/equipment/scalpers/TS1340/TS1340-3.jpg' },
         ]
     },
 
@@ -464,7 +472,7 @@ const data = {
             }
         },
         media: [
-            { type: 'image', path: '/equipment/screeners/TS2430/TS2430-1.jpg' },
+            { type: 'video', path: '/equipment/screeners/TS2430/TS2430Video.mp4' },
             { type: 'image', path: '/equipment/screeners/TS2430/TS2430-2.jpg' },
             { type: 'image', path: '/equipment/screeners/TS2430/TS2430-3.jpg' },
         ]
@@ -507,7 +515,7 @@ const data = {
             }
         },
         media: [
-            { type: 'image', path: '/equipment/screeners/TS2600/TS2600-3.png' },
+            { type: 'image', path: '/equipment/screeners/TS2600/TS2600Video.mp4' },
             { type: 'image', path: '/equipment/screeners/TS2600/TS2600-2.jpg' },
             { type: 'image', path: '/equipment/screeners/TS2600/TS2600-1.png' },
         ]
@@ -550,6 +558,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/screeners/TS3600/TS3600Video.mp4' },
             { type: 'image', path: '/equipment/screeners/TS3600/TS3600-1.jpg' },
             { type: 'image', path: '/equipment/screeners/TS3600/TS3600-2.jpg' },
             { type: 'image', path: '/equipment/screeners/TS3600/TS3600-3.jpg' },
@@ -586,8 +595,9 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/trackedStockpilers/8042T/8042TVideo.mp4' },
             { type: 'image', path: '/equipment/trackedStockpilers/8042T/8042T-1.jpg' },
-            { type: 'image', path: '/equipment/trackedStockpilers/8042T/8042T-2.jpeg' },
+            { type: 'image', path: '/equipment/trackedStockpilers/8042T/8042T-2.jpg' },
         ]
     },
 
@@ -621,6 +631,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/trackedStockpilers/8042TSL/8042TSLVideo.mp4' },
             { type: 'image', path: '/equipment/trackedStockpilers/8042TSL/8042TSL-1.jpg' },
             { type: 'image', path: '/equipment/trackedStockpilers/8042TSL/8042TSL-2.jpg' },
         ]
@@ -656,6 +667,7 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/recycling/TR100E/TR100EVideo.mp4' },
             { type: 'image', path: '/equipment/recycling/TR100E/TR100E-1.jpeg' },
             { type: 'image', path: '/equipment/recycling/TR100E/TR100E-2.jpeg' },
         ]
@@ -691,9 +703,10 @@ const data = {
             }
         },
         media: [
-            { type: 'image', path: '/equipment/recycling/REC100/REC100-1.jpeg' },
-            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpeg' },
-            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpeg' },
+            { type: 'video', path: '/equipment/recycling/REC100/REC100Video.mp4' },
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-1.jpg' },
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpg' },
+            { type: 'image', path: '/equipment/recycling/REC100/REC100-2.jpg' },
         ]
     },
 
@@ -727,9 +740,9 @@ const data = {
             }
         },
         media: [
+            { type: 'video', path: '/equipment/recycling/AIR-VAC/AIR-VACVideo.mp4' },
             { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-1.png' },
             { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-2.png' },
-            { type: 'image', path: '/equipment/recycling/AIR-VAC/AIR-VAC-3.png' },
         ]
     },
 
@@ -812,49 +825,55 @@ const data = {
 export default function Equipment({ isMobile }) {
     const content = prepareContent()
     const router = useRouter()
-    const { equipmentId } = router.query
+    const { equipmentGroup } = router.query
 
-    if (equipmentId) {
+    if (equipmentGroup) {
         // @ts-ignore
-        const { literals, media } = data[equipmentId]
-        const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = prepareLiterals(literals)
+        const { title, machines } = data[equipmentGroup]
 
         return <>
             <Head>
                 <title>{title} - Tesab Spain</title>
             </Head>
+
             <main>
-                <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
-                <div className='flex flex-col  lg:flex-row lg:place-content-around'>
-                    <div className='max-w-[800px]'>
-                        <Slider id="slider">
-                            {media && media.map(({ type, path }) =>
-                                type === 'video' ?
-                                    <video className="w-full" autoPlay loop muted src={content(path)} type="video/mp4" />
-                                    :
-                                    <img className="w-full block" src={content(path)} />
-                            )}
-                        </Slider>
+                {machines.map((machine, index) => {
+                    const { literals, media } = machine
+                    const { title, descriptionTitle, descriptionText, technicalSpecificationsTitle, technicalSpecificationsItems, makeQueryButton } = prepareLiterals(literals)
+
+                    return <div key={index}>
+                        <h1 className="font-bakbakone text-center text-5xl mx-4 lg:my-4">{title}</h1>
+                        <div className='flex flex-col  lg:flex-row lg:place-content-around'>
+                            <div className='max-w-[800px]'>
+                                <Slider id={`slider-${index}`}>
+                                    {media && media.map(({ type, path }) =>
+                                        type === 'video' ?
+                                            <video className="w-full" autoPlay loop muted src={content(path)} type="video/mp4" />
+                                            :
+                                            <img className="w-full block" src={content(path)} />
+                                    )}
+                                </Slider>
+                            </div>
+
+                            <div className='flex flex-col p-4 gap-5 lg:w-160'>
+                                <h2 className="font-bakbakone">{descriptionTitle}</h2>
+                                <p className="font-alexandria text-justify">{descriptionText}</p>
+
+                                <h2 className="font-bakbakone">{technicalSpecificationsTitle}</h2>
+                                <ul className="font-alexandria list-disc px-4">
+                                    {technicalSpecificationsItems.map(technicalSpecificationsItem => <li>{technicalSpecificationsItem}</li>)}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-center sticky">
+                            <Link href="/contact"><button className="bg-amber-400 my-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
+                                {makeQueryButton}
+                            </button></Link>
+                        </div>
                     </div>
-
-                    <div className='flex flex-col p-4 gap-5 lg:w-160'>
-                        <h2 className="font-bakbakone">{descriptionTitle}</h2>
-                        <p className="font-alexandria text-justify">{descriptionText}</p>
-
-                        <h2 className="font-bakbakone">{technicalSpecificationsTitle}</h2>
-                        <ul className="font-alexandria list-disc px-4">
-                            {technicalSpecificationsItems.map(technicalSpecificationsItem => <li>{technicalSpecificationsItem}</li>)}
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="flex justify-center sticky">
-                    <Link href="/contact"><button className="bg-amber-400 my-4 px-4 py-2 font-bold rounded hover:bg-[#323A47] hover:text-amber-400 ">
-                        {makeQueryButton}
-                    </button></Link>
-                </div>
+                })}
             </main>
-
             <Footer />
         </>
     } else return null

@@ -54,7 +54,7 @@ export default function UsedEquipment({ isMobile }) {
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:items-center lg:gap-x-16">
-              <Slider id="slider">
+              <Slider id="slider-0">
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-1.jpg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-2.jpeg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-3.jpg')} />
@@ -74,7 +74,7 @@ export default function UsedEquipment({ isMobile }) {
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:items-center lg:gap-x-16">
-              <Slider id="slider">
+              <Slider id="slider-1">
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-1.jpg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-2.jpeg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-3.jpg')} />
@@ -94,7 +94,7 @@ export default function UsedEquipment({ isMobile }) {
           <div className="flex flex-col items-center bg-white shadow-lg py-6 sm:w-128 py-6 lg:max-w-160">
             <h2 className="font-bakbakone text-xl">{model} 700i</h2>
             <div className="flex flex-col lg:items-center lg:gap-x-16">
-              <Slider id="slider">
+              <Slider id="slider-2">
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-1.jpg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-2.jpeg')} />
                 <img className="w-full" src={content('/equipment/crushers/700i/700i-3.jpg')} />

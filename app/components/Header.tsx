@@ -126,60 +126,40 @@ function Header({ isMobile }) {
       <title>Tesab Spain S.L.</title>
     </Head>
 
-    <header className="z-10 absolute top-0 w-full">
-      <div className="flex justify-between bg-[#323A47] p-2">
-        <nav className="flex space-x-5">
-          <a href="https://wa.me/34666967923">
-            <img className="w-5" src="/images/social/Wsapp-Blanco.png" alt="WhatsApp" />
-          </a>
-          <a href="">
-            <img className="w-5" src="/images/social/Youtube-Blanco.png" alt="YouTube" />
-          </a>
-          <a href="https://www.instagram.com/tesabspain/">
-            <img className="w-5" src="/images/social/Instagram-Blanco.png" alt="Instagram" />
-          </a>
-          <a href="https://www.linkedin.com/company/tesab-spain-sl/?viewAsMember=true">
-            <img className="w-5" src="/images/social/Linkedin-blanco.png" alt="LinkedIn" />
-          </a>
-          <a href="https://www.facebook.com/tesabspainsl/">
-            <img className="w-5" src="/images/social/Facebook-blanco.png" alt="Facebook" />
-          </a>
-        </nav>
-        <nav className="flex space-x-5">
-          <span className="flex items-center space-x-2">
-            <img
-              className="w-4"
-              src="/images/social/Telefono-Blanco.png"
-              alt="Telephone"
-              onClick={togglePhoneNumber}
-            />
-            {phoneNumberVisible && (
-              <a href="tel:+34944924003" className="font-alexandria text-white text-xs">
-                944 924 003
-              </a>
-            )}
-          </span>
+    <header className="z-10 fixed top-0 w-full">
+      <nav className="flex space-x-5">
+        <span className="flex items-center space-x-2">
+          <img
+            className="w-4"
+            src="/images/social/Telefono-Blanco.png"
+            alt="Telephone"
+            onClick={togglePhoneNumber}
+          />
+          {phoneNumberVisible && (
+            <a href="tel:+34944924003" className="font-alexandria text-white text-xs">
+              944 924 003
+            </a>
+          )}
+        </span>
 
-          <span className="flex items-center space-x-2">
-            <img
-              className="w-4"
-              src="/images/social/Correo-blanco.png"
-              alt="E-mail"
-              onClick={toggleEmail}
-            />
-            {emailVisible && (
-              <a
-                href="mailto:tesab@tesabspain.es"
-                className="font-alexandria text-white text-xs"
-              >
-                tesab@tesabspain.es
-              </a>
-            )}
-          </span>
-        </nav>
-      </div>
-
-      <div className="flex justify-between p-3 bg-white/75 lg:overflow-visible h-[90px]">
+        <span className="flex items-center space-x-2">
+          <img
+            className="w-4"
+            src="/images/social/Correo-blanco.png"
+            alt="E-mail"
+            onClick={toggleEmail}
+          />
+          {emailVisible && (
+            <a
+              href="mailto:tesab@tesabspain.es"
+              className="font-alexandria text-white text-xs"
+            >
+              tesab@tesabspain.es
+            </a>
+          )}
+        </span>
+      </nav>
+      <div className="flex justify-between p-3 bg-white lg:overflow-visible h-[90px]">
         <div className="flex flex-col justify-self-center self-center">
           <h1>
             <Link href="/" title="Tesab Spain S.L.">
